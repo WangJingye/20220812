@@ -1,0 +1,174 @@
+
+[13:25:32] getMemberInfo start api:3fabe87f654a13dba817525f5d92df29：[1623734732.67427]
+
+[13:25:32] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[13:25:32] user_info end api:3fabe87f654a13dba817525f5d92df29：[1623734732.756844]
+
+[13:25:32] 1058230拿用户优惠券信息：[]
+
+[13:25:32] coupons end api:3fabe87f654a13dba817525f5d92df29：[1623734732.776791]
+
+[13:25:32] address end api:3fabe87f654a13dba817525f5d92df29：[1623734732.795575]
+
+[13:25:32] all end api:3fabe87f654a13dba817525f5d92df29：[1623734732.796476]
+
+[13:27:30] getMemberInfo start api:19c7fdf5105bb236d7dd72295c7b1a36：[1623734850.363555]
+
+[13:27:30] user_info end api:19c7fdf5105bb236d7dd72295c7b1a36：[1623734850.410934]
+
+[13:27:30] 1058230拿用户优惠券信息：[]
+
+[13:27:30] coupons end api:19c7fdf5105bb236d7dd72295c7b1a36：[1623734850.463196]
+
+[13:27:30] address end api:19c7fdf5105bb236d7dd72295c7b1a36：[1623734850.467728]
+
+[13:27:30] all end api:19c7fdf5105bb236d7dd72295c7b1a36：[1623734850.468581]
+
+[13:29:20] getMemberInfo start api:4303129bd8c909966989dbf6759ca474：[1623734960.618607]
+
+[13:29:20] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[13:29:20] user_info end api:4303129bd8c909966989dbf6759ca474：[1623734960.700021]
+
+[13:29:20] 1058230拿用户优惠券信息：[]
+
+[13:29:20] coupons end api:4303129bd8c909966989dbf6759ca474：[1623734960.713908]
+
+[13:29:20] address end api:4303129bd8c909966989dbf6759ca474：[1623734960.719114]
+
+[13:29:20] all end api:4303129bd8c909966989dbf6759ca474：[1623734960.719843]
+
+[13:30:22] getMemberInfo start api:b639747ec13dad8cadc1dab879ece75e：[1623735022.850968]
+
+[13:30:22] user_info end api:b639747ec13dad8cadc1dab879ece75e：[1623735022.889679]
+
+[13:30:22] 1058230拿用户优惠券信息：[]
+
+[13:30:22] coupons end api:b639747ec13dad8cadc1dab879ece75e：[1623735022.926919]
+
+[13:30:22] address end api:b639747ec13dad8cadc1dab879ece75e：[1623735022.932432]
+
+[13:30:22] all end api:b639747ec13dad8cadc1dab879ece75e：[1623735022.933248]
+
+[13:31:23] getMemberInfo start api:a8d3c95106f975e83d73fe77e6c77eed：[1623735083.08294]
+
+[13:31:23] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[13:31:23] user_info end api:a8d3c95106f975e83d73fe77e6c77eed：[1623735083.181618]
+
+[13:31:23] 1058230拿用户优惠券信息：[]
+
+[13:31:23] coupons end api:a8d3c95106f975e83d73fe77e6c77eed：[1623735083.198531]
+
+[13:31:23] address end api:a8d3c95106f975e83d73fe77e6c77eed：[1623735083.202071]
+
+[13:31:23] all end api:a8d3c95106f975e83d73fe77e6c77eed：[1623735083.202657]
+
+[13:33:49] getMemberInfo start api:a6451519e6c8ef36221d141a47a2879a：[1623735229.601774]
+
+[13:33:49] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[13:33:49] user_info end api:a6451519e6c8ef36221d141a47a2879a：[1623735229.669624]
+
+[13:33:49] 1058230拿用户优惠券信息：[]
+
+[13:33:49] coupons end api:a6451519e6c8ef36221d141a47a2879a：[1623735229.684884]
+
+[13:33:49] address end api:a6451519e6c8ef36221d141a47a2879a：[1623735229.690504]
+
+[13:33:49] all end api:a6451519e6c8ef36221d141a47a2879a：[1623735229.691163]
+
+[13:44:27] getMemberInfo start api:d710eae1cc92cf30786be6dadf5d205b：[1623735867.766607]
+
+[13:44:27] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[13:44:27] user_info end api:d710eae1cc92cf30786be6dadf5d205b：[1623735867.838667]
+
+[13:44:27] 1058230拿用户优惠券信息：[]
+
+[13:44:27] coupons end api:d710eae1cc92cf30786be6dadf5d205b：[1623735867.855551]
+
+[13:44:27] address end api:d710eae1cc92cf30786be6dadf5d205b：[1623735867.861236]
+
+[13:44:27] all end api:d710eae1cc92cf30786be6dadf5d205b：[1623735867.862081]
+
+[14:13:33] getMemberInfo start api:bfa8cb92f305c338882f252eb2c52810：[1623737613.67213]
+
+[14:13:33] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[14:13:33] user_info end api:bfa8cb92f305c338882f252eb2c52810：[1623737613.739006]
+
+[14:13:33] 1058230拿用户优惠券信息：[]
+
+[14:13:33] coupons end api:bfa8cb92f305c338882f252eb2c52810：[1623737613.754973]
+
+[14:13:33] address end api:bfa8cb92f305c338882f252eb2c52810：[1623737613.759179]
+
+[14:13:33] all end api:bfa8cb92f305c338882f252eb2c52810：[1623737613.760043]
+
+[14:14:58] getMemberInfo start api:ec254dd59270dfa8d340d1725ee7a0e8：[1623737698.577783]
+
+[14:14:58] user_info end api:ec254dd59270dfa8d340d1725ee7a0e8：[1623737698.618132]
+
+[14:14:58] 1058230拿用户优惠券信息：[]
+
+[14:14:58] coupons end api:ec254dd59270dfa8d340d1725ee7a0e8：[1623737698.659294]
+
+[14:14:58] address end api:ec254dd59270dfa8d340d1725ee7a0e8：[1623737698.671789]
+
+[14:14:58] all end api:ec254dd59270dfa8d340d1725ee7a0e8：[1623737698.672478]
+
+[14:16:48] getMemberInfo start api:2d78e98e58b88a5a609c870e7b87f858：[1623737808.050842]
+
+[14:16:48] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[14:16:48] user_info end api:2d78e98e58b88a5a609c870e7b87f858：[1623737808.113661]
+
+[14:16:48] 1058230拿用户优惠券信息：[]
+
+[14:16:48] coupons end api:2d78e98e58b88a5a609c870e7b87f858：[1623737808.122914]
+
+[14:16:48] address end api:2d78e98e58b88a5a609c870e7b87f858：[1623737808.127007]
+
+[14:16:48] all end api:2d78e98e58b88a5a609c870e7b87f858：[1623737808.127675]
+
+[14:21:57] getMemberInfo start api:8b3c0ca3e9d75d02dbe544a61dc9225b：[1623738117.739686]
+
+[14:21:57] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[14:21:57] user_info end api:8b3c0ca3e9d75d02dbe544a61dc9225b：[1623738117.799794]
+
+[14:21:57] 1058230拿用户优惠券信息：[]
+
+[14:21:57] coupons end api:8b3c0ca3e9d75d02dbe544a61dc9225b：[1623738117.810338]
+
+[14:21:57] address end api:8b3c0ca3e9d75d02dbe544a61dc9225b：[1623738117.81462]
+
+[14:21:57] all end api:8b3c0ca3e9d75d02dbe544a61dc9225b：[1623738117.815273]
+
+[14:23:16] getMemberInfo start api:fbe95e4c917bc11442641db88cedf797：[1623738196.522191]
+
+[14:23:16] user_info end api:fbe95e4c917bc11442641db88cedf797：[1623738196.562018]
+
+[14:23:16] 1058230拿用户优惠券信息：[]
+
+[14:23:16] coupons end api:fbe95e4c917bc11442641db88cedf797：[1623738196.591268]
+
+[14:23:16] address end api:fbe95e4c917bc11442641db88cedf797：[1623738196.595275]
+
+[14:23:16] all end api:fbe95e4c917bc11442641db88cedf797：[1623738196.595866]
+
+[14:25:40] getMemberInfo start api:26723f13f8a3310906aa7d831eb4e29b：[1623738340.807047]
+
+[14:25:40] 1058230拿用户优惠券信息：{"id":1058230,"sex":0,"source_type":2,"level":0,"guid_id":10010,"parent_id":null,"channel":3,"points":0,"respect_type":"","birth":"1979-07-06","guid_name":null,"phone":"17701761566","name":"\u53f2\u8482\u6c76","nickname":"","last_name":"","status":1,"first_name":"","open_id":"omBzf4qwFLjOOl7tYsXuis_0-uok","email":null,"pos_id":"2998000070","session_id":null,"password":"fd4c1d36097313fe4a65d1979fe77101:11","province":"","pic":"","from_activity":null,"from_entrance":null,"city":"","country":"","telephone":"","age_group":0,"pc_login_at":"2020-11-26 15:29:26","guide_id":0,"updated_at":"2021-06-11 17:32:28","created_at":"2020-08-12 10:49:45","mini_login_at":"2020-11-25 13:41:34","mobile_login_at":"2020-09-22 17:16:00","share_from":0,"union_id":"","avatar_url":"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/Q0j4TwGTfTJxoV3C6H94w0MYgZEYhPsCVdUbKN96hsQT4Pic9ETuScXNU45Bibu6whD23gt8otA0thECF3YrD3Bw\/132"}
+
+[14:25:40] user_info end api:26723f13f8a3310906aa7d831eb4e29b：[1623738340.904427]
+
+[14:25:40] 1058230拿用户优惠券信息：[]
+
+[14:25:40] coupons end api:26723f13f8a3310906aa7d831eb4e29b：[1623738340.919387]
+
+[14:25:40] address end api:26723f13f8a3310906aa7d831eb4e29b：[1623738340.923379]
+
+[14:25:40] all end api:26723f13f8a3310906aa7d831eb4e29b：[1623738340.923896]

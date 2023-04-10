@@ -1,0 +1,20 @@
+[2022-01-17 16:12:03] Member.ERROR: Class 'App\Dlc\Coupon\Commands\Validator' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\Dlc\\Coupon\\Commands\\Validator' not found at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Commands\\ShellCommand.php:56)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Commands\\ShellCommand->couponget('')
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Commands\\ShellCommand.php(43): call_user_func_array(Array, Array)
+#2 [internal function]: App\\Dlc\\Coupon\\Commands\\ShellCommand->handle()
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(987): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Dlc\\Coupon\\Commands\\ShellCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 {main}
+"} 

@@ -1,0 +1,202 @@
+<?php
+
+namespace App\Console\Commands;
+
+use function AlibabaCloud\Client\json;
+use App\Model\Element;
+use App\Model\Pages;
+use Illuminate\Console\Command;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
+use App\Lib\Http;
+
+class Import extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'import:product_detail {--filename=}';
+    protected $_http;
+    const  IMPORT_KEY = 'import_product_detail';
+    protected $importId;
+    protected $errorLines=[];
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = '批量导入商品图文详情';
+
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->_http = new Http();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+
+        $csvFile=$this->option('filename');
+        if(!$csvFile){
+            return $this->error('filename必传');
+        }
+        $lineCount = $this->getLineCount($csvFile);
+        if($lineCount>0){
+            $importId=DB::table('import_log')->insertGetId(['count'=>$lineCount,'filename'=>$csvFile]);
+
+            $this->importId = $importId;
+            $this->getCsvData($csvFile);
+            $data=[
+                'finished'=>date("Y-m-d H:i:s")
+            ];
+            if(count($this->errorLines)>0){
+                $data['error_ids'] =join(',',$this->errorLines);
+            }
+            $this->updateStatus($data);
+        }
+    }
+
+    public function updateStatus($data){
+        DB::table('import_log')->where('id',$this->importId)->update($data);
+    }
+
+    public function getLineCount($csvFile){
+        $command ='wc -l '.$csvFile ."|awk '{print $1}'";
+        $return = (int) trim(shell_exec($command),"\n");
+        return $return - 1;
+    }
+
+    protected function getCsvData($file){
+        if(!is_file($file)){
+            $this->updateStatus(['message'=>'不是文件']);
+            dd('不是文件');
+        }
+
+        $handle = fopen($file,'r');
+        if(!$handle){
+            $this->updateStatus(['message'=>'读取文件失败']);
+            dd('读取文件失败');
+        }
+
+        $i =0;
+        while(($data = fgetcsv($handle))!==false){
+                if($i == 0 ){
+                    if($data[0]!=='SKU' || $data[1]!=='TYPE' || $data[2]!=='IMAGE'  ){
+                        $this->updateStatus(['message'=>'标题不对,SKU,TYPE:(detail,kv),IMAGE']);
+                        dd('标题不对');
+                    }
+                }
+                if($i>0 && count($data)>2){
+                        $this->importImages($data,$i);
+                }
+                $i++;
+        }
+    }
+
+    protected function importImages($data,$i){
+        $sku = $data[0];
+        $type = $data[1];
+        $imagesTag=false;
+        $kvTag=false;
+        $imageArray = array_slice($data,2);
+        if($type=='detail'){
+            $imagesTag=$this->createMultiTag($sku,$imageArray);
+            $imagesTag = json_encode($imagesTag);
+        }
+
+        if($type=='kv'){
+            $kvTag=$this->createImageTag($sku,$imageArray);
+            $kvTag = json_encode($kvTag);
+        }
+        $params=[
+            'id'=>$sku,
+            'wechat'=>$imagesTag,
+            'pc'=>$imagesTag,
+            'kv_images'=>$kvTag,
+        ];
+
+        $this->save($params,$i);
+
+    }
+
+
+    protected function createImageTag($sku,$imageArray){
+
+        $images=[];
+        foreach($imageArray as $image){
+            $imageObj=[
+                "tag"=>"image",
+                "data"=>[
+                    "src"=>$this->getOssPath($sku,$image),
+                ]
+            ];
+            $images [] = $imageObj;
+        }
+        return $images;
+    }
+
+
+    protected function createMultiTag($sku,$imageArray){
+
+        $nodes = [];
+        foreach($imageArray as $image){
+            $imageObj=[
+                "tag"=>"image",
+                "src"=>$this->getOssPath($sku,$image),
+                "action"=>[
+                    "data"=>"",
+                    "type"=>"none",
+                    "route"=>"",
+                    "height"=>""
+                ]
+            ];
+            $nodes [] = $imageObj;
+        }
+        $tag =[
+            "tag"=>"multi_image",
+            "name"=>"多图",
+            "nodes"=>$nodes,
+            "height"=>"",
+            "columns"=>1
+        ];
+        return [$tag];
+    }
+
+
+    protected function getOssPath($sku,$filename){
+        return env('OSS_DOMAIN').'/cms/upload/spu_images/'.$sku.'/'.$filename;
+    }
+
+    public function save($data,$i){
+        $result=$this->curl('goods/spu/saveDetail',$data);
+        if(isset($result['code']) && $result['code']==1){
+            DB::table('import_log')->where('id',$this->importId)->increment('success');
+        }else{
+            DB::table('import_log')->where('id',$this->importId)->increment('error');
+            $this->errorLines[]=$i+1;
+        }
+        return $result;
+    }
+
+    public function curl($apiName, $data = [])
+    {
+        return $this->_http->curl($apiName, $data);
+    }
+
+
+
+}

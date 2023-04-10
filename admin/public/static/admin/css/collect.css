@@ -1,0 +1,88 @@
+.collect{
+    padding: 15px;
+}
+.collect-top{
+    margin-bottom: 15px;
+    display: flex;
+}
+.collect-visit{
+    width: 50%;
+    margin-right: 15px;
+}
+.collect-visit .layui-card-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.collect-visit .visit-item{
+    width: 50%;
+    text-align: center;
+}
+.collect-visit .visit-item .visit-num{
+    font-size: 26px;
+    margin:5px 0 10px;
+}
+.collect-visit .visit-item:nth-child(1){
+    position: relative;
+}
+.collect-visit .visit-item:nth-child(1)::after{
+    content: '';
+    width: 2px;
+    height: 30px;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.collect-visit .collect-rate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.collect-rate .layui-card{
+    width: 49%;
+    margin-bottom: 0;
+    padding: 20px 0 25px;
+}
+.collect-search{
+    width: 49%;
+    background: #fff;
+}
+
+.collect .collect-goods{
+    display: flex;
+    justify-content: space-between;
+    min-height: 240px;
+}
+.collect-goods .layui-card{
+    width: 19%;
+    margin-bottom: 0;
+}
+.more{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #36a2eb;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.more:hover{
+    color: #36a2eb;
+}
+.layui-layout-admin .layui-body .layadmin-tabsbody-item{
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {display:none}
+.no-data{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collect-title{
+    text-align:center;
+    height:30px;
+}

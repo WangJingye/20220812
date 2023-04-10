@@ -1,0 +1,17 @@
+@font-face {
+    font-family:PlayfairDisplay-Regular;
+    font-display:swap;
+    src:url(./fonts/PlayfairDisplay-Regular.woff) format("woff")
+}
+@font-face {
+    font-family:HelveticaNeueLTW05-45Light;
+    font-display:swap;
+    src:url(./fonts/HelveticaNeueLTW05-45Light.woff2) format("woff2"),
+    url(./fonts/HelveticaNeueLTW05-45Light.woff) format("woff")
+}
+@font-face {
+    font-family:HelveticaNeueLTW05-75Bold;
+    font-display:swap;
+    src:url(./fonts/HelveticaNeueLTW05-75Bold.woff2) format("woff2"),
+    url(./fonts/HelveticaNeueLTW05-75Bold.woff) format("woff")
+}

@@ -1,0 +1,565 @@
+[2022-01-19 10:33:32] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:23:32"],["ordered_flag","=","0"]]  
+[2022-01-19 10:33:32] Member.INFO: 没有导购  
+[2022-01-19 10:33:32] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:23:32"],["ordered_flag","=","0"]]  
+[2022-01-19 10:33:32] Member.INFO: 没有导购  
+[2022-01-19 10:33:32] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:33:52] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:23:52"],["ordered_flag","=","0"]]  
+[2022-01-19 10:33:52] Member.INFO: 没有导购  
+[2022-01-19 10:33:52] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:23:52"],["ordered_flag","=","0"]]  
+[2022-01-19 10:33:52] Member.INFO: 没有导购  
+[2022-01-19 10:33:52] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:34:11] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:11"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:11] Member.INFO: 没有导购  
+[2022-01-19 10:34:11] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:11"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:11] Member.INFO: 没有导购  
+[2022-01-19 10:34:11] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:34:20] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:20"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:20] Member.INFO: 没有导购  
+[2022-01-19 10:34:20] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:20"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:20] Member.INFO: 没有导购  
+[2022-01-19 10:34:20] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:34:39] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:39"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:39] Member.INFO: 没有导购  
+[2022-01-19 10:34:39] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:39"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:39] Member.INFO: 没有导购  
+[2022-01-19 10:34:39] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:34:46] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:46"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:46] Member.INFO: 没有导购  
+[2022-01-19 10:34:46] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:46"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:46] Member.INFO: 没有导购  
+[2022-01-19 10:34:46] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:34:49] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:49"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:49] Member.INFO: 没有导购  
+[2022-01-19 10:34:49] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:24:49"],["ordered_flag","=","0"]]  
+[2022-01-19 10:34:49] Member.INFO: 没有导购  
+[2022-01-19 10:34:49] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:35:02] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:02"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:02] Member.INFO: 没有导购  
+[2022-01-19 10:35:02] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:02"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:02] Member.INFO: 没有导购  
+[2022-01-19 10:35:02] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:35:09] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:09"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:09] Member.INFO: 没有导购  
+[2022-01-19 10:35:09] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:09"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:09] Member.INFO: 没有导购  
+[2022-01-19 10:35:09] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:35:30] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:30"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:30] Member.INFO: 没有导购  
+[2022-01-19 10:35:30] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:30"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:30] Member.INFO: 没有导购  
+[2022-01-19 10:35:30] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:35:34] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:34"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:34] Member.INFO: 没有导购  
+[2022-01-19 10:35:34] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:25:34"],["ordered_flag","=","0"]]  
+[2022-01-19 10:35:34] Member.INFO: 没有导购  
+[2022-01-19 10:35:34] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:36:48] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:26:48"],["ordered_flag","=","0"]]  
+[2022-01-19 10:36:48] Member.INFO: 没有导购  
+[2022-01-19 10:36:48] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:26:48"],["ordered_flag","=","0"]]  
+[2022-01-19 10:36:48] Member.INFO: 没有导购  
+[2022-01-19 10:36:48] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:37:02] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:27:02"],["ordered_flag","=","0"]]  
+[2022-01-19 10:37:02] Member.INFO: 没有导购  
+[2022-01-19 10:37:02] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:27:02"],["ordered_flag","=","0"]]  
+[2022-01-19 10:37:02] Member.INFO: 没有导购  
+[2022-01-19 10:37:02] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:37:17] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:27:17"],["ordered_flag","=","0"]]  
+[2022-01-19 10:37:17] Member.INFO: 没有导购  
+[2022-01-19 10:37:17] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:27:17"],["ordered_flag","=","0"]]  
+[2022-01-19 10:37:17] Member.INFO: 没有导购  
+[2022-01-19 10:37:17] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:37:39] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:27:39"],["ordered_flag","=","0"]]  
+[2022-01-19 10:37:39] Member.INFO: 没有导购  
+[2022-01-19 10:37:39] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:27:39"],["ordered_flag","=","0"]]  
+[2022-01-19 10:37:39] Member.INFO: 没有导购  
+[2022-01-19 10:37:39] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:38:13] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:13"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:13] Member.INFO: 没有导购  
+[2022-01-19 10:38:13] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:13"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:13] Member.INFO: 没有导购  
+[2022-01-19 10:38:13] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:38:25] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:25"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:25] Member.INFO: 没有导购  
+[2022-01-19 10:38:25] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:25"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:25] Member.INFO: 没有导购  
+[2022-01-19 10:38:25] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:38:43] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:43"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:43] Member.INFO: 没有导购  
+[2022-01-19 10:38:43] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:43"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:43] Member.INFO: 没有导购  
+[2022-01-19 10:38:43] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:38:49] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:49"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:49] Member.INFO: 没有导购  
+[2022-01-19 10:38:49] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:28:49"],["ordered_flag","=","0"]]  
+[2022-01-19 10:38:49] Member.INFO: 没有导购  
+[2022-01-19 10:38:49] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:39:01] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:29:01"],["ordered_flag","=","0"]]  
+[2022-01-19 10:39:01] Member.INFO: 没有导购  
+[2022-01-19 10:39:01] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:29:01"],["ordered_flag","=","0"]]  
+[2022-01-19 10:39:01] Member.INFO: 没有导购  
+[2022-01-19 10:39:01] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:39:21] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:29:21"],["ordered_flag","=","0"]]  
+[2022-01-19 10:39:21] Member.INFO: 没有导购  
+[2022-01-19 10:39:21] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:29:21"],["ordered_flag","=","0"]]  
+[2022-01-19 10:39:21] Member.INFO: 没有导购  
+[2022-01-19 10:39:21] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:53:32] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:43:32"],["ordered_flag","=","0"]]  
+[2022-01-19 10:53:32] Member.INFO: 没有导购  
+[2022-01-19 10:53:32] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:43:32"],["ordered_flag","=","0"]]  
+[2022-01-19 10:53:32] Member.INFO: 没有导购  
+[2022-01-19 10:53:32] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:54:28] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:44:28"],["ordered_flag","=","0"]]  
+[2022-01-19 10:54:28] Member.INFO: 没有导购  
+[2022-01-19 10:54:28] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:44:28"],["ordered_flag","=","0"]]  
+[2022-01-19 10:54:28] Member.INFO: 没有导购  
+[2022-01-19 10:54:28] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:54:46] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:44:46"],["ordered_flag","=","0"]]  
+[2022-01-19 10:54:46] Member.INFO: 没有导购  
+[2022-01-19 10:54:46] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:44:46"],["ordered_flag","=","0"]]  
+[2022-01-19 10:54:46] Member.INFO: 没有导购  
+[2022-01-19 10:54:46] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:55:00] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:45:00"],["ordered_flag","=","0"]]  
+[2022-01-19 10:55:00] Member.INFO: 没有导购  
+[2022-01-19 10:55:00] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:45:00"],["ordered_flag","=","0"]]  
+[2022-01-19 10:55:00] Member.INFO: 没有导购  
+[2022-01-19 10:55:00] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 10:58:19] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:48:19"],["ordered_flag","=","0"]]  
+[2022-01-19 10:58:19] Member.INFO: 没有导购  
+[2022-01-19 10:58:19] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:48:19"],["ordered_flag","=","0"]]  
+[2022-01-19 10:58:19] Member.INFO: 没有导购  
+[2022-01-19 10:58:19] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:01:43] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:51:43"],["ordered_flag","=","0"]]  
+[2022-01-19 11:01:43] Member.INFO: 没有导购  
+[2022-01-19 11:01:43] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 10:51:43"],["ordered_flag","=","0"]]  
+[2022-01-19 11:01:43] Member.INFO: 没有导购  
+[2022-01-19 11:01:43] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:13:58] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:03:58"],["ordered_flag","=","0"]]  
+[2022-01-19 11:13:58] Member.INFO: 没有导购  
+[2022-01-19 11:13:58] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:03:58"],["ordered_flag","=","0"]]  
+[2022-01-19 11:13:58] Member.INFO: 没有导购  
+[2022-01-19 11:13:58] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:14:11] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:04:11"],["ordered_flag","=","0"]]  
+[2022-01-19 11:14:11] Member.INFO: 没有导购  
+[2022-01-19 11:14:11] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:04:11"],["ordered_flag","=","0"]]  
+[2022-01-19 11:14:11] Member.INFO: 没有导购  
+[2022-01-19 11:14:11] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:14:18] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:04:18"],["ordered_flag","=","0"]]  
+[2022-01-19 11:14:18] Member.INFO: 没有导购  
+[2022-01-19 11:14:18] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:04:18"],["ordered_flag","=","0"]]  
+[2022-01-19 11:14:18] Member.INFO: 没有导购  
+[2022-01-19 11:14:18] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:14:23] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:04:23"],["ordered_flag","=","0"]]  
+[2022-01-19 11:14:23] Member.INFO: 没有导购  
+[2022-01-19 11:14:23] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:04:23"],["ordered_flag","=","0"]]  
+[2022-01-19 11:14:23] Member.INFO: 没有导购  
+[2022-01-19 11:14:23] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:17:41] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:07:41"],["ordered_flag","=","0"]]  
+[2022-01-19 11:17:41] Member.INFO: 没有导购  
+[2022-01-19 11:17:41] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:07:41"],["ordered_flag","=","0"]]  
+[2022-01-19 11:17:41] Member.INFO: 没有导购  
+[2022-01-19 11:17:41] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:17:44] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:07:44"],["ordered_flag","=","0"]]  
+[2022-01-19 11:17:44] Member.INFO: 没有导购  
+[2022-01-19 11:17:44] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:07:44"],["ordered_flag","=","0"]]  
+[2022-01-19 11:17:44] Member.INFO: 没有导购  
+[2022-01-19 11:17:44] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:17:48] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:07:48"],["ordered_flag","=","0"]]  
+[2022-01-19 11:17:48] Member.INFO: 没有导购  
+[2022-01-19 11:17:48] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:07:48"],["ordered_flag","=","0"]]  
+[2022-01-19 11:17:48] Member.INFO: 没有导购  
+[2022-01-19 11:17:48] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:18:14] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:14"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:14] Member.INFO: 没有导购  
+[2022-01-19 11:18:14] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:14"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:14] Member.INFO: 没有导购  
+[2022-01-19 11:18:14] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:18:20] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:20"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:20] Member.INFO: 没有导购  
+[2022-01-19 11:18:20] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:20"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:20] Member.INFO: 没有导购  
+[2022-01-19 11:18:20] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:18:24] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:24"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:24] Member.INFO: 没有导购  
+[2022-01-19 11:18:24] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:24"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:24] Member.INFO: 没有导购  
+[2022-01-19 11:18:24] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 11:18:27] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:27"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:27] Member.INFO: 没有导购  
+[2022-01-19 11:18:27] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 11:08:27"],["ordered_flag","=","0"]]  
+[2022-01-19 11:18:27] Member.INFO: 没有导购  
+[2022-01-19 11:18:27] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:43:42] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:33:42"],["ordered_flag","=","0"]]  
+[2022-01-19 13:43:42] Member.INFO: 没有导购  
+[2022-01-19 13:43:42] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:33:42"],["ordered_flag","=","0"]]  
+[2022-01-19 13:43:42] Member.INFO: 没有导购  
+[2022-01-19 13:43:42] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:44:08] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:34:08"],["ordered_flag","=","0"]]  
+[2022-01-19 13:44:08] Member.INFO: 没有导购  
+[2022-01-19 13:44:08] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:34:08"],["ordered_flag","=","0"]]  
+[2022-01-19 13:44:08] Member.INFO: 没有导购  
+[2022-01-19 13:44:08] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:47:45] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:37:45"],["ordered_flag","=","0"]]  
+[2022-01-19 13:47:45] Member.INFO: 没有导购  
+[2022-01-19 13:47:45] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:37:45"],["ordered_flag","=","0"]]  
+[2022-01-19 13:47:45] Member.INFO: 没有导购  
+[2022-01-19 13:47:45] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:49:08] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:39:08"],["ordered_flag","=","0"]]  
+[2022-01-19 13:49:08] Member.INFO: 没有导购  
+[2022-01-19 13:49:08] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:39:08"],["ordered_flag","=","0"]]  
+[2022-01-19 13:49:08] Member.INFO: 没有导购  
+[2022-01-19 13:49:08] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:49:17] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:39:17"],["ordered_flag","=","0"]]  
+[2022-01-19 13:49:17] Member.INFO: 没有导购  
+[2022-01-19 13:49:17] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:39:17"],["ordered_flag","=","0"]]  
+[2022-01-19 13:49:17] Member.INFO: 没有导购  
+[2022-01-19 13:49:17] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:49:26] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:39:26"],["ordered_flag","=","0"]]  
+[2022-01-19 13:49:26] Member.INFO: 没有导购  
+[2022-01-19 13:49:26] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:39:26"],["ordered_flag","=","0"]]  
+[2022-01-19 13:49:26] Member.INFO: 没有导购  
+[2022-01-19 13:49:26] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 13:50:02] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:40:02"],["ordered_flag","=","0"]]  
+[2022-01-19 13:50:02] Member.INFO: 没有导购  
+[2022-01-19 13:50:02] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:40:02"],["ordered_flag","=","0"]]  
+[2022-01-19 13:50:02] Member.INFO: 没有导购  
+[2022-01-19 13:50:02] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:05:55] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:55:55"],["ordered_flag","=","0"]]  
+[2022-01-19 14:05:55] Member.INFO: 没有导购  
+[2022-01-19 14:05:55] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 13:55:55"],["ordered_flag","=","0"]]  
+[2022-01-19 14:05:55] Member.INFO: 没有导购  
+[2022-01-19 14:05:55] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:19:27] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:09:27"],["ordered_flag","=","0"]]  
+[2022-01-19 14:19:27] Member.INFO: 没有导购  
+[2022-01-19 14:19:27] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:09:27"],["ordered_flag","=","0"]]  
+[2022-01-19 14:19:27] Member.INFO: 没有导购  
+[2022-01-19 14:19:27] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:19:50] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:09:50"],["ordered_flag","=","0"]]  
+[2022-01-19 14:19:50] Member.INFO: 没有导购  
+[2022-01-19 14:19:50] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:09:50"],["ordered_flag","=","0"]]  
+[2022-01-19 14:19:50] Member.INFO: 没有导购  
+[2022-01-19 14:19:50] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:24:42] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:14:42"],["ordered_flag","=","0"]]  
+[2022-01-19 14:24:42] Member.INFO: 没有导购  
+[2022-01-19 14:24:42] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:14:42"],["ordered_flag","=","0"]]  
+[2022-01-19 14:24:42] Member.INFO: 没有导购  
+[2022-01-19 14:24:42] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:35:08] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:25:08"],["ordered_flag","=","0"]]  
+[2022-01-19 14:35:08] Member.INFO: 没有导购  
+[2022-01-19 14:35:08] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:25:08"],["ordered_flag","=","0"]]  
+[2022-01-19 14:35:08] Member.INFO: 没有导购  
+[2022-01-19 14:35:08] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:35:43] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:25:43"],["ordered_flag","=","0"]]  
+[2022-01-19 14:35:43] Member.INFO: 没有导购  
+[2022-01-19 14:35:43] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:25:43"],["ordered_flag","=","0"]]  
+[2022-01-19 14:35:43] Member.INFO: 没有导购  
+[2022-01-19 14:35:43] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:39:15] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:29:15"],["ordered_flag","=","0"]]  
+[2022-01-19 14:39:15] Member.INFO: 没有导购  
+[2022-01-19 14:39:15] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:29:15"],["ordered_flag","=","0"]]  
+[2022-01-19 14:39:15] Member.INFO: 没有导购  
+[2022-01-19 14:39:15] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:48:20] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:38:20"],["ordered_flag","=","0"]]  
+[2022-01-19 14:48:20] Member.INFO: 没有导购  
+[2022-01-19 14:48:20] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:38:20"],["ordered_flag","=","0"]]  
+[2022-01-19 14:48:20] Member.INFO: 没有导购  
+[2022-01-19 14:48:20] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:50:50] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:40:50"],["ordered_flag","=","0"]]  
+[2022-01-19 14:50:50] Member.INFO: 没有导购  
+[2022-01-19 14:50:50] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:40:50"],["ordered_flag","=","0"]]  
+[2022-01-19 14:50:50] Member.INFO: 没有导购  
+[2022-01-19 14:50:50] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:50:57] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:40:57"],["ordered_flag","=","0"]]  
+[2022-01-19 14:50:57] Member.INFO: 没有导购  
+[2022-01-19 14:50:57] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:40:57"],["ordered_flag","=","0"]]  
+[2022-01-19 14:50:57] Member.INFO: 没有导购  
+[2022-01-19 14:50:57] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:53:35] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:43:35"],["ordered_flag","=","0"]]  
+[2022-01-19 14:53:35] Member.INFO: 没有导购  
+[2022-01-19 14:53:35] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:43:35"],["ordered_flag","=","0"]]  
+[2022-01-19 14:53:35] Member.INFO: 没有导购  
+[2022-01-19 14:53:35] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:53:57] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:43:57"],["ordered_flag","=","0"]]  
+[2022-01-19 14:53:57] Member.INFO: 没有导购  
+[2022-01-19 14:53:57] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:43:57"],["ordered_flag","=","0"]]  
+[2022-01-19 14:53:57] Member.INFO: 没有导购  
+[2022-01-19 14:53:57] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:55:19] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:45:19"],["ordered_flag","=","0"]]  
+[2022-01-19 14:55:19] Member.INFO: 没有导购  
+[2022-01-19 14:55:19] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:45:19"],["ordered_flag","=","0"]]  
+[2022-01-19 14:55:19] Member.INFO: 没有导购  
+[2022-01-19 14:55:19] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:56:41] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:46:41"],["ordered_flag","=","0"]]  
+[2022-01-19 14:56:41] Member.INFO: 没有导购  
+[2022-01-19 14:56:41] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:46:41"],["ordered_flag","=","0"]]  
+[2022-01-19 14:56:41] Member.INFO: 没有导购  
+[2022-01-19 14:56:41] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:56:52] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:46:52"],["ordered_flag","=","0"]]  
+[2022-01-19 14:56:52] Member.INFO: 没有导购  
+[2022-01-19 14:56:52] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:46:52"],["ordered_flag","=","0"]]  
+[2022-01-19 14:56:52] Member.INFO: 没有导购  
+[2022-01-19 14:56:52] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:57:02] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:02"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:02] Member.INFO: 没有导购  
+[2022-01-19 14:57:02] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:02"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:02] Member.INFO: 没有导购  
+[2022-01-19 14:57:02] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:57:10] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:10"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:10] Member.INFO: 没有导购  
+[2022-01-19 14:57:10] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:10"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:10] Member.INFO: 没有导购  
+[2022-01-19 14:57:10] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:57:27] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:27"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:27] Member.INFO: 没有导购  
+[2022-01-19 14:57:27] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:27"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:27] Member.INFO: 没有导购  
+[2022-01-19 14:57:27] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:57:35] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:35"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:35] Member.INFO: 没有导购  
+[2022-01-19 14:57:35] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:35"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:35] Member.INFO: 没有导购  
+[2022-01-19 14:57:35] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:57:44] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:44"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:44] Member.INFO: 没有导购  
+[2022-01-19 14:57:44] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:47:44"],["ordered_flag","=","0"]]  
+[2022-01-19 14:57:44] Member.INFO: 没有导购  
+[2022-01-19 14:57:44] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:58:01] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:48:01"],["ordered_flag","=","0"]]  
+[2022-01-19 14:58:01] Member.INFO: 没有导购  
+[2022-01-19 14:58:01] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:48:01"],["ordered_flag","=","0"]]  
+[2022-01-19 14:58:01] Member.INFO: 没有导购  
+[2022-01-19 14:58:01] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:58:23] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:48:23"],["ordered_flag","=","0"]]  
+[2022-01-19 14:58:23] Member.INFO: 没有导购  
+[2022-01-19 14:58:23] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:48:23"],["ordered_flag","=","0"]]  
+[2022-01-19 14:58:23] Member.INFO: 没有导购  
+[2022-01-19 14:58:23] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 14:59:07] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:49:07"],["ordered_flag","=","0"]]  
+[2022-01-19 14:59:07] Member.INFO: 没有导购  
+[2022-01-19 14:59:07] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:49:07"],["ordered_flag","=","0"]]  
+[2022-01-19 14:59:07] Member.INFO: 没有导购  
+[2022-01-19 14:59:07] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:00:03] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:50:03"],["ordered_flag","=","0"]]  
+[2022-01-19 15:00:03] Member.INFO: 没有导购  
+[2022-01-19 15:00:03] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:50:03"],["ordered_flag","=","0"]]  
+[2022-01-19 15:00:03] Member.INFO: 没有导购  
+[2022-01-19 15:00:03] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:00:28] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:50:28"],["ordered_flag","=","0"]]  
+[2022-01-19 15:00:28] Member.INFO: 没有导购  
+[2022-01-19 15:00:28] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:50:28"],["ordered_flag","=","0"]]  
+[2022-01-19 15:00:28] Member.INFO: 没有导购  
+[2022-01-19 15:00:28] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:02:28] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:52:28"],["ordered_flag","=","0"]]  
+[2022-01-19 15:02:28] Member.INFO: 没有导购  
+[2022-01-19 15:02:28] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:52:28"],["ordered_flag","=","0"]]  
+[2022-01-19 15:02:28] Member.INFO: 没有导购  
+[2022-01-19 15:02:28] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:03:44] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:53:44"],["ordered_flag","=","0"]]  
+[2022-01-19 15:03:44] Member.INFO: 没有导购  
+[2022-01-19 15:03:44] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:53:44"],["ordered_flag","=","0"]]  
+[2022-01-19 15:03:44] Member.INFO: 没有导购  
+[2022-01-19 15:03:44] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:03:55] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:53:55"],["ordered_flag","=","0"]]  
+[2022-01-19 15:03:55] Member.INFO: 没有导购  
+[2022-01-19 15:03:55] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:53:55"],["ordered_flag","=","0"]]  
+[2022-01-19 15:03:55] Member.INFO: 没有导购  
+[2022-01-19 15:03:55] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:04:08] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:54:08"],["ordered_flag","=","0"]]  
+[2022-01-19 15:04:08] Member.INFO: 没有导购  
+[2022-01-19 15:04:08] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:54:08"],["ordered_flag","=","0"]]  
+[2022-01-19 15:04:08] Member.INFO: 没有导购  
+[2022-01-19 15:04:08] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:07:54] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:57:54"],["ordered_flag","=","0"]]  
+[2022-01-19 15:07:54] Member.INFO: 没有导购  
+[2022-01-19 15:07:54] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:57:54"],["ordered_flag","=","0"]]  
+[2022-01-19 15:07:54] Member.INFO: 没有导购  
+[2022-01-19 15:07:54] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:08:30] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:58:30"],["ordered_flag","=","0"]]  
+[2022-01-19 15:08:30] Member.INFO: 没有导购  
+[2022-01-19 15:08:30] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 14:58:30"],["ordered_flag","=","0"]]  
+[2022-01-19 15:08:30] Member.INFO: 没有导购  
+[2022-01-19 15:08:30] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:12:22] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:02:22"],["ordered_flag","=","0"]]  
+[2022-01-19 15:12:22] Member.INFO: 没有导购  
+[2022-01-19 15:12:22] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:02:22"],["ordered_flag","=","0"]]  
+[2022-01-19 15:12:22] Member.INFO: 没有导购  
+[2022-01-19 15:12:22] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:12:34] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:02:34"],["ordered_flag","=","0"]]  
+[2022-01-19 15:12:34] Member.INFO: 没有导购  
+[2022-01-19 15:12:34] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:02:34"],["ordered_flag","=","0"]]  
+[2022-01-19 15:12:34] Member.INFO: 没有导购  
+[2022-01-19 15:12:34] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:13:39] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:03:39"],["ordered_flag","=","0"]]  
+[2022-01-19 15:13:39] Member.INFO: 没有导购  
+[2022-01-19 15:13:39] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:03:39"],["ordered_flag","=","0"]]  
+[2022-01-19 15:13:39] Member.INFO: 没有导购  
+[2022-01-19 15:13:39] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:13:48] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:03:48"],["ordered_flag","=","0"]]  
+[2022-01-19 15:13:48] Member.INFO: 没有导购  
+[2022-01-19 15:13:48] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:03:48"],["ordered_flag","=","0"]]  
+[2022-01-19 15:13:48] Member.INFO: 没有导购  
+[2022-01-19 15:13:48] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:14:09] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:04:09"],["ordered_flag","=","0"]]  
+[2022-01-19 15:14:09] Member.INFO: 没有导购  
+[2022-01-19 15:14:09] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:04:09"],["ordered_flag","=","0"]]  
+[2022-01-19 15:14:09] Member.INFO: 没有导购  
+[2022-01-19 15:14:09] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 15:14:37] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:04:37"],["ordered_flag","=","0"]]  
+[2022-01-19 15:14:37] Member.INFO: 没有导购  
+[2022-01-19 15:14:37] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-19 15:04:37"],["ordered_flag","=","0"]]  
+[2022-01-19 15:14:37] Member.INFO: 没有导购  
+[2022-01-19 15:14:37] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-19 16:11:19] Member.ERROR: Command "sendnewcoupon" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"sendnewcoupon\" is not defined. at D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php:646)
+[stacktrace]
+#0 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(236): Symfony\\Component\\Console\\Application->find('sendnewcoupon')
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-01-19 17:14:28] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponBack() from context 'App\Dlc\Coupon\Commands\ShellCommand' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponBack() from context 'App\\Dlc\\Coupon\\Commands\\ShellCommand' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Commands\\ShellCommand.php:119)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Commands\\ShellCommand->couponback('')
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Commands\\ShellCommand.php(44): call_user_func_array(Array, Array)
+#2 [internal function]: App\\Dlc\\Coupon\\Commands\\ShellCommand->handle()
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(987): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Dlc\\Coupon\\Commands\\ShellCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 {main}
+"} 
+[2022-01-19 17:15:08] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponBack() from context 'App\Dlc\Coupon\Commands\ShellCommand' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponBack() from context 'App\\Dlc\\Coupon\\Commands\\ShellCommand' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Commands\\ShellCommand.php:119)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Commands\\ShellCommand->couponback('')
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Commands\\ShellCommand.php(44): call_user_func_array(Array, Array)
+#2 [internal function]: App\\Dlc\\Coupon\\Commands\\ShellCommand->handle()
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(987): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->doRunCommand(Object(App\\Dlc\\Coupon\\Commands\\ShellCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\symfony\\console\\Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 {main}
+"} 
+[2022-01-19 18:03:13] Member.ERROR: Type error: Too few arguments to function App\Dlc\Coupon\Service\CouponService::couponList(), 1 passed in D:\phpstudy_pro\WWW\el-api\member\app\Dlc\Coupon\Controllers\Api\CouponController.php on line 72 and at least 2 expected {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Type error: Too few arguments to function App\\Dlc\\Coupon\\Service\\CouponService::couponList(), 1 passed in D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php on line 72 and at least 2 expected at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Service\\CouponService.php:187)
+[stacktrace]
+#0 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php(72): App\\Dlc\\Coupon\\Service\\CouponService->couponList('1058230')
+#1 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponListByPage(Object(Illuminate\\Http\\Request))
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponListByPag...', Array)
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponListByPag...')
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#48 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#49 {main}
+"} 
+[2022-01-19 18:03:52] Member.ERROR: Call to a member function toArray() on array {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function toArray() on array at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Service\\CouponService.php:260)
+[stacktrace]
+#0 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php(72): App\\Dlc\\Coupon\\Service\\CouponService->couponListByPage('1058230')
+#1 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponListByPage(Object(Illuminate\\Http\\Request))
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponListByPag...', Array)
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponListByPag...')
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#48 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#49 {main}
+"} 

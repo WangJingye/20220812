@@ -1,0 +1,1079 @@
+[2022-01-19 11:33:33]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [13] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 11:34:52]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [15] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 13:28:16]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [16] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 16:12:38]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-18 18:38:41
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 4
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:12:57]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 0
+            [message] => 促销不存在
+        )
+
+)
+
+[2022-01-19 16:18:19]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 0
+            [message] => 促销不存在
+        )
+
+)
+
+[2022-01-19 16:36:10]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 0
+            [message] => 促销不存在
+        )
+
+)
+
+[2022-01-19 16:36:26]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 0
+            [message] => 促销不存在
+        )
+
+)
+
+[2022-01-19 16:36:50]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 0
+            [message] => 促销不存在
+        )
+
+)
+
+[2022-01-19 16:37:17]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-18 18:38:41
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 4
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:37:34]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-18 18:38:41
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 4
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:50:44]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-18 18:38:41
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 4
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:50:45]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [11] => 3
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 16:52:29]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-19 16:50:45
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 7
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:52:30]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [11] => 0
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 16:53:52]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-19 16:50:45
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 7
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:53:52]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [11] => 0
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 16:54:39]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-19 16:50:45
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 7
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:55:26]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-19 16:50:45
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 7
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:55:26]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [11] => 3
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 16:56:30]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getNewDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 11
+                    [name] => 新人券001
+                    [display_name] => 新人券
+                    [type] => coupon
+                    [start_time] => 2022-01-01 00:00:00
+                    [end_time] => 2023-01-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-18 11:37:54
+                    [updated_at] => 2022-01-19 16:55:26
+                    [exclude_sku] => 
+                    [add_sku] => 
+                    [cids] => 
+                    [addrules] => 1
+                    [total_amount] => 1
+                    [total_discount] => 5
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 10
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 1
+                    [is_rand] => 0
+                    [is_new] => 1
+                    [notice] => aaaaaaa
+bbbbbbb
+ccccccc
+                )
+
+        )
+
+)
+
+[2022-01-19 16:56:30]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [11] => 3
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 18:04:52]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [12] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 18:04:56]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [13] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 18:05:00]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [14] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 18:05:04]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [15] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 18:05:12]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [16] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-19 18:17:58]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [12] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+

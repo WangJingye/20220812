@@ -1,0 +1,358 @@
+[2022-01-20 11:47:42] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 11:37:42"],["ordered_flag","=","0"]]  
+[2022-01-20 11:47:42] Member.INFO: 没有导购  
+[2022-01-20 11:47:42] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 11:37:42"],["ordered_flag","=","0"]]  
+[2022-01-20 11:47:42] Member.INFO: 没有导购  
+[2022-01-20 11:47:42] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 11:51:37] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 11:41:37"],["ordered_flag","=","0"]]  
+[2022-01-20 11:51:37] Member.INFO: 没有导购  
+[2022-01-20 11:51:37] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 11:41:37"],["ordered_flag","=","0"]]  
+[2022-01-20 11:51:37] Member.INFO: 没有导购  
+[2022-01-20 11:51:37] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 12:30:39] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:20:39"],["ordered_flag","=","0"]]  
+[2022-01-20 12:30:39] Member.INFO: 没有导购  
+[2022-01-20 12:30:39] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:20:39"],["ordered_flag","=","0"]]  
+[2022-01-20 12:30:39] Member.INFO: 没有导购  
+[2022-01-20 12:30:39] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 12:30:46] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:20:46"],["ordered_flag","=","0"]]  
+[2022-01-20 12:30:46] Member.INFO: 没有导购  
+[2022-01-20 12:30:46] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:20:46"],["ordered_flag","=","0"]]  
+[2022-01-20 12:30:46] Member.INFO: 没有导购  
+[2022-01-20 12:30:46] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 12:31:59] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:21:59"],["ordered_flag","=","0"]]  
+[2022-01-20 12:31:59] Member.INFO: 没有导购  
+[2022-01-20 12:31:59] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:21:59"],["ordered_flag","=","0"]]  
+[2022-01-20 12:31:59] Member.INFO: 没有导购  
+[2022-01-20 12:31:59] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 12:33:22] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:23:22"],["ordered_flag","=","0"]]  
+[2022-01-20 12:33:22] Member.INFO: 没有导购  
+[2022-01-20 12:33:22] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:23:22"],["ordered_flag","=","0"]]  
+[2022-01-20 12:33:22] Member.INFO: 没有导购  
+[2022-01-20 12:33:22] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 12:33:56] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:23:56"],["ordered_flag","=","0"]]  
+[2022-01-20 12:33:56] Member.INFO: 没有导购  
+[2022-01-20 12:33:56] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:23:56"],["ordered_flag","=","0"]]  
+[2022-01-20 12:33:56] Member.INFO: 没有导购  
+[2022-01-20 12:33:56] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 12:34:28] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:24:28"],["ordered_flag","=","0"]]  
+[2022-01-20 12:34:28] Member.INFO: 没有导购  
+[2022-01-20 12:34:28] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 12:24:28"],["ordered_flag","=","0"]]  
+[2022-01-20 12:34:28] Member.INFO: 没有导购  
+[2022-01-20 12:34:28] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:01:07] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:51:07"],["ordered_flag","=","0"]]  
+[2022-01-20 14:01:07] Member.INFO: 没有导购  
+[2022-01-20 14:01:07] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:51:07"],["ordered_flag","=","0"]]  
+[2022-01-20 14:01:07] Member.INFO: 没有导购  
+[2022-01-20 14:01:07] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:01:41] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:51:41"],["ordered_flag","=","0"]]  
+[2022-01-20 14:01:41] Member.INFO: 没有导购  
+[2022-01-20 14:01:41] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:51:41"],["ordered_flag","=","0"]]  
+[2022-01-20 14:01:41] Member.INFO: 没有导购  
+[2022-01-20 14:01:41] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:04:26] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:54:26"],["ordered_flag","=","0"]]  
+[2022-01-20 14:04:26] Member.INFO: 没有导购  
+[2022-01-20 14:04:26] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:54:26"],["ordered_flag","=","0"]]  
+[2022-01-20 14:04:26] Member.INFO: 没有导购  
+[2022-01-20 14:04:26] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:06:42] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:56:42"],["ordered_flag","=","0"]]  
+[2022-01-20 14:06:42] Member.INFO: 没有导购  
+[2022-01-20 14:06:42] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:56:42"],["ordered_flag","=","0"]]  
+[2022-01-20 14:06:42] Member.INFO: 没有导购  
+[2022-01-20 14:06:42] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:07:30] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:57:30"],["ordered_flag","=","0"]]  
+[2022-01-20 14:07:30] Member.INFO: 没有导购  
+[2022-01-20 14:07:30] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:57:30"],["ordered_flag","=","0"]]  
+[2022-01-20 14:07:30] Member.INFO: 没有导购  
+[2022-01-20 14:07:30] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:08:32] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:58:32"],["ordered_flag","=","0"]]  
+[2022-01-20 14:08:32] Member.INFO: 没有导购  
+[2022-01-20 14:08:32] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 13:58:32"],["ordered_flag","=","0"]]  
+[2022-01-20 14:08:32] Member.INFO: 没有导购  
+[2022-01-20 14:08:32] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:23:39] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:13:39"],["ordered_flag","=","0"]]  
+[2022-01-20 14:23:39] Member.INFO: 没有导购  
+[2022-01-20 14:23:39] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:13:39"],["ordered_flag","=","0"]]  
+[2022-01-20 14:23:39] Member.INFO: 没有导购  
+[2022-01-20 14:23:39] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:23:50] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:13:50"],["ordered_flag","=","0"]]  
+[2022-01-20 14:23:50] Member.INFO: 没有导购  
+[2022-01-20 14:23:50] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:13:50"],["ordered_flag","=","0"]]  
+[2022-01-20 14:23:50] Member.INFO: 没有导购  
+[2022-01-20 14:23:50] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:23:52] Member.INFO: response {"code":0,"response":"优惠券不存在"} 
+[2022-01-20 14:24:41] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:14:41"],["ordered_flag","=","0"]]  
+[2022-01-20 14:24:41] Member.INFO: 没有导购  
+[2022-01-20 14:24:41] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:14:41"],["ordered_flag","=","0"]]  
+[2022-01-20 14:24:41] Member.INFO: 没有导购  
+[2022-01-20 14:24:41] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:26:02] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:16:02"],["ordered_flag","=","0"]]  
+[2022-01-20 14:26:02] Member.INFO: 没有导购  
+[2022-01-20 14:26:02] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:16:02"],["ordered_flag","=","0"]]  
+[2022-01-20 14:26:02] Member.INFO: 没有导购  
+[2022-01-20 14:26:02] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 
+[2022-01-20 14:26:40] Member.INFO: response {"code":0,"response":"优惠券不存在"} 
+[2022-01-20 14:35:36] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponUse() from context 'App\Dlc\Coupon\Controllers\Api\CouponController' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponUse() from context 'App\\Dlc\\Coupon\\Controllers\\Api\\CouponController' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php:54)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponUse(Object(Illuminate\\Http\\Request))
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponUse', Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponUse')
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2022-01-20 14:35:51] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponUse() from context 'App\Dlc\Coupon\Controllers\Api\CouponController' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponUse() from context 'App\\Dlc\\Coupon\\Controllers\\Api\\CouponController' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php:54)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponUse(Object(Illuminate\\Http\\Request))
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponUse', Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponUse')
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2022-01-20 14:36:01] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponUse() from context 'App\Dlc\Coupon\Controllers\Api\CouponController' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponUse() from context 'App\\Dlc\\Coupon\\Controllers\\Api\\CouponController' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php:54)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponUse(Object(Illuminate\\Http\\Request))
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponUse', Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponUse')
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2022-01-20 14:36:11] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponUse() from context 'App\Dlc\Coupon\Controllers\Api\CouponController' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponUse() from context 'App\\Dlc\\Coupon\\Controllers\\Api\\CouponController' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php:54)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponUse(Object(Illuminate\\Http\\Request))
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponUse', Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponUse')
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2022-01-20 14:37:12] Member.ERROR: Call to private method App\Dlc\Coupon\Service\CouponService::couponUse() from context 'App\Dlc\Coupon\Controllers\Api\CouponController' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to private method App\\Dlc\\Coupon\\Service\\CouponService::couponUse() from context 'App\\Dlc\\Coupon\\Controllers\\Api\\CouponController' at D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Dlc\\Coupon\\Controllers\\Api\\CouponController.php:54)
+[stacktrace]
+#0 [internal function]: App\\Dlc\\Coupon\\Controllers\\Api\\CouponController->couponUse(Object(Illuminate\\Http\\Request))
+#1 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#2 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('couponUse', Array)
+#3 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Dlc\\Coupon\\Controllers\\Api\\CouponController), 'couponUse')
+#4 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#5 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(658): Illuminate\\Routing\\Route->run()
+#6 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 600000, '1')
+#12 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(660): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(601): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(590): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(65): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\MemberApiLog.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\MemberApiLog->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 D:\\phpstudy_pro\\WWW\\el-api\\member\\app\\Http\\Middleware\\CorsMiddleware.php(36): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): App\\Http\\Middleware\\CorsMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 D:\\phpstudy_pro\\WWW\\el-api\\member\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 D:\\phpstudy_pro\\WWW\\el-api\\member\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2022-01-20 14:38:11] Member.INFO: ShareController {"RequestUri":"http://el.member.local/share/notify","RequestData":{"type":"2","userId":"omBzf4qwFLjOOl7tYsXuis_0-uok","orderId":"21"}} 
+[2022-01-20 15:02:56] Member.INFO: processGuid where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:52:56"],["ordered_flag","=","0"]]  
+[2022-01-20 15:02:56] Member.INFO: 没有导购  
+[2022-01-20 15:02:56] Member.INFO: MemberGuide where[["user_id","=","1058230"],["created_at",">","2022-01-20 14:52:56"],["ordered_flag","=","0"]]  
+[2022-01-20 15:02:56] Member.INFO: 没有导购  
+[2022-01-20 15:02:56] Member.INFO: 获取导购信息 [{"member_code":0,"store_code":0,"guide_code":0}] 

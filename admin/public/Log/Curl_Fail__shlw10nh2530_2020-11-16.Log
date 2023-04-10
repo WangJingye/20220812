@@ -1,0 +1,1 @@
+{"Request_body":[{"start_time":null,"end_time":null,"type":"product_coupon"}],"Request_Time":"2020-11-16 16:12:47","Request_IP":false,"Method":"http:\/\/promotion.sisley.org\/\/promotion\/cart\/getCrossRules","URL":"GET","HostName":"shlw10nh2530","Headers":"","HTTP code":500,"Response_Time":"2020-11-16 16:12:48","Response_UUID":"d2f02a04-4a4b-9eb2-9f38-d9745ec75fa4"}

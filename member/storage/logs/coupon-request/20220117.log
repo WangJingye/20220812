@@ -1,0 +1,926 @@
+[2022-01-17 16:15:29]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 0
+            [message] => 促销不存在
+        )
+
+)
+
+[2022-01-17 16:18:11]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => 
+        )
+
+)
+
+[2022-01-17 16:18:45]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [query] => Array
+                (
+                    [id] => 10
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => 10
+        )
+
+)
+
+[2022-01-17 16:19:18]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => 10
+        )
+
+)
+
+[2022-01-17 16:19:28]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:31:07]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:32:27]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:46:13]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:47:19]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:48:02]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:48:22]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:48:43]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 1
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 16:55:04]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 18:09:53]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-10 15:48:00
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 0
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 18:09:53]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [10] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                )
+
+        )
+
+)
+
+[2022-01-17 18:10:35]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-17 18:09:53
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 1
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 18:11:14]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/getDetail
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [id] => 10
+        )
+
+    [responseCode] => 200
+    [responseData] => Array
+        (
+            [code] => 1
+            [message] => 成功
+            [data] => Array
+                (
+                    [id] => 10
+                    [name] => 海泥唤肤洁面皂满300减30元
+                    [display_name] => 
+                    [type] => coupon
+                    [start_time] => 2021-11-01 00:00:00
+                    [end_time] => 2022-12-31 00:00:00
+                    [priority] => 1
+                    [status] => 2
+                    [created_at] => 2022-01-10 15:21:45
+                    [updated_at] => 2022-01-17 18:09:53
+                    [exclude_sku] => 
+                    [add_sku] => 1
+                    [cids] => 
+                    [addrules] => 
+                    [total_amount] => 300
+                    [total_discount] => 30
+                    [product_discount] => 
+                    [nn_n] => 
+                    [nn_discount] => 
+                    [step_amount] => 
+                    [step_discount] => 
+                    [gift_id] => 
+                    [gift_amount] => 
+                    [gift_n] => 
+                    [coupon_stock] => 100
+                    [coupon_stock_used] => 1
+                    [coupon_description] => 
+                    [code_length] => 
+                    [code_stock] => 
+                    [code_stock_used] => 0
+                    [code_code] => 
+                    [used_times] => 0
+                    [deleted_at] => 
+                    [member_use_count] => 1
+                    [show_page] => 
+                    [gwp_skus] => 
+                    [ship_fee] => 0
+                    [coupon_type] => 1
+                    [product_coupon_sku] => 
+                    [expire_days] => 100
+                    [product_coupon_pic] => 
+                    [product_coupon_name] => 
+                    [is_step] => 0
+                    [is_whole] => 0
+                    [is_rand] => 0
+                )
+
+        )
+
+)
+
+[2022-01-17 18:11:14]Array
+(
+    [requestUri] => http://promotion.el.org/coupon/inner/couponUsePluck
+    [requestMethod] => POST
+    [requestData] => Array
+        (
+            [ids_pluck] => Array
+                (
+                    [10] => 1
+                )
+
+        )
+
+    [responseCode] => 200
+    [responseData] => 1
+)
+

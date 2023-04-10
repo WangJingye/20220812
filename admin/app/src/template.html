@@ -1,0 +1,9 @@
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <% if (chunk=="vendor" || chunk=="main") { %>
+<script type="text/javascript" src="/js/<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %>
+<% } %>
+
+
+
+

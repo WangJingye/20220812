@@ -1,0 +1,14 @@
+#goods
+*/5 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheAllCats  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/5 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheAllProduct  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/5 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheCatProductIdList  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/5 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheAllSkuSpuMap  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/5 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheAllLocAds  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/5 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheProductSort  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/15 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheAllBlackList  >> /var/www/html/el-api/goods/products.log 2>&1 &
+*/15 * * * * /usr/bin/php /var/www/html/el-api/goods/artisan  product:shell cacheAllSynonym  >> /var/www/html/el-api/goods/products.log 2>&1 &
+#oms
+*/1 * * * * /usr/bin/php /var/www/html/el-api/oms/artisan run:overtimeOrder >> /var/www/html/el-api/oms/storage/logs/overtime_order.log 2>&1 &
+0 */1 * * * /usr/bin/php /var/www/html/el-api/oms/artisan order:shell orderend >> /var/www/html/el-api/oms/order_shell.log 2>&1 &
+#promotions
+0 0 * * * /usr/bin/php /var/www/html/el-api/promotion/artisan promotion:shell cacheshipfee >> /var/www/html/el-api/promotion/promotion.log 2>&1 &

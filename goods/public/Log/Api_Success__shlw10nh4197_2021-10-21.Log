@@ -1,0 +1,1 @@
+{"Request_Body":{"action":"product"},"HTTP code":"200","Method":"POST","Url":"http:\/\/el.goods.local\/goods\/cache\/clear","Request_Time":"2021-10-21 18:33:11","Request_IP":false,"Response_Time":"2021-10-21 18:33:22","Response_Body":["{\"code\":1,\"message\":\"OK\"}"]}

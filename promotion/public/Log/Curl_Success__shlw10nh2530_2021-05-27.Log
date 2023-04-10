@@ -1,0 +1,1 @@
+{"Request_body":[{"sku_ids":"1"}],"Request_Time":"2021-05-27 13:05:17","Request_IP":false,"Method":"Get","URL":"http:\/\/goods.el.org\/outward\/product\/getProductInfoBySkuIds","HostName":"shlw10nh2530","Headers":"","HTTP code":200,"Response":{"code":1,"message":"ok","data":[]},"Response_Time":"2021-05-27 13:05:18"}
