@@ -193,13 +193,4 @@ class UserController extends ApiController
             return $this->error($e->getMessage(), []);
         }
     }
-    public function removeAccount(Request $request)
-    {
-        try {
-            Users::query()->where('phone','=','18310169947')->delete();
-            return $this->success();
-        } catch (\Exception $e) {
-            return $this->error($e->getMessage(), []);
-        }
-    }
 }
