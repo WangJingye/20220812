@@ -210,6 +210,12 @@ Route::group([
     Route::any('ad/get', 'Goods\CategoryController@getAd');
     //获取明星产品
     Route::any('goods/category/getStarProducts', 'Goods\CategoryController@getStarProducts');
+    Route::any('gold/list', 'Gold\IndexController@list');
+    Route::any('gold/changeStatus', 'Gold\IndexController@changeStatus');
+    Route::any('gold/delete', 'Gold\IndexController@delete');
+    Route::any('gold/add', 'Gold\IndexController@add');
+    Route::any('gold/detail', 'Gold\IndexController@detail');
+
 });
 
 
@@ -238,4 +244,7 @@ Route::group([
     //缓存刷新
     Route::any('goods/cache/clear', 'Goods\CacheController@clear');
     Route::any('inner/addSalesVolume', 'Goods\ProductController@addSalesVolume');
+    Route::any('gold/getList', 'Gold\IndexController@getList');
+    Route::any('gold/guide', 'Gold\IndexController@goldGuide');
+
 });

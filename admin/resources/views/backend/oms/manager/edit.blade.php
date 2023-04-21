@@ -42,6 +42,8 @@
                                                     @if($order['payment_type'] ==4) 花呗支付 @endif
                                                     @if($order['payment_type'] ==5) 货到付款 @endif
                                                     @if($order['payment_type'] ==6) 小程序支付 @endif
+                                                    @if($order['payment_type'] ==10) 储值卡支付 @endif
+                                                    @if($order['payment_type'] ==11) 组合支付 @endif
 
                                                 </td>
                                                 <td>下单时间：{{$order['created_at']}}</td>
@@ -339,52 +341,24 @@
                                             <colgroup>
                                                 <col width="100%">
                                             </colgroup>
+                                            <?php $invoice = $order['is_invoice'] == 2 && $order['invoice'] ? json_decode($order['invoice'], true) : []?>
                                             <tbody>
                                             <tr>
-                                                <td>开票类型：
-                                                    <div class="layui-input-inline">
-                                                        <select name="order_invoice[type]" lay-verify="required">
-                                                            <option value="person"
-                                                                    @if( @$order['order_invoice']['type']=='person') selected @endif>
-                                                                个人
-                                                            </option>
-                                                            <option value="company"
-                                                                    @if( @$order['order_invoice']['type']=='company') selected @endif>
-                                                                公司
-                                                            </option>
-                                                            <option value=""
-                                                                    @if(!@$order['order_invoice']['type']) selected @endif></option>
-                                                        </select>
-                                                    </div>
-
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>抬头：
-                                                    <input class="layui-input" style="width:250px;display: inline"
-                                                           type="text" name="order_invoice[title]"
-                                                           value="{{@$order['order_invoice']['title']}}">
-                                                </td>
+                                                <td><strong>开票类型：</strong></td>
+                                                <td><?=isset($invoice['type']) ? ($invoice['type'] == 1 ? '个人' : '企业') : ''?></td>
                                             </tr>
                                             <tr>
-                                                <td>纳税人识别号：
-                                                    <input class="layui-input" style="width:250px;display: inline"
-                                                           type="text" name="order_invoice[number]"
-                                                           value="{{@$order['order_invoice']['number']}}">
-                                                </td>
+                                                <td><strong>抬头：</strong></td>
+                                                <td><?=$invoice['title'] ?? ''?></td>
                                             </tr>
                                             <tr>
-                                                <td>邮箱：
-                                                    <input class="layui-input" style="width:250px;display: inline"
-                                                           type="text" name="order_invoice[email]"
-                                                           value="{{@$order['order_invoice']['email']}}">
-                                                </td>
+                                                <td><strong>纳税人识别号：</strong></td>
+                                                <td><?=$invoice['code'] ?? ''?></td>
                                             </tr>
                                             <tr>
-                                                <td>预开票金额：{{@$order['order_invoice']['total_free']}}</td>
+                                                <td><strong>邮箱：</strong></td>
+                                                <td><?=$invoice['email'] ?? ''?></td>
                                             </tr>
-
                                             </tbody>
                                         </table>
                                     </div>

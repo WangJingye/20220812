@@ -170,6 +170,32 @@ class   Menus
             ],
             [
                 'name' => 'admin-goods',
+                'display_name' => '储值卡管理',
+                'route' => '',
+                'permission' => 'gold.index',
+                'child' => [
+                    [
+                        'name' => 'admin-gold-index',
+                        'display_name' => '储值卡列表',
+                        'route' => 'backend.gold.index',
+                        'permission' => 'goods.gold.index',
+                    ],
+                    [
+                        'name' => 'admin-gold-balanceLog',
+                        'display_name' => '用户储值余额记录',
+                        'route' => 'backend.gold.userBalanceLog',
+                        'permission' => 'goods.gold.userBalanceLog',
+                    ],
+                    [
+                        'name' => 'admin-gold-userBalance',
+                        'display_name' => '用户储值卡列表',
+                        'route' => 'backend.gold.userBalanceList',
+                        'permission' => 'goods.gold.userBalanceList',
+                    ],
+                ],
+            ],
+            [
+                'name' => 'admin-goods',
                 'display_name' => '广告管理',
                 'route' => '',
                 'permission' => 'ad.index',
@@ -244,7 +270,7 @@ class   Menus
 //                        'route' => 'backend.fission',
 //                        'permission' => 'member.index',
 //                    ],
-            
+
                 ],
             ],
 

@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
         Commands\MemberShell::class,
         Commands\TestShell::class,
         Commands\RunShell::class,
+        Commands\UserBalanceShell::class,
     ];
 
     /**

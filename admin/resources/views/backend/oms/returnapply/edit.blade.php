@@ -48,10 +48,13 @@
                                                     @if($order['payment_type'] ==4) 花呗 @endif
                                                     @if($order['payment_type'] ==5) 货到付款 @endif
                                                     @if($order['payment_type'] ==6) 小程序支付 @endif
+                                                    @if($order['payment_type'] ==10) 储值卡支付 @endif
+                                                    @if($order['payment_type'] ==11) 组合支付 @endif
 
 
                                                 </td>
-                                                @if($order['order_type'] ==2)  <td>付邮试用</td> @endif
+                                                @if($order['order_type'] ==2)
+                                                    <td>付邮试用</td> @endif
                                                 <td>下单时间：{{$order['created_at']}}</td>
                                                 <td>
                                                     @if($order['channel'] !=0)
@@ -63,7 +66,8 @@
                                                         @endif
 
                                                         @if($order['after_sale_id']==0 && $order['order_status']>5 &&$order['order_status']!=7)
-                                                            <span style="display: none" order_id="{{$order['id']}}" class="afterSell layui-btn layui-btn-normal layui-btn-md">发起售后</span>
+                                                            <span style="display: none" order_id="{{$order['id']}}"
+                                                                  class="afterSell layui-btn layui-btn-normal layui-btn-md">发起售后</span>
                                                         @endif
                                                     @else
                                                         <span>订单类型：历史订单</span>
@@ -368,9 +372,10 @@
 
 
                                             <tr>
-                                                <td style="display:none">备注 ：<textarea style="display:inline" placeholder="请输入备注信息"
-                                                                  class="layui-textarea layui-input"
-                                                                  name="remark">{{$order['remark']}}</textarea>
+                                                <td style="display:none">备注 ：<textarea style="display:inline"
+                                                                                       placeholder="请输入备注信息"
+                                                                                       class="layui-textarea layui-input"
+                                                                                       name="remark">{{$order['remark']}}</textarea>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -412,22 +417,23 @@
                                     <form id="update_form" class="layui-form" action="">
                                         <table class="layui-table" lay-skin="line" lay-size="">
                                             <caption>发票信息:</caption>
+                                            <?php $invoice = $order['is_invoice'] == 2 && $order['invoice'] ? json_decode($order['invoice'], true) : []?>
                                             <tbody>
                                             <tr>
                                                 <td><strong>开票类型：</strong></td>
-                                                <td>{{@$order['order_invoice']['type']}}</td>
+                                                <td><?=isset($invoice['type']) ? ($invoice['type'] == 1 ? '个人' : '企业') : ''?></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>抬头：</strong></td>
-                                                <td>{{@$order['order_invoice']['title']}}</td>
+                                                <td><?=$invoice['title'] ?? ''?></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>纳税人识别号：</strong></td>
-                                                <td>{{@$order['order_invoice']['number']}}</td>
+                                                <td><?=$invoice['code'] ?? ''?></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>邮箱：</strong></td>
-                                                <td>{{@$order['order_invoice']['email']}}</td>
+                                                <td><?=$invoice['email'] ?? ''?></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -462,8 +468,8 @@
             //自定义验证规则
             form.render();
             form.verify({
-                number_code: function(value,item){ //value：表单的值、item：表单的DOM对象
-                    if(!(/^[a-zA-Z0-9]{10,20}$/.test(value))){
+                number_code: function (value, item) { //value：表单的值、item：表单的DOM对象
+                    if (!(/^[a-zA-Z0-9]{10,20}$/.test(value))) {
                         return '税号必须是字母或数字格式';
                     }
                 }

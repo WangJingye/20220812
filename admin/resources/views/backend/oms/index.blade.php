@@ -91,20 +91,6 @@
 
 
         </div>
-
-{{--        <div class="layui-form-item">--}}
-{{--            <div class="layui-inline" style="position: relative">--}}
-{{--                <div class="layui-input-inline">--}}
-{{--                    <input class="layui-input" id="coupon_id" name="coupon_id" autocomplete="off"--}}
-{{--                           placeholder="输入优惠券id" value="{{request('coupon_id')}}">--}}
-{{--                </div>--}}
-
-{{--                <div class="layui-input-inline">--}}
-{{--                    <input style="display: inline-block;" class="layui-input " id="coupon_code" name="coupon_code"--}}
-{{--                           autocomplete="off" placeholder="输入优惠券码" value="{{request('coupon_code')}}">--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
         <div class="layui-form-item">
             <div class="layui-inline" style="position: relative">
                 <label class="layui-form-label">下单时间</label>
@@ -125,9 +111,26 @@
                 <label class="layui-form-label">订单类型</label>
                 <div class="layui-input-inline">
                     <select name="order_type">
-                        <option value="0">无</option>
+                        <option value="">无</option>
                         <option value="1" @if(request('order_type')==1)) selected @endif>普通</option>
                         <option value="2" @if(request('order_type')==2)) selected @endif>付邮试用</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">支付类型</label>
+                <div class="layui-input-inline">
+                    <select name="order_payment_type">
+                        <option value="">无</option>
+                        <?php $payTypes = [
+                            1 => '支付宝', 2 => '微信', 3 => '银联',
+                            4 => '花呗', 5 => '货到付款', 10 => '储值卡', 11 => '组合支付'
+                        ];
+                        foreach ($payTypes as $k=>$v):?>
+                        <option value="<?=$k?>" <?= request('order_payment_type') == $k ? 'selected' : ''?>><?=$v?></option>
+                        <?php endforeach;?>
                     </select>
                 </div>
             </div>
@@ -147,13 +150,15 @@
             <div class="layui-inline">
                 <button class="layui-btn layui-btn-normal" lay-submit="search">搜索</button>
                 <button id="formSubmit" class="layui-btn" lay-submit lay-filter="formSubmit">导出订单</button>
-                <span class="layui-inline layui-btn" id="export_warehouse_order">导出仓库发货单</span>
+                <button class="layui-btn" id="export_warehouse_order">导出仓库发货单</button>
+                <button class="layui-btn" id="export_finance_order">导出财务报表</button>
             </div>
         </div>
         <div class="layui-form-item">
             <div class="layui-inline">
-                <a class="layui-btn uploadExcel" href="javascript:;" lay-data="{url: '{{route('backend.config.data.import',['action'=>'ship'])}}', accept: 'file'}">导入发货单</a>
-                <a style="margin-left:10px" class="layui-btn" href="{{url('static/demo/importship.xlsx')}}" >下载发货单模板</a>
+                <a class="layui-btn uploadExcel" href="javascript:;"
+                   lay-data="{url: '{{route('backend.config.data.import',['action'=>'ship'])}}', accept: 'file'}">导入发货单</a>
+                <a style="margin-left:10px" class="layui-btn" href="{{url('static/demo/importship.xlsx')}}">下载发货单模板</a>
             </div>
         </div>
     </form>
@@ -232,6 +237,8 @@
                             @if($order['payment_type'] ==4) 花呗支付 @endif
                             @if($order['payment_type'] ==5) 货到付款 @endif
                             @if($order['payment_type'] ==6) 小程序支付 @endif
+                            @if($order['payment_type'] ==10) 储值卡支付 @endif
+                            @if($order['payment_type'] ==11) 组合支付 @endif
                             @if($order['order_type'] ==2) 付邮试用 @endif
                         </span>
                         <span class="state_name" style="margin-right:30px;">
@@ -240,9 +247,14 @@
 
                         <span class="order_status" data-info="{{json_encode($order)}}">
                             <a class="layui-btn layui-btn-normal layui-btn-md" href="edit?id={{$order['id']}}">订单详情</a>
+                           <?php if($order['is_invoice'] == 1):?>
+                            <a class="layui-btn layui-btn-normal layui-btn-md invoice-btn">开票</a>
+                            <?php endif;?>
                         </span>
                         @if($order['is_exception']==1)
-                            <button class="layui-btn layui-btn-warm re-sync" lay-data="{{route('backend.oms.order.omsSync',['orderId'=>$order['id']])}}">重新同步</button>
+                            <button class="layui-btn layui-btn-warm re-sync"
+                                    lay-data="{{route('backend.oms.order.omsSync',['orderId'=>$order['id']])}}">重新同步
+                            </button>
                             <span style="color:red">异常信息：{{$order['exception_msg']?:'未知异常'}}</span>
                         @endif
                         @if($order['total_amount']>0 && $order['total_product_price']>0 && $order['channel'] !=0)
@@ -351,8 +363,49 @@
         </table>
         <div id="page"></div>
     </div>
+    <div style="display: none">
+        <div class="invoice-info-hidden">
+            <form onsubmit="return false;" style="margin-top: 20px">
+                <input name="id" type="hidden">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">开票类型</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input type" readonly value="">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">抬头</label>
+                    <div class="layui-input-block">
+                        <input readonly class="layui-input title" type="text">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">纳税人识别号</label>
+                    <div class="layui-input-block">
+                        <input readonly class="layui-input code" type="text">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">邮箱</label>
+                    <div class="layui-input-block">
+                        <input readonly class="layui-input email" type="text">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">预开票金额</label>
+                    <div class="layui-input-block">
+                        <input readonly class="layui-input pay_amount" type="text">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"></label>
+                    <button class="layui-btn layui-btn-normal confirm-invoice">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script type="text/javascript">
-        layui.use(['layer', 'form', 'table', 'laydate','upload'], function () {
+        layui.use(['layer', 'form', 'table', 'laydate', 'upload'], function () {
             var layer = layui.layer
                 , form = layui.form, table = layui.table;
             var laydate = layui.laydate;
@@ -380,7 +433,7 @@
                             layer.msg(res.message);
                         } else {
                             layer.msg(res.message, {
-                                time: 3000, end:function() {
+                                time: 3000, end: function () {
                                     location.reload(); //删除成功后再刷新
                                 }
                             });
@@ -409,7 +462,7 @@
 
                             layer.msg('操作成功', {
                                 time: 3000,
-                                end:function () {
+                                end: function () {
                                     location.reload(); //删除成功后再刷新
                                 }
                             });
@@ -439,11 +492,10 @@
                         } else {
                             layer.msg('操作成功', {
                                 time: 3000,
-                                end:function () {
+                                end: function () {
                                     location.reload(); //删除成功后再刷新
                                 }
                             });
-
 
 
                         }
@@ -528,7 +580,7 @@
                                     if (data.code == 1) {
                                         layer.msg('操作成功', {
                                             time: 3000,
-                                            end:function() {
+                                            end: function () {
                                                 location.reload(); //删除成功后再刷新
                                             }
                                         });
@@ -564,7 +616,7 @@
                 return false;
             });
 
-            lay(".re-sync").on('click', function(e){
+            lay(".re-sync").on('click', function (e) {
                 let url = $(this).attr('lay-data');
                 console.log(url);
                 var loading = layer.load(1, {shade: [0.3]});
@@ -588,16 +640,16 @@
             var loading;
             upload.render({
                 elem: '.uploadExcel'
-                ,before: function(){
+                , before: function () {
                     // layer.tips('接口地址：'+ this.url, this.item, {tips: 1});
                     loading = layer.load(1, {shade: [0.3]});
                 }
-                ,done: function(res, index, upload){
+                , done: function (res, index, upload) {
                     if (res.code === 1) {
                         layer.msg('操作成功', {
                             icon: 1,
                             shade: 0.3,
-                        }, function(){
+                        }, function () {
                             layer.close(loading);
                             location.reload()
                         });
@@ -605,7 +657,7 @@
                         layer.msg(res.message, {
                             icon: 2,
                             time: 2000
-                        }, function(){
+                        }, function () {
                             layer.close(loading);
                             location.reload()
                         });
@@ -614,7 +666,7 @@
                 }
             })
             $("#export_warehouse_order").on('click', function () {
-                $.post("{{ route('backend.oms.order.export',['type'=>'warehouse']) }}",[], function (res) {
+                $.post("{{ route('backend.oms.order.export',['type'=>'warehouse']) }}", [], function (res) {
                     if (res.code != 1) {
                         return false;
                     }
@@ -623,6 +675,56 @@
                     table.exportFile(columns, value, 'xls'); //默认导出 csv，也可以为：xls
                 }, 'json');
                 return false;
+            });
+            $("#export_finance_order").on('click', function () {
+                $.post("{{ route('backend.oms.order.export',['type'=>'finance']) }}", $('#search-form').serialize(), function (res) {
+                    if (res.code != 1) {
+                        return false;
+                    }
+                    var value = res.data.value;
+                    var columns = res.data.columns;
+                    table.exportFile(columns, value, '财务报表.xls'); //默认导出 csv，也可以为：xls
+                }, 'json');
+                return false;
+            });
+            let invoiceBtn = null;
+            $('.invoice-btn').click(function () {
+                invoiceBtn = $(this);
+                let data = invoiceBtn.parent().data('info');
+                let dom = $('.invoice-info-hidden').clone();
+                dom.find('form').addClass('invoice-info-form');
+                layer.open({
+                    type: 1,
+                    content: dom.html(),
+                    title: '开票信息',
+                    area: ['80%', '100%'],
+                    offset: 't',
+                    fixed: true,
+                    end: function () {
+                        table.reload('table_list')
+                    }
+                });
+                let form = $('.invoice-info-form');
+                let invoice = JSON.parse(data.invoice);
+                form.find('.code').val(invoice['code']);
+                form.find('.title').val(invoice['title']);
+                form.find('.email').val(invoice['email']);
+                form.find('.type').val(invoice['type'] == 1 ? '个人' : '企业');
+                form.find('.pay_amount').val(data.pay_amount);
+                form.find('[name=id]').val(data.id);
+            });
+            $('body').on('click', '.confirm-invoice', function () {
+                let args = $('.invoice-info-form').serialize();
+                $.post("{{ route('backend.oms.order.invoice') }}", args, function (res) {
+                    layer.msg(res.message);
+                    if (res.code == 1) {
+                        if (invoiceBtn != null) {
+                            invoiceBtn.remove();
+                            invoiceBtn = null;
+                        }
+                        $('.invoice-info-form').parents('.layui-layer-page').find('.layui-layer-close').click()
+                    }
+                });
             });
         });
     </script>

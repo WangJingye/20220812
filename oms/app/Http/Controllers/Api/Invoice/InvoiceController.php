@@ -44,7 +44,7 @@ class InvoiceController extends Controller
                 //更新开票信息
                 OmsInvoice::updateOrCreate(
                     ['order_sn' => $orderSn],
-                    ['order_sn' => $orderSn, 'pos_id' => $orderRow['pos_id'], 'total_free' => $orderRow['total_amount'], 'title' => $invoiceInfo['title'], 'type' => empty($invoiceInfo['number']) ? 'person' : 'company', 'email' => $invoiceInfo['email'], 'phone' => $invoiceInfo['phone'], 'number' => $invoiceInfo['number']]
+                    ['order_sn' => $orderSn, 'pos_id' => $orderRow['pos_id'], 'total_free' => $orderRow['pay_amount'], 'title' => $invoiceInfo['title'], 'type' => empty($invoiceInfo['number']) ? 'person' : 'company', 'email' => $invoiceInfo['email'], 'phone' => $invoiceInfo['phone'], 'number' => $invoiceInfo['number']]
                 );
                 Order::where('id', $orderRow['id'])->update(['has_invoice' => 3, 'invoice_path' => $invoiceInfo['invoicePath'], 'invoice_download_url' => $invoiceInfo['invoiceDownloadUrl']]);
                 DB::commit();
@@ -125,7 +125,7 @@ class InvoiceController extends Controller
             Order::where('id', $orderRow['id'])->update(['has_invoice' => 3, 'invoice_path' => $invoiceInfo['invoicePath'], 'invoice_download_url' => $invoiceInfo['invoiceDownloadUrl']]);
             OmsInvoice::updateOrCreate(
                 ['order_sn' => $orderSn],
-                ['order_sn' => $orderSn, 'pos_id' => $orderRow['pos_id'], 'total_free' => $orderRow['total_amount'], 'title' => $invoiceInfo['title'], 'type' => empty($invoiceInfo['number']) ? 'person' : 'company', 'email' => $invoiceInfo['email'], 'phone' => $invoiceInfo['phone'], 'number' => $invoiceInfo['number']]
+                ['order_sn' => $orderSn, 'pos_id' => $orderRow['pos_id'], 'total_free' => $orderRow['pay_amount'], 'title' => $invoiceInfo['title'], 'type' => empty($invoiceInfo['number']) ? 'person' : 'company', 'email' => $invoiceInfo['email'], 'phone' => $invoiceInfo['phone'], 'number' => $invoiceInfo['number']]
             );
             DB::commit();
             return $this->success('success', ['invoice_url' => $orderRow['invoice_url'] ?: '', 'invoice_path' => $invoiceInfo['invoicePath'] ?: '']);

@@ -35,6 +35,8 @@ return [
         'share/notify' => MEMBER.'share/notify',
         'couponBack'=> MEMBER.'coupon/inner/couponBack',
         'couponUse'=> MEMBER.'coupon/inner/couponUse',
+        'useBalance' => MEMBER . 'user/useBalance',
+        'refundBalance' => MEMBER . 'user/refundBalance',
     ]
 ];
 

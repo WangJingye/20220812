@@ -47,7 +47,7 @@ class AfterOrderSale extends Model
     public function createAfterOrderNo($order_sn)
     {
         //这边我的想法是每天有一串退单号，这样减少退单id的位数
-        $nums = Redis::incr('create_after_order_no'.'ymd');
+        $nums = Redis::incr('create_after_order_no' . 'ymd');
 
         return $order_sn . '-' . $nums;
     }
@@ -230,20 +230,44 @@ class AfterOrderSale extends Model
             if (!$order['pay_order_sn']) {
                 $order['pay_order_sn'] = $order['order_sn'];
             }
-            $params = [
-                'refund_fee' => bcadd($order['total_amount'], 0, 2),
-                'total_fee' => bcadd($order['total_amount'], 0, 2),
-                'order_sn' => $order['pay_order_sn'],
-                'order_id' => $order['id'],
-                'openid' => $order['open_id'],
-                'type' => $order['payment_type'],
-                'trade_type' => $order['trade_type'],
-                'ori_tran_date' => date('Ymd', strtotime($order['transaction_date']))
-            ];
+            $sources = [2 => 'WeixinPay'];
+            if ($order['payment_type'] == 10) {
+                $sources = [10 => 'GoldPay'];
+            } else if ($order['payment_type'] == 11) {
+                $sources = [2 => 'WeixinPay', 10 => 'GoldPay'];
+            }
+            foreach ($sources as $paymentType => $source) {
+                if ($paymentType == 2) {
+                    $params = [
+                        'order_sn' => $order['pay_order_sn'],
+                        'refund_fee' => bcadd($order['pay_amount'], 0, 2),
+                        'total_fee' => bcadd($order['pay_amount'], 0, 2),
+                        'order_id' => $order['id'],
+                        'openid' => $order['open_id'],
+                        'type' => $paymentType,
+                        'trade_type' => $order['trade_type'],
+                        'ori_tran_date' => date('Ymd', strtotime($order['transaction_date']))
+                    ];
 
-            $success = self::doRefund($params);
-            if (!$success) {
-                return false;
+                    $success = self::doRefund($params);
+                    if (!$success) {
+                        return false;
+                    }
+                } else {
+                    $item = OrderItem::query()->where('order_main_id', $order['id'])->first();
+                    $api = app('ApiRequestInner', ['module' => 'member']);
+                    $params = [
+                        'order_sn' => $order['order_sn'],
+                        'order_title' => $item['name'],
+                        'balance' => $order['gold_amount'],
+                        'user_id' => $order['user_id'],
+                    ];
+                    $info = $api->request('refundBalance', 'POST', $params);
+                    if (isset($info['code']) && $info['code'] == 0) {
+                        return false;
+                    }
+
+                }
             }
 
             if ($order['payment_type'] != 3 && $order['payment_type'] != 5) {

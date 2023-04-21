@@ -35,6 +35,7 @@ return [
 	],
 	'TIME_EXPIRE' => 14400,
 	'NAME'        => 'ErnoLaszlo奥伦纳素官方商城订单',
+	'GOLD_NAME'        => 'ErnoLaszlo奥伦纳素官方商城储值卡订单',
 ];
 
 ?>

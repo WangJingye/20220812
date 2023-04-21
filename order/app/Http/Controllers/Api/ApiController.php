@@ -6,11 +6,12 @@ use App\Support\Token;
 
 class ApiController extends Controller
 {
-    public function success($data=[]){
+    public function success($data = [], $msg = 'OK')
+    {
         return [
-            'code'=>1,
-            'message'=>'OK',
-            'data'=>$data
+            'code' => 1,
+            'message' => $msg,
+            'data' => $data
         ];
     }
 

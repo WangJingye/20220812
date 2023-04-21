@@ -3,7 +3,7 @@
     <div class="layui-col-md12">
         <div class="layui-card">
             <div class="layui-card-body" style="padding: 15px;">
-                <form id="add_form" class="layui-form"  action="">
+                <form id="add_form" class="layui-form" onsubmit="return false;">
                     <div class="layui-form-item">
                         <label class="layui-form-label">退货类型</label>
                         <div class="layui-input-block">
@@ -18,6 +18,8 @@
                             <select name="payment_type" lay-verify="required">
                                 <option value="0" @if( $order['payment_type']==0) selected @endif></option>
                                 <option value="2" @if( $order['payment_type']==2) selected @endif>微信支付</option>
+                                <option value="10" @if( $order['payment_type']==10) selected @endif>储值卡支付</option>
+                                <option value="11" @if( $order['payment_type']==11) selected @endif>组合支付</option>
                             </select>
                         </div>
                     </div>

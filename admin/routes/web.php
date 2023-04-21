@@ -310,7 +310,7 @@ Route::group([
     Route::any('goods/spu/cms', 'Goods\SpuController@cms')->name('backend.goods.spu.cms');
     Route::any('goods/spu/cmssave', 'Goods\SpuController@cmssave')->name('backend.goods.spu.cmssave');
     Route::any('goods/spu/add', 'Goods\SpuController@add')->name('backend.goods.spu.add');
-     Route::any('goods/spu/insert', 'Goods\SpuController@insert')->name('backend.goods.spu.insert');
+    Route::any('goods/spu/insert', 'Goods\SpuController@insert')->name('backend.goods.spu.insert');
 //     Route::get('goods/sku', 'Goods\SkuController@index')->name('backend.goods.sku');
     Route::get('goods/sku', 'Goods\SkuController@index')->name('backend.goods.sku')->middleware('permission:goods.sku.index');
     Route::get('goods/sku/list', 'Goods\SkuController@list')->name('backend.goods.sku.list');
@@ -470,9 +470,9 @@ Route::group([
         Route::post('prodstat/prodTypeViewExport', 'ProdTypeViewStatController@prodTypeViewExport')->name('dsb.prodstat.prodTypeViewExport');
 
 
-        Route::any('prodstat/getConversionRate','ProductStatisticsController@getConversionRate')->name('dsb.prodstat.getconversionRate');
+        Route::any('prodstat/getConversionRate', 'ProductStatisticsController@getConversionRate')->name('dsb.prodstat.getconversionRate');
 
-        Route::any('prodstat/conversionRate','ProductStatisticsController@conversionRate')->name('dsb.prodstat.conversionRate');
+        Route::any('prodstat/conversionRate', 'ProductStatisticsController@conversionRate')->name('dsb.prodstat.conversionRate');
         Route::get('prodstat/efficiency', 'ProductStatisticsController@efficiency')->name('dsb.prodstat.efficiency');
 
 
@@ -509,8 +509,6 @@ Route::group([
         Route::any('guide/dashBoardNeedData', 'GuideController@dashBoardNeedData')->name('backend.store.guide.dashBoardNeedData');
 
 
-
-
     });
     Route::group(['namespace' => 'Oms', 'prefix' => 'oms'], function () {
 
@@ -523,7 +521,8 @@ Route::group([
         Route::any('orderItem/list', 'OrderController@orderItemList')->name('backend.oms.order.item.list');
         Route::any('order/status/update', 'OrderController@updateOrderStatus')->name('backend.oms.order.status.update');
         Route::any('order/free', 'OrderController@orderFree')->name('backend.oms.order.free');
-        Route::post('order/batch/delivery','OrderController@batchDelivery')->name('backend.oms.order.batch.delivery');
+        Route::post('order/batch/delivery', 'OrderController@batchDelivery')->name('backend.oms.order.batch.delivery');
+        Route::post('order/invoice', 'OrderController@invoice')->name('backend.oms.order.invoice');
 
         Route::get('order/add/index', 'OrderAddedController@index')->name('backend.oms.add');
         Route::any('order/add/list', 'OrderAddedController@list')->name('backend.oms.add.list');
@@ -533,14 +532,14 @@ Route::group([
         Route::any('order/insert', 'OrderAddedController@addOrder')->name('backend.oms.add.insert');
 
         //订单同步
-        Route::any('order/omsSync','OrderController@omsSync')->name('backend.oms.order.omsSync');
-        Route::any('order/export/{type}','OrderController@export')->name('backend.oms.order.export');
+        Route::any('order/omsSync', 'OrderController@omsSync')->name('backend.oms.order.omsSync');
+        Route::any('order/export/{type}', 'OrderController@export')->name('backend.oms.order.export');
 
         //退单申请
         Route::get('returnapply/index', 'ReturnapplyController@index')->name('backend.oms.returnapply');
         Route::any('returnapply/list', 'ReturnapplyController@list')->name('backend.oms.returnapply.list');
         Route::get('returnapply/edit', 'ReturnapplyController@edit')->name('backend.oms.returnapply.edit');
-        Route::any('returnapply/returnApplyStatusChange','ReturnapplyController@returnApplyStatusChange')->name('backend.oms.returnapply.returnApplyStatusChange');
+        Route::any('returnapply/returnApplyStatusChange', 'ReturnapplyController@returnApplyStatusChange')->name('backend.oms.returnapply.returnApplyStatusChange');
     });
 
     Route::group(['namespace' => 'Oms', 'prefix' => 'oms'], function () {
@@ -554,52 +553,69 @@ Route::group([
     //会员裂变
     Route::group(['namespace' => 'Member', 'prefix' => 'fission'], function () {
 
-        Route::any('backend/memeber/fission','FissionController@list')->name('backend.fission');
-        Route::any('backend/memeber/fissione/edit','FissionController@edit')->name('backend.fission.edit');
-        Route::any('backend/fissionlist','FissionController@dataList')->name('backend.fission.dataList');
-        Route::any('backend/fissionadd','FissionController@add')->name('backend.fission.add');
-        Route::any('backend/fission/update','FissionController@update')->name('backend.fission.update');
-        Route::any('backend/fission/view','FissionController@view')->name('backend.fission.view');
-        Route::any('backend/fission/log','FissionController@log')->name('backend.fission.log');
-        Route::any('backend/fission/active','FissionController@active')->name('backend.fission.active');
-        Route::any('backend/fission/unactive','FissionController@unactive')->name('backend.fission.unactive');
-        Route::any('backend/fission/detail','FissionController@detail')->name('backend.fission.detail');
+        Route::any('backend/memeber/fission', 'FissionController@list')->name('backend.fission');
+        Route::any('backend/memeber/fissione/edit', 'FissionController@edit')->name('backend.fission.edit');
+        Route::any('backend/fissionlist', 'FissionController@dataList')->name('backend.fission.dataList');
+        Route::any('backend/fissionadd', 'FissionController@add')->name('backend.fission.add');
+        Route::any('backend/fission/update', 'FissionController@update')->name('backend.fission.update');
+        Route::any('backend/fission/view', 'FissionController@view')->name('backend.fission.view');
+        Route::any('backend/fission/log', 'FissionController@log')->name('backend.fission.log');
+        Route::any('backend/fission/active', 'FissionController@active')->name('backend.fission.active');
+        Route::any('backend/fission/unactive', 'FissionController@unactive')->name('backend.fission.unactive');
+        Route::any('backend/fission/detail', 'FissionController@detail')->name('backend.fission.detail');
     });
 
     //付邮
     Route::group(['namespace' => 'Trial', 'prefix' => 'trial'], function () {
-        Route::any('backend/trial/index','TrialController@index')->name('backend.trial.index');
-        Route::any('backend/trial/dataList','TrialController@dataList')->name('backend.trial.dataList');
-        Route::any('backend/trial/add','TrialController@add')->name('backend.trial.add');
-        Route::any('backend/trial/edit','TrialController@edit')->name('backend.trial.edit');
-        Route::any('backend/trial/view','TrialController@view')->name('backend.trial.view');
-        Route::any('backend/trial/update','TrialController@update')->name('backend.trial.update');
-        Route::any('backend/trial/active','TrialController@active')->name('backend.trial.active');
-        Route::any('backend/trial/unactive','TrialController@unactive')->name('backend.trial.unactive');
+        Route::any('backend/trial/index', 'TrialController@index')->name('backend.trial.index');
+        Route::any('backend/trial/dataList', 'TrialController@dataList')->name('backend.trial.dataList');
+        Route::any('backend/trial/add', 'TrialController@add')->name('backend.trial.add');
+        Route::any('backend/trial/edit', 'TrialController@edit')->name('backend.trial.edit');
+        Route::any('backend/trial/view', 'TrialController@view')->name('backend.trial.view');
+        Route::any('backend/trial/update', 'TrialController@update')->name('backend.trial.update');
+        Route::any('backend/trial/active', 'TrialController@active')->name('backend.trial.active');
+        Route::any('backend/trial/unactive', 'TrialController@unactive')->name('backend.trial.unactive');
     });
 
     Route::group(['namespace' => 'Shipfee', 'prefix' => 'shipfee'], function () {
-        Route::any('backend/shipfee/index','ShipfeeController@index')->name('backend.shipfee.index');
-        Route::any('backend/shipfee/dataList','ShipfeeController@dataList')->name('backend.shipfee.dataList');
-        Route::any('backend/shipfee/add','ShipfeeController@add')->name('backend.shipfee.add');
-        Route::any('backend/shipfee/edit','ShipfeeController@edit')->name('backend.shipfee.edit');
-        Route::any('backend/shipfee/view','ShipfeeController@view')->name('backend.shipfee.view');
-        Route::any('backend/shipfee/update','ShipfeeController@update')->name('backend.shipfee.update');
+        Route::any('backend/shipfee/index', 'ShipfeeController@index')->name('backend.shipfee.index');
+        Route::any('backend/shipfee/dataList', 'ShipfeeController@dataList')->name('backend.shipfee.dataList');
+        Route::any('backend/shipfee/add', 'ShipfeeController@add')->name('backend.shipfee.add');
+        Route::any('backend/shipfee/edit', 'ShipfeeController@edit')->name('backend.shipfee.edit');
+        Route::any('backend/shipfee/view', 'ShipfeeController@view')->name('backend.shipfee.view');
+        Route::any('backend/shipfee/update', 'ShipfeeController@update')->name('backend.shipfee.update');
     });
 
     Route::group(['namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
-        Route::any('allData','DashboardController@allData')->name('backend.dashboard.alldata');
-        Route::any('index','DashboardController@index')->name('backend.dashboard.index');
-        Route::any('product','ProductController@getData')->name('backend.dashboard.product');
-        Route::any('miniapp','MiniController@getData')->name('backend.dashboard.miniapp');
-        Route::any('analysis/getOrderReportData','AnalysisController@getOrderReportData')->name('backend.dashboard.analysis.orderReport');
+        Route::any('allData', 'DashboardController@allData')->name('backend.dashboard.alldata');
+        Route::any('index', 'DashboardController@index')->name('backend.dashboard.index');
+        Route::any('product', 'ProductController@getData')->name('backend.dashboard.product');
+        Route::any('miniapp', 'MiniController@getData')->name('backend.dashboard.miniapp');
+        Route::any('analysis/getOrderReportData', 'AnalysisController@getOrderReportData')->name('backend.dashboard.analysis.orderReport');
     });
 
     Route::group(['namespace' => 'Coupon', 'prefix' => 'coupon'], function () {
-        Route::any('couponsend/edit','CouponSendController@edit')->name('backend.coupon.couponsend.edit');
-        Route::any('couponsend/update','CouponSendController@update')->name('backend.coupon.couponsend.update');
+        Route::any('couponsend/edit', 'CouponSendController@edit')->name('backend.coupon.couponsend.edit');
+        Route::any('couponsend/update', 'CouponSendController@update')->name('backend.coupon.couponsend.update');
 
         Route::any('mycoupon/index', 'MyCouponController@index')->name('backend.coupon.mycoupon.index');
         Route::any('mycoupon/list', 'MyCouponController@dataList')->name('backend.coupon.mycoupon.dataList');
     });
+    #储值卡
+    Route::any('gold/index/index', 'Gold\IndexController@index')->name('backend.gold.index');
+    Route::any('gold/index/list', 'Gold\IndexController@list')->name('backend.gold.list');
+    Route::any('gold/index/changeStatus', 'Gold\IndexController@changeStatus')->name('backend.gold.changeStatus');
+    Route::any('gold/index/delete', 'Gold\IndexController@delete')->name('backend.gold.delete');
+    Route::any('gold/index/add', 'Gold\IndexController@add')->name('backend.gold.add');
+    Route::any('gold/index/insert', 'Gold\IndexController@insert')->name('backend.gold.insert');
+    Route::any('gold/order/list', 'Gold\IndexController@order')->name('backend.gold.order');
+    Route::any('gold/order/getOrderList', 'Gold\IndexController@getOrderList')->name('backend.gold.getOrderList');
+    Route::any('gold/index/userBalanceLog', 'Gold\IndexController@userBalanceLog')->name('backend.gold.userBalanceLog');
+    Route::any('gold/index/getUserBalanceLogs', 'Gold\IndexController@getUserBalanceLogs')->name('backend.gold.getUserBalanceLogs');
+    Route::any('gold/index/exportLog', 'Gold\IndexController@exportLog')->name('backend.gold.exportLog');
+    Route::any('gold/index/userBalanceList', 'Gold\IndexController@userBalanceList')->name('backend.gold.userBalanceList');
+    Route::any('gold/index/getUserBalanceList', 'Gold\IndexController@getUserBalanceList')->name('backend.gold.getUserBalanceList');
+    Route::any('gold/index/refund', 'Gold\IndexController@refund')->name('backend.gold.refund');
+    Route::any('gold/index/invoice', 'Gold\IndexController@invoice')->name('backend.gold.invoice');
+
 });

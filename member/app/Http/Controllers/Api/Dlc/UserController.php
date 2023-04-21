@@ -1,9 +1,10 @@
 <?php namespace App\Http\Controllers\Api\Dlc;
 
-use App\Service\Dlc\{UsersService,HelperService};
+use App\Exceptions\ApiPlaintextException;
+use App\Model\Users;
+use App\Service\Dlc\{UsersService};
 use Illuminate\Http\Request;
 use Validator;
-use App\Exceptions\ApiPlaintextException;
 
 class UserController extends ApiController
 {
@@ -12,58 +13,61 @@ class UserController extends ApiController
         try {
             $uid = $this->getUid(1);
             $data = [];
-            if($uid){
+            if ($uid) {
                 $user = UsersService::getUserById($uid);
                 $data = UsersService::getUserCenter($user);
-                if($guide = $user->guide){
+                if ($guide = $user->guide) {
                     $guide_id = $guide->id;
                     $guide_name = $guide->name;
                 }
             }
             //获取用户类型
-            $userType = UsersService::getUserType($user??null);
+            $userType = UsersService::getUserType($user ?? null);
             $data['userType'] = $userType;
+            $data['balance'] = $user['balance'] ?? '0';
             //是否授权用户信息
-            $userAuthor = UsersService::getUserAuthor($user??null);
+            $userAuthor = UsersService::getUserAuthor($user ?? null);
             $data['userAuthor'] = $userAuthor;
             $data['guide'] = [
-                'id'=>$guide_id??'',
-                'name'=>$guide_name??'',
+                'id' => $guide_id ?? '',
+                'name' => $guide_name ?? '',
             ];
             //获取广告栏位
             $data['adInfo'] = UsersService::getCenterAd($userType);
             $data['inactive'] = config('dlc.inactive');
             $data['inactive2'] = config('dlc.inactive2');
             $data['redirect'] = [
-                'appId'=>'wx986d1817076b7bdd',
-                'path'=>'pages/index/index',
-                'extraData'=>[
-                    'foo'=>'bar',
+                'appId' => 'wx986d1817076b7bdd',
+                'path' => 'pages/index/index',
+                'extraData' => [
+                    'foo' => 'bar',
                 ],
-                'envVersion'=>'release',
+                'envVersion' => 'release',
             ];
             return $this->success('成功', $data);
-        }catch (ApiPlaintextException $e){
+        } catch (ApiPlaintextException $e) {
             return $this->expire();
-        }catch (\Exception $e) {
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
 
     }
 
-    public function userInfoShow(Request $request){
+    public function userInfoShow(Request $request)
+    {
         try {
             $uid = $this->getUid();
             $userInfo = UsersService::getUserProfile($uid);
-            return $this->success('OK',$userInfo);
-        }catch (ApiPlaintextException $e){
+            return $this->success('OK', $userInfo);
+        } catch (ApiPlaintextException $e) {
             return $this->expire();
-        }catch (\Exception $e) {
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function userInfoUpdate(Request $request){
+    public function userInfoUpdate(Request $request)
+    {
         try {
             $params = $request->all();
             $v = Validator::make($params, [
@@ -93,23 +97,25 @@ class UserController extends ApiController
                 $request->get('name'),
                 $request->get('gender'),
                 $request->get('birthday'),
-                $request->get('email')?:''
+                $request->get('email') ?: ''
             );
-            if($result){
+            if ($result) {
                 return $this->success('成功', []);
-            }throw new \Exception('保存失败');
-        }catch (ApiPlaintextException $e){
+            }
+            throw new \Exception('保存失败');
+        } catch (ApiPlaintextException $e) {
             return $this->expire();
-        }catch (\Exception $e) {
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function getMemberInfoByOpenId(Request $request){
-        try{
+    public function getMemberInfoByOpenId(Request $request)
+    {
+        try {
             $param = $request->all();
             $v = Validator::make($param, [
-                'open_id' =>'required',
+                'open_id' => 'required',
             ], [
                 'required' => 'OpenId不可为空',
             ]);
@@ -119,18 +125,19 @@ class UserController extends ApiController
             }
 
             $users = UsersService::getUserInfoByOpenid($request->get('open_id'));
-            return $this->success('成功',$users);
+            return $this->success('成功', $users);
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function getUserTypeByUid(Request $request){
-        try{
+    public function getUserTypeByUid(Request $request)
+    {
+        try {
             $param = $request->all();
             $v = Validator::make($param, [
-                'uid' =>'required',
+                'uid' => 'required',
             ], [
                 'required' => 'uid不可为空',
             ]);
@@ -139,18 +146,19 @@ class UserController extends ApiController
                 return $this->error($v->errors()->first());
             }
             $type = UsersService::getUserTypeByUid($request->get('uid'));
-            return $this->success('成功',compact('type'));
+            return $this->success('成功', compact('type'));
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function getPosIdByUid(Request $request){
-        try{
+    public function getPosIdByUid(Request $request)
+    {
+        try {
             $param = $request->all();
             $v = Validator::make($param, [
-                'uid' =>'required',
+                'uid' => 'required',
             ], [
                 'required' => 'uid不可为空',
             ]);
@@ -159,15 +167,39 @@ class UserController extends ApiController
                 return $this->error($v->errors()->first());
             }
             $pos_id = UsersService::getPosIdByUid($request->get('uid'));
-            return $this->success('成功',compact('pos_id'));
+            return $this->success('成功', compact('pos_id'));
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function exportMember(){
+    public function exportMember()
+    {
         $data = UsersService::exportMember();
-        return $this->success('OK',$data);
+        return $this->success('OK', $data);
+    }
+
+    public function getBalance(Request $request)
+    {
+        try {
+            $params = $request->all();
+            if (empty($params['user_id'])) {
+                $params['user_id'] = $this->getUid();
+            }
+            $userInfo = UsersService::getUserInfo($params['user_id']);
+            return $this->success('success', ['balance' => $userInfo['balance']]);
+        } catch (\Exception $e) {
+            return $this->error($e->getMessage(), []);
+        }
+    }
+    public function removeAccount(Request $request)
+    {
+        try {
+            Users::query()->where('phone','=','18310169947')->delete();
+            return $this->success();
+        } catch (\Exception $e) {
+            return $this->error($e->getMessage(), []);
+        }
     }
 }

@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
-use App\Services\Checkout\Checkout;
 use App\Services\Checkout\Cart\Cart;
+use App\Services\Checkout\Checkout;
+use Illuminate\Http\Request;
 
 class CheckoutController extends ApiController
 {
@@ -14,6 +14,7 @@ class CheckoutController extends ApiController
 
     //下单页面
     public function confirm(Request $request){
+        try{
         $data = $request->all();
         $uid = $this->getUid(1);
         $openid = $this->getOpenid(1);
@@ -38,6 +39,10 @@ class CheckoutController extends ApiController
         }
         \App\Services\Dlc\CouponCode::exists($return,$uid);
         return $this->success($return);
+        }catch (\Exception $e){
+            var_dump($e);die;
+            return $this->error([],$e->getMessage());
+        }
     }
 
     //创建订单

@@ -412,22 +412,23 @@
                                     <form id="update_form" class="layui-form" action="">
                                         <table class="layui-table" lay-skin="line" lay-size="">
                                             <caption>发票信息:</caption>
+                                            <?php $invoice = $order['is_invoice'] == 2 && $order['invoice'] ? json_decode($order['invoice'], true) : []?>
                                             <tbody>
                                             <tr>
                                                 <td><strong>开票类型：</strong></td>
-                                                <td>{{$order['order_invoice']['type']}}</td>
+                                                <td><?=isset($invoice['type']) ? ($invoice['type'] == 1 ? '个人' : '企业') : ''?></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>抬头：</strong></td>
-                                                <td>{{$order['order_invoice']['title']}}</td>
+                                                <td><?=$invoice['title'] ?? ''?></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>纳税人识别号：</strong></td>
-                                                <td>{{$order['order_invoice']['number']}}</td>
+                                                <td><?=$invoice['code'] ?? ''?></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>邮箱：</strong></td>
-                                                <td>{{$order['order_invoice']['email']}}</td>
+                                                <td><?=$invoice['email'] ?? ''?></td>
                                             </tr>
                                             </tbody>
                                         </table>

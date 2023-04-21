@@ -93,7 +93,7 @@ class OrdersController extends ApiController
             4 => '手工'
         ];
         $orders = $order;
-        $order = $order->with(['comment','returnapply','orderInvoice']);
+        $order = $order->with(['comment', 'returnapply', 'orderInvoice']);
         if ($request->has('is_apply_return')) {
             $order = $order->where('is_apply_return', $request->is_apply_return);
         }
@@ -123,7 +123,7 @@ class OrdersController extends ApiController
         }
         if ($request->has('is_exception') && $request->get('is_exception')) {
             $array = array_keys($inputs['is_exception']);
-            $order = $order->whereIn('is_exception',$array);
+            $order = $order->whereIn('is_exception', $array);
         }
         if ($request->has('contact') && $request->get('contact')) {
             $order = $order->where('contact', 'like', "%" . $request->get('contact') . '%');
@@ -155,6 +155,9 @@ class OrdersController extends ApiController
         if ($request->has('payment_type') && $request->get('payment_type')) {
             $array = array_keys($inputs['payment_type']);
             $order = $order->whereIn('payment_type', $array);
+        }
+        if ($request->has('order_payment_type') && $request->get('order_payment_type')) {
+            $order = $order->where('payment_type', $request->get('order_payment_type'));
         }
         if (isset($inputs['channel'])) {
             $channcl_array = array_keys($inputs['channel']);
@@ -194,7 +197,7 @@ class OrdersController extends ApiController
         if ($request->has('guide_id')) {
             if ($request->get('guide_id') > 0) {
                 $order = $order->where('guide_id', '=', $inputs['guide_id']);
-            }else{
+            } else {
                 $order = $order->where('guide_id', '>', 0);
             }
         }
@@ -205,7 +208,6 @@ class OrdersController extends ApiController
                 $query->where('name', 'like', "%" . $goods_name . '%');
             });
         }
-
         $order = $order->with('orderDataItem');
         if ($request->type == 2) {
             $order = $order->with('orderAfterSale');
@@ -221,7 +223,6 @@ class OrdersController extends ApiController
 
             return $this->success('success', $data);
         }
-
         $data = $order->orderBy('id', 'desc')->paginate($limit);
 
 
@@ -331,7 +332,13 @@ class OrdersController extends ApiController
             );
             $status_invoice = OmsInvoice::updateOrCreate(
                 ['order_sn' => $updateData['order_sn']],
-                ['order_sn' => $updateData['order_sn'], 'pos_id' => $orderinfo['pos_id'], 'total_free' => $orderinfo['total_amount'], 'title' => $updateData['order_invoice']['title'], 'type' => empty($updateData['order_invoice']['number']) ? 'person' : 'company', 'email' => $updateData['order_invoice']['email'], 'number' => $updateData['order_invoice']['number']]
+                ['order_sn' => $updateData['order_sn'],
+                    'pos_id' => $orderinfo['pos_id'],
+                    'total_free' => $orderinfo['pay_amount'],
+                    'title' => $updateData['order_invoice']['title'],
+                    'type' => empty($updateData['order_invoice']['number']) ? 'person' : 'company',
+                    'email' => $updateData['order_invoice']['email'],
+                    'number' => $updateData['order_invoice']['number']]
             );
         }
         if ($status_order && $status_invoice) {
@@ -508,7 +515,7 @@ class OrdersController extends ApiController
         }
 
         //设置或者取消异常订单
-        if ($request->get('method')=='exception') {
+        if ($request->get('method') == 'exception') {
             $type = $request->get('type');
             $status = Order::orderExceptionOrCancle(0, $type, $item_arr);
             if ($status) {
@@ -671,38 +678,38 @@ class OrdersController extends ApiController
         $status_model = new OmsOrderStatus;
         list($states_info, $status_info) = $status_model->getStatusMap();
         $model = Order::query();
-        if($request->get('order_sn')){
-            $model->where('order_sn',$request->get('order_sn'));
+        if ($request->get('order_sn')) {
+            $model->where('order_sn', $request->get('order_sn'));
         }
-        if($request->get('start_time')){
-            $model->where('created_at','>=',$request->get('start_time').' 00:00:00');
+        if ($request->get('start_time')) {
+            $model->where('created_at', '>=', $request->get('start_time') . ' 00:00:00');
         }
-        if($request->get('end_time')){
-            $model->where('created_at','<=',$request->get('end_time').' 23:59:59');
+        if ($request->get('end_time')) {
+            $model->where('created_at', '<=', $request->get('end_time') . ' 23:59:59');
         }
-        if($request->get('guide_id')){
-            $model->where('guide_id',$request->get('guide_id'));
+        if ($request->get('guide_id')) {
+            $model->where('guide_id', $request->get('guide_id'));
         }
 //        if($request->get('store_id')){
 //            $model->where('store_code',$request->get('store_id'));
 //        }
-        if($request->get('order_status')){
-            $model->where('order_status',$request->get('order_status'));
+        if ($request->get('order_status')) {
+            $model->where('order_status', $request->get('order_status'));
         }
         $model->whereNotNull('guide_id');
-        $model->where('guide_id','<>',0);
+        $model->where('guide_id', '<>', 0);
 //        $model->whereNotNull('store_code');
 //        $model->where('store_code','<>',0);
 
-        $list = $model->orderByDesc('id')->paginate($request->get('limit')?:10);
+        $list = $model->orderByDesc('id')->paginate($request->get('limit') ?: 10);
         $orders = $list->items();
-        foreach($orders as $k=>$order){
-            $orders[$k]['state_name'] = array_get($status_info,$order['order_state']);
-            $orders[$k]['status_name'] = array_get($status_info,$order['order_status']);
+        foreach ($orders as $k => $order) {
+            $orders[$k]['state_name'] = array_get($status_info, $order['order_state']);
+            $orders[$k]['status_name'] = array_get($status_info, $order['order_status']);
         }
         return $this->success('success', [
-            'data'=>$orders,
-            'total'=>$list->total(),
+            'data' => $orders,
+            'total' => $list->total(),
         ]);
 
 
@@ -711,10 +718,16 @@ class OrdersController extends ApiController
     public function export(Request $request)
     {
         $type = $request->get('action');
-        if($type=='warehouse'){
+        $params=$request->all();
+        $data=[];
+        if ($type == 'warehouse') {
             $data = \App\Services\Dlc\OrderService::exportWarehouseOrder();
         }
+        if ($type == 'finance') {
+            $data = \App\Services\Dlc\OrderService::exportFinanceOrder($params);
+        }
 
-        return $this->success('success',$data??[]);
+        return $this->success('success', $data ?? []);
     }
+
 }

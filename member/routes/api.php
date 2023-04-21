@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::group(['namespace'=>'Api'],function (){
+Route::group(['namespace' => 'Api'], function () {
     Route::any('importCoupon', 'CouponController@importCoupon');
     Route::any('user/getMemberInfo', 'UserNoLoginController@getMemberInfo');
     Route::any('social/list', 'CustomerLoginController@socialList');
@@ -44,14 +44,30 @@ Route::group(['namespace'=>'Api'],function (){
     Route::any('user/getUserTypeByUid', 'Dlc\UserController@getUserTypeByUid');
     Route::any('inner/user/getPosIdByUid', 'Dlc\UserController@getPosIdByUid');
     Route::any('member/exportMember', 'Dlc\UserController@exportMember');
+
+    #储值卡
+    Route::any('user/getBalance', 'Dlc\UserController@getBalance');
+    Route::any('user/getBalanceList', 'Dlc\BalanceController@getBalanceList');
+    Route::any('user/getUserBalanceList', 'Dlc\BalanceController@getUserBalanceList');
+    Route::any('user/getBalanceInfo', 'Dlc\BalanceController@getBalanceInfo');
+    Route::any('user/setBalanceInvoice', 'Dlc\BalanceController@setBalanceInvoice');
+    Route::any('user/invoice', 'Dlc\BalanceController@invoice');
+    Route::any('user/refundBalanceCard', 'Dlc\BalanceController@refundBalanceCard');
+    Route::any('balance/applyRefund', 'Dlc\BalanceController@applyRefund');
+    Route::any('user/refundBalance', 'Dlc\BalanceController@refundBalance');
+    Route::any('user/addBalance', 'Dlc\BalanceController@addBalance');
+    Route::any('user/useBalance', 'Dlc\BalanceController@useBalance');
+    Route::any('user/getBalanceLogs', 'Dlc\BalanceController@getBalanceLogs');
+    Route::any('user/exportBalanceLogs', 'Dlc\BalanceController@exportBalanceLogs');
+    Route::any('balance/cancelInvoice', 'Dlc\BalanceController@cancelInvoice');
+    Route::any('balance/applyInvoice', 'Dlc\BalanceController@applyInvoice');
+    Route::any('user/removeAccount', 'Dlc\UserController@removeAccount');
 });
 
 Route::group([
     'namespace' => 'Api'
-    ,'middleware' => 'self.api'
+    , 'middleware' => 'self.api'
 ], function () {
-
-
 
 
 //    Route::any('member/social/callback/{socialName}', 'SocialCallbackController@socialCallback');
@@ -121,7 +137,7 @@ Route::group([
 
 
 //  优惠券列表
-    Route::any('couponList', 'CouponController@list');  //有效优惠券
+    Route::any('couponList', 'CouponController@list');  //有效优惠券user
 
     Route::any('allCoupons', 'CouponController@allCoupons');  //我的所有优惠券
     Route::any('addCoupon', 'CouponController@action');
@@ -150,10 +166,9 @@ Route::group([
     Route::post('mark/activity', 'UserController@saveActivity');
 
 
-
 });
 //微信
-Route::group(['namespace'=>'Api'],function (){
+Route::group(['namespace' => 'Api'], function () {
 //    Route::post('wx/login', 'WxController@signin');
     Route::post('wx/login/test', 'WxController@signinTest');
     Route::post('decode/mobile', 'WxController@getPhoneNumber');
@@ -170,7 +185,7 @@ Route::group(['namespace'=>'Api'],function (){
     Route::any('share/notify', 'Share\ShareController@notify');
 });
 //后台
-Route::group(['namespace'=>'Api'],function (){
+Route::group(['namespace' => 'Api'], function () {
     // 会员列表- excel导出
     Route::post('member/excel/list', 'MemberController@export');
     // 会员详情
@@ -182,12 +197,14 @@ Route::group(['namespace'=>'Api'],function (){
     Route::any('member/mergeSlaveMemberIntoMasterMember', 'MemberController@mergeSlaveMemberIntoMasterMember');
     Route::any('member/getSlaveAndMasterMember', 'MemberController@getSlaveAndMasterMember');
     Route::any('member/getUserInfo', 'MemberController@getUserInfo');
+    Route::any('member/getUserInfoByOpenid', 'MemberController@getUserInfoByOpenid');
+    Route::any('member/getUserInfoByUserId', 'MemberController@getUserInfoByUserId');
 
 
 });
 
 
-Route::group(['namespace'=>'Api'],function (){
+Route::group(['namespace' => 'Api'], function () {
     Route::any('pointmall/list', 'PointmallController@list');
     Route::any('pointmall/convert', 'PointmallController@convert');
     Route::any('pointmall/my/convert', 'PointmallController@myconvert');
@@ -208,23 +225,22 @@ Route::group(['namespace'=>'Api'],function (){
     Route::post('user/exportUserHistory', 'UserController@exportUserHistory');
 });
 
-Route::group(['namespace'=>'Api'],function (){
+Route::group(['namespace' => 'Api'], function () {
     Route::any('dashboard', 'DashBoardController@index');
 });
 
 
-
-Route::group(['namespace'=>'Api'],function (){
+Route::group(['namespace' => 'Api'], function () {
     //会员裂变
-    Route::any('fission/edit','FissionController@edit');
-    Route::any('fission/add','FissionController@add');
-    Route::any('fission/dataList','FissionController@dataList');
-    Route::any('fission/detail','FissionController@detail');
-    Route::any('fission/registerAdd','FissionController@registerAdd');
-    Route::any('fission/getFissionRank','FissionController@getFissionRank');
-    Route::any('fission/active','FissionController@active');
-    Route::any('fission/info','FissionController@getFissionInfo');
-    
+    Route::any('fission/edit', 'FissionController@edit');
+    Route::any('fission/add', 'FissionController@add');
+    Route::any('fission/dataList', 'FissionController@dataList');
+    Route::any('fission/detail', 'FissionController@detail');
+    Route::any('fission/registerAdd', 'FissionController@registerAdd');
+    Route::any('fission/getFissionRank', 'FissionController@getFissionRank');
+    Route::any('fission/active', 'FissionController@active');
+    Route::any('fission/info', 'FissionController@getFissionInfo');
+
     //导购 太阳码
     Route::any('getShareImg', 'Advert\GuideController@getGuideMiniCode');
     Route::any('readShare', 'Advert\GuideController@getGuideInfo');
@@ -248,17 +264,17 @@ Route::group(['namespace'=>'Api'],function (){
     Route::any('bar/add', 'NotifyBarController@add');
     Route::any('pop/info', 'NotifyBarController@infoPop');
     Route::any('pop/add', 'NotifyBarController@addPop');
-   /* Route::any('store/list', 'StoreController@list');
-    Route::post('store/get', 'StoreController@getStore');
-    Route::any('store/update', 'StoreController@updateStore');
+    /* Route::any('store/list', 'StoreController@list');
+     Route::post('store/get', 'StoreController@getStore');
+     Route::any('store/update', 'StoreController@updateStore');
 
-    Route::any('employee/list', 'EmployeeController@list');
-    Route::post('employee/get', 'EmployeeController@getEmployee');
-    Route::any('employee/update', 'EmployeeController@updateEmployee');
+     Route::any('employee/list', 'EmployeeController@list');
+     Route::post('employee/get', 'EmployeeController@getEmployee');
+     Route::any('employee/update', 'EmployeeController@updateEmployee');
 
-    Route::any('role/list', 'RoleController@list');
-    Route::post('role/get', 'RoleController@getRole');
-    Route::any('role/update', 'RoleController@updateRole'); */
+     Route::any('role/list', 'RoleController@list');
+     Route::post('role/get', 'RoleController@getRole');
+     Route::any('role/update', 'RoleController@updateRole'); */
 });
 
 
@@ -279,7 +295,6 @@ Route::group(['namespace' => 'Backend'], function () {
     Route::post('role/get', 'RoleController@getRole');
     Route::any('role/update', 'RoleController@updateRole');
     Route::any('role/AllList', 'RoleController@AllList');
-
 
 
 });

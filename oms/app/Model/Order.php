@@ -37,6 +37,8 @@ class Order extends Model
         'UnionPay' => 3,
         'HuabeiPay' => 4,
         'Offline' => 5,
+        'GoldPay' => 10,
+        'MultiPay' => 11
     ];
 
     static $trade_type = [
@@ -84,30 +86,30 @@ class Order extends Model
      * @var array
      */
     static $oms_status_code_map = [
-        1=>'pending',//待支付
-        2=>'canceled',//已取消
-        3=>'paid',//已支付
-        4=>'shipped',//已发货
-        5=>'refunding',//退款申请中
-        7=>'refunded',//已退款
-        8=>'returning',//退货申请中
-        9=>'finished',//已完成
-        10=>'finished',//已完成
-        11=>'canceled',//已取消
-        12=>'paid',//待发货
-        13=>'returned',//已退货
+        1 => 'pending',//待支付
+        2 => 'canceled',//已取消
+        3 => 'paid',//已支付
+        4 => 'shipped',//已发货
+        5 => 'refunding',//退款申请中
+        7 => 'refunded',//已退款
+        8 => 'returning',//退货申请中
+        9 => 'finished',//已完成
+        10 => 'finished',//已完成
+        11 => 'canceled',//已取消
+        12 => 'paid',//待发货
+        13 => 'returned',//已退货
     ];
 
     //快递Map
     static $delivery_mode_map = [
-        'EMS'=>'EMS',
-        'SF'=>'顺丰快递',
-        'POSTB'=>'邮政国内小包',
-        'STO'=>'申通E物流',
-        'YTO'=>'圆通速递',
-        'YUNDA'=>'韵达快运',
-        'ZTO'=>'中通速递',
-        'OTHER'=>'其他',
+        'EMS' => 'EMS',
+        'SF' => '顺丰快递',
+        'POSTB' => '邮政国内小包',
+        'STO' => '申通E物流',
+        'YTO' => '圆通速递',
+        'YUNDA' => '韵达快运',
+        'ZTO' => '中通速递',
+        'OTHER' => '其他',
     ];
 
     /**
@@ -115,14 +117,14 @@ class Order extends Model
      * @var array
      */
     static $oms_status_desc_map = [
-        1=>'待付款',//待支付
-        3=>'待发货',
-        12=>'待发货',
+        1 => '待付款',//待支付
+        3 => '待发货',
+        12 => '待发货',
     ];
 
     static $oms_status_list_map = [
-        3=>'待发货',
-        12=>'待发货',
+        3 => '待发货',
+        12 => '待发货',
     ];
 
     /**
@@ -130,18 +132,17 @@ class Order extends Model
      * @var array
      */
     static $oms_status_remark = [
-        1=>'您的订单已提交，请在指定时间内完成付款，超时订单自动取消',
-        2=>'您的订单已被取消',
-        3=>'您的订单将在1-3个工作日内发出,请注意查收',
-        4=>'您的商品已发货，请耐心等待',
-        7=>'您的商品已退款成功',
-        9=>'您的商品已被签收',
-        10=>'您的商品已被签收',
-        11=>'您的订单已被取消',
-        12=>'您的订单将在1-3个工作日内发出,请注意查收',
-        13=>'您的商品已退货成功',
+        1 => '您的订单已提交，请在指定时间内完成付款，超时订单自动取消',
+        2 => '您的订单已被取消',
+        3 => '您的订单将在1-3个工作日内发出,请注意查收',
+        4 => '您的商品已发货，请耐心等待',
+        7 => '您的商品已退款成功',
+        9 => '您的商品已被签收',
+        10 => '您的商品已被签收',
+        11 => '您的订单已被取消',
+        12 => '您的订单将在1-3个工作日内发出,请注意查收',
+        13 => '您的商品已退货成功',
     ];
-
 
 
 //支付方式: AliPay, WeixinPay, UnionPay,HuabeiPay,Offline
@@ -206,12 +207,14 @@ class Order extends Model
         return $this->hasOne('App\Model\AfterOrderSale', 'order_main_id', 'id');
     }
 
-    public function comment(){
-        return $this->hasOne('App\Model\OmsOrderComment','order_sn','order_sn');
+    public function comment()
+    {
+        return $this->hasOne('App\Model\OmsOrderComment', 'order_sn', 'order_sn');
     }
 
-    public function returnapply(){
-        return $this->hasOne('App\Model\OmsOrderReturnApply','order_sn','order_sn');
+    public function returnapply()
+    {
+        return $this->hasOne('App\Model\OmsOrderReturnApply', 'order_sn', 'order_sn');
     }
 
     /**
@@ -255,7 +258,7 @@ class Order extends Model
             11 => array(),
             12 => array(),
         ];
-        return array_get($status_next_array,$status)?:[];
+        return array_get($status_next_array, $status) ?: [];
 
     }
 
@@ -383,12 +386,12 @@ class Order extends Model
                     //触发器
                     $self->where('id', $main_order_id)->first()->update(['trigger_status' => 1]);
                     Log::info('taskNotifyShare');
-                    self::taskNotifyShare($order_info['openid'],$main_order_id);
+                    self::taskNotifyShare($order_info['openid'], $main_order_id);
                     //steven 增加待支付提醒
                     $pendingRemindTime = config('dlc.order_pending_remind');
                     app(Dispatcher::class)->dispatch(new Queued(
-                        'pendingRemind',
-                        ['orderId'=>$main_order_id],$pendingRemindTime)
+                            'pendingRemind',
+                            ['orderId' => $main_order_id], $pendingRemindTime)
                     );
                     return [1, 'success', $data];
                 }
@@ -504,7 +507,7 @@ class Order extends Model
                     'short_desc' => $value['short_desc'],
                     'sku' => $value['sku'],
                     'spu' => $value['product_id'],
-                    'product_amount_total' => (string)floatval($value['original_price']*$value['qty']),
+                    'product_amount_total' => (string)floatval($value['original_price'] * $value['qty']),
                     'collection_id' => $collection_id,
                     'original_price' => (string)floatval($value['original_price']),
                     'discount' => (string)floatval($value['discount']),
@@ -519,11 +522,11 @@ class Order extends Model
                     'applied_rule_ids' => json_encode($value['applied_rule_ids']),
                     'revenue_type' => $value['revenue_type'] ? $value['revenue_type'] : 0,
                     'cats' => $value['cats'] ? $value['cats'] : '',
-                    'rule_name'=>'',
-                    'main_sku'=>'',
-                    'if_show'=>1,
+                    'rule_name' => '',
+                    'main_sku' => '',
+                    'if_show' => 1,
                 ];
-                if(!empty($value['main_sku'])){
+                if (!empty($value['main_sku'])) {
                     $order_item['main_sku'] = $value['main_sku'];
                     $order_item['if_show'] = 0;
                 }
@@ -540,7 +543,7 @@ class Order extends Model
                                 'short_desc' => $item['short_desc'],
                                 'sku' => $item['sku'],
                                 'spu' => $value['product_id'],
-                                'product_amount_total' => (string)floatval($item['original_price']*$value['qty']),
+                                'product_amount_total' => (string)floatval($item['original_price'] * $value['qty']),
                                 'collection_id' => $collection_id,
                                 'original_price' => (string)floatval($item['original_price']),
                                 'discount' => (string)floatval($item['discount']),
@@ -555,9 +558,9 @@ class Order extends Model
                                 'applied_rule_ids' => '',
                                 'revenue_type' => $item['revenue_type'] ? $item['revenue_type'] : 0,
                                 'cats' => $item['cats'] ? $item['cats'] : '',
-                                'rule_name'=>'',
-                                'main_sku'=>'',
-                                'if_show'=>1,
+                                'rule_name' => '',
+                                'main_sku' => '',
+                                'if_show' => 1,
                             ];
                             $order_items_entries[] = $collection_order_item;
                         }
@@ -580,7 +583,7 @@ class Order extends Model
                     'short_desc' => $value['short_desc'],
                     'sku' => $value['sku'],
                     'spu' => $value['product_id'],
-                    'product_amount_total' => (string)floatval($value['original_price']*$value['qty']),
+                    'product_amount_total' => (string)floatval($value['original_price'] * $value['qty']),
                     'collection_id' => $item_group_id,
                     'original_price' => (string)floatval($value['original_price']),
                     'discount' => 0,
@@ -595,9 +598,9 @@ class Order extends Model
                     'applied_rule_ids' => '',
                     'revenue_type' => $value['revenue_type'] ? $value['revenue_type'] : 0,
                     'cats' => $value['cats'] ? $value['cats'] : '',
-                    'rule_name'=>'赠品',
-                    'main_sku'=>'',
-                    'if_show'=>1,
+                    'rule_name' => '赠品',
+                    'main_sku' => '',
+                    'if_show' => 1,
                 ];
                 $order_items_entries[] = $order_item;
                 $stock_sku[] = [$value['sku'], $value['qty'], $order_info['order_sn']];
@@ -630,9 +633,9 @@ class Order extends Model
                 'applied_rule_ids' => '',
                 'revenue_type' => $value['revenue_type'] ? $value['revenue_type'] : 0,
                 'cats' => $value['cats'] ? $value['cats'] : '',
-                'rule_name'=>'试用装',
-                'main_sku'=>'',
-                'if_show'=>1,
+                'rule_name' => '试用装',
+                'main_sku' => '',
+                'if_show' => 1,
             ];
             $order_items_entries[] = $order_item;
             $stock_sku[] = [$value['sku'], $value['qty'], $order_info['order_sn']];
@@ -642,7 +645,7 @@ class Order extends Model
             foreach ($order_info['goods_list']['another_group_gifts'] as $rule) {
                 $item_group_id = self::createOrderNoItem();
                 $rule_name = $rule['name'];
-                foreach ($rule['gifts'] as $value){
+                foreach ($rule['gifts'] as $value) {
                     $order_item = [
                         'order_sn' => $order_info['order_sn'],
                         'is_gift' => 2,
@@ -667,9 +670,9 @@ class Order extends Model
                         'applied_rule_ids' => '',
                         'revenue_type' => $value['revenue_type'] ? $value['revenue_type'] : 0,
                         'cats' => $value['cats'] ? $value['cats'] : '',
-                        'rule_name'=>$rule_name,
-                        'main_sku'=>'',
-                        'if_show'=>1,
+                        'rule_name' => $rule_name,
+                        'main_sku' => '',
+                        'if_show' => 1,
                     ];
                     $order_items_entries[] = $order_item;
                     if ($value['product_type'] == 2) {
@@ -685,7 +688,7 @@ class Order extends Model
                                     'short_desc' => $item['short_desc'],
                                     'sku' => $item['sku'],
                                     'spu' => $value['product_id'],
-                                    'product_amount_total' => (string)floatval($item['original_price']*$value['qty']),
+                                    'product_amount_total' => (string)floatval($item['original_price'] * $value['qty']),
                                     'collection_id' => $collection_id,
                                     'original_price' => (string)floatval($item['original_price']),
                                     'discount' => 0,
@@ -700,9 +703,9 @@ class Order extends Model
                                     'applied_rule_ids' => '',
                                     'revenue_type' => $item['revenue_type'] ? $item['revenue_type'] : 0,
                                     'cats' => $item['cats'] ? $item['cats'] : '',
-                                    'rule_name'=>$rule_name,
-                                    'main_sku'=>'',
-                                    'if_show'=>1,
+                                    'rule_name' => $rule_name,
+                                    'main_sku' => '',
+                                    'if_show' => 1,
                                 ];
                                 $order_items_entries[] = $collection_order_item;
                             }
@@ -744,9 +747,9 @@ class Order extends Model
                     'applied_rule_ids' => '',
                     'revenue_type' => $value['revenue_type'] ? $value['revenue_type'] : 0,
                     'cats' => $value['cats'] ? $value['cats'] : '',
-                    'rule_name'=>'实物券',
-                    'main_sku'=>'',
-                    'if_show'=>1,
+                    'rule_name' => '实物券',
+                    'main_sku' => '',
+                    'if_show' => 1,
                 ];
                 $order_items_entries[] = $order_item;
 
@@ -764,7 +767,7 @@ class Order extends Model
                                 'short_desc' => $item['short_desc'],
                                 'sku' => $item['sku'],
                                 'spu' => $value['product_id'],
-                                'product_amount_total' => (string)floatval($item['original_price']*$value['qty']),
+                                'product_amount_total' => (string)floatval($item['original_price'] * $value['qty']),
                                 'collection_id' => $collection_id,
                                 'original_price' => (string)floatval($item['original_price']),
                                 'discount' => 0,
@@ -779,9 +782,9 @@ class Order extends Model
                                 'applied_rule_ids' => '',
                                 'revenue_type' => $item['revenue_type'] ? $item['revenue_type'] : 0,
                                 'cats' => $item['cats'] ? $item['cats'] : '',
-                                'rule_name'=>'实物券',
-                                'main_sku'=>'',
-                                'if_show'=>1,
+                                'rule_name' => '实物券',
+                                'main_sku' => '',
+                                'if_show' => 1,
                             ];
                             $order_items_entries[] = $collection_order_item;
                         }
@@ -812,12 +815,12 @@ class Order extends Model
         $redis->expire("lock_oms_action" . $order_sn . $action, 5);
         Log::info('orderRefuse' . $order_sn . $action);
         $self = new static();
-        $info = $self->select('id', 'channel', 'order_status', 'payment_type', 'mobile', 'contact', 'coupon_id', 'user_id','order_type')->where('order_sn', $order_sn)->first();
+        $info = $self->select('id', 'channel', 'order_status', 'payment_type', 'mobile', 'contact', 'coupon_id', 'user_id', 'order_type')->where('order_sn', $order_sn)->first();
         if ($action) {
 
             switch ($action) {
                 case 'cancel_order_unpay':
-                    $status = self::cancleOrder($order_sn, $info['id'], $info['payment_type'], $info['channel'], $this->action_array[$action], $info['mobile'], $info['contact'], $info['user_id'], $info['coupon_id'],$info['order_type']);
+                    $status = self::cancleOrder($order_sn, $info['id'], $info['payment_type'], $info['channel'], $this->action_array[$action], $info['mobile'], $info['contact'], $info['user_id'], $info['coupon_id'], $info['order_type']);
                     break;
                 case 'order_verify_no':
                     $status = self::orderRefuse($info['id']);
@@ -945,7 +948,7 @@ class Order extends Model
     /**
      * 未支付取消下单(超时取消 用户取消 客服取消)
      */
-    public static function cancleOrder($order_sn, $order_id, $pay_type, $channel, $next_status, $mobile, $name, $uid, $coupon_id,$order_type)
+    public static function cancleOrder($order_sn, $order_id, $pay_type, $channel, $next_status, $mobile, $name, $uid, $coupon_id, $order_type)
     {
 
         $self = new static();
@@ -964,7 +967,7 @@ class Order extends Model
         }
 
         //如果是付邮试用则退回次数
-        if($order_type==2){
+        if ($order_type == 2) {
             \App\Services\ShipfeeTry\Revert::revertNumber($order_sn);
         }
         if (!$success) {
@@ -996,7 +999,7 @@ class Order extends Model
     {
         Log::info('pay_success', $data);
         $self = new static();
-        $order_info = $self->select('id', 'channel', 'coupon_id', 'user_id', 'order_sn', 'order_status', 'coupon_id', 'mobile', 'contact')->where('pay_order_sn', $data['pay_order_sn'])->first();
+        $order_info = $self->where('pay_order_sn', $data['pay_order_sn'])->first();
         if (!$order_info) {
             return false;
         }
@@ -1004,24 +1007,54 @@ class Order extends Model
         if ($order_info['order_status'] == 3) {
             return true;
         }
+        if ($order_info['order_status'] != 1) {
+            return false;
+        }
         DB::beginTransaction();
-        if ($order_info['order_status'] == 1) {
-            $status = $self->where('id', $order_info['id'])->where('order_status', 1)->first()->update(
-                [
-                    'order_status' => 3,
-                    'order_state' => 5,
-                    'payment_type' => $data['type'],
-                    'trade_type' => $data['tradeType'],
-                    'payment_id' => $data['trade_no'],
-                    'transaction_time' => $data['payTime'],
-                    'transaction_date' => date('Y-m-d', strtotime($data['payTime'])),
-                ]
-
-            );
+        try {
+            if (in_array($order_info['payment_type'], [10, 11, 'MultiPay', 'GoldPay'])) {
+                $status = $order_info->update(
+                    [
+                        'order_status' => 3,
+                        'order_state' => 5,
+                        'trade_type' => $data['tradeType'],
+                        'payment_id' => $data['trade_no'],
+                        'transaction_time' => $data['payTime'],
+                        'transaction_date' => date('Y-m-d', strtotime($data['payTime'])),
+                    ]
+                );
+            } else {
+                $status = $order_info->update(
+                    [
+                        'order_status' => 3,
+                        'order_state' => 5,
+                        'payment_type' => $data['type'],
+                        'trade_type' => $data['tradeType'],
+                        'payment_id' => $data['trade_no'],
+                        'transaction_time' => $data['payTime'],
+                        'transaction_date' => date('Y-m-d', strtotime($data['payTime'])),
+                    ]
+                );
+            }
             if (!$status) {
                 return false;
             }
             self::orderLog($order_info['id'], 5, '支付成功');
+            //储值余额扣减
+            if (in_array($order_info['payment_type'], [10, 11, 'MultiPay', 'GoldPay'])) {
+                $item = OrderItem::query()->where('order_main_id', $order_info['id'])->first();
+                $params = [
+                    'user_id' => $order_info['user_id'],
+                    'balance' => $order_info['gold_amount'],
+                    'order_sn' => $order_info['order_sn'],
+                    'order_title' => $item['name']
+                ];
+                $api = app('ApiRequestInner', ['module' => 'member']);
+                $info = $api->request('useBalance', 'POST', $params);
+                if (isset($info['code']) && $info['code'] == 0) {
+                    return false;
+                }
+            }
             DB::commit();
             Log::info('pay_success_order' . $order_info['coupon_id'] . $order_info['order_sn'], []);
             $sub = new SubscribeShipped;
@@ -1029,21 +1062,22 @@ class Order extends Model
             $sub->paidMessage($order_info['id']);
             //加入队列 执行OMS推送(解锁库存放在推送成功后执行)
             app(Dispatcher::class)->dispatch(new Queued(
-                'syncToOms',
-                ['orderId'=>$order_info['id']])
+                    'syncToOms',
+                    ['orderId' => $order_info['id']])
             );
             //加入队列 增加对应商品的销量记录
             app(Dispatcher::class)->dispatch(new Queued(
                     'salesVolume',
-                    ['orderId'=>$order_info['id']])
+                    ['orderId' => $order_info['id']])
             );
             //支付回调成功后删除前端支付成功的临时标记
             \App\Services\Dlc\SalesServices::removePayPendingFlag($order_info['order_sn']);
             return true;
-
+        } catch (\Exception $e) {
+            Log::info('pay_success_order_error' . $order_info['order_sn'] . ' ' . $e->getMessage());
+            return false;
         }
 
-        return false;
     }
 
     /**
@@ -1058,6 +1092,8 @@ class Order extends Model
             'payment_type' => $data['type'],
             'pay_order_sn' => $data['pay_order_sn'],
             'trade_type' => $data['tradeType'],
+            'pay_amount' => $data['pay_amount'],
+            'gold_amount' => $data['gold_amount'],
             'payment' => $data['payment'] ?? '',
             'payment_at' => $data['time'] ?? date('Y-m-d H:i:s'),
         ];
@@ -1153,17 +1189,17 @@ class Order extends Model
         $self = new static();
 
         if ($order_sn) {
-            $data = $self->select('id', 'payment_type', 'total_amount', 'huabei_period', 'trade_type', 'payment', 'payment_at', 'order_sn', 'order_status', 'order_state', 'pay_order_sn', 'coupon_id','province','city','district','address','contact','mobile','total_amount','total_ship_fee','created_at','express_no')
+            $data = $self->select('id', 'payment_type', 'total_amount', 'huabei_period', 'trade_type', 'payment', 'payment_at', 'order_sn', 'order_status', 'order_state', 'pay_order_sn', 'coupon_id', 'province', 'city', 'district', 'address', 'contact', 'mobile', 'total_amount', 'total_ship_fee', 'created_at', 'express_no')
                 ->where('order_sn', $order_sn)
                 ->with(['orderDataItem' => function ($query) {
-                    $query->select('id', 'order_main_id', 'name','spec_desc','original_price','qty','pic');
+                    $query->select('id', 'order_main_id', 'name', 'spec_desc', 'original_price', 'qty', 'pic');
                 }])->with('orderInvoice')->get();
         }
         if ($pay_order_sn) {
-            $data = $self->select('id', 'payment_type', 'total_amount', 'huabei_period', 'trade_type', 'payment', 'payment_at', 'order_sn', 'order_status', 'order_state', 'pay_order_sn', 'coupon_id','province','city','district','address','contact','mobile','total_amount','total_ship_fee','created_at','express_no')
+            $data = $self->select('id', 'payment_type', 'total_amount', 'huabei_period', 'trade_type', 'payment', 'payment_at', 'order_sn', 'order_status', 'order_state', 'pay_order_sn', 'coupon_id', 'province', 'city', 'district', 'address', 'contact', 'mobile', 'total_amount', 'total_ship_fee', 'created_at', 'express_no')
                 ->where('pay_order_sn', $pay_order_sn)
                 ->with(['orderDataItem' => function ($query) {
-                    $query->select('id', 'order_main_id', 'name','spec_desc','original_price','qty','pic');
+                    $query->select('id', 'order_main_id', 'name', 'spec_desc', 'original_price', 'qty', 'pic');
                 }])->with('orderInvoice')->get();
         }
 
@@ -1173,8 +1209,8 @@ class Order extends Model
         foreach ($data as $k => &$v) {
             $v->state_name = $states_info[$v->order_state];
             $v->status_name = $status_info[$v->order_status];
-            $v->order_remark = array_get(self::$oms_status_remark,$v->order_status)?:'';
-            $v->order_status_code = array_get(self::$oms_status_code_map,$v->order_status)?:'';
+            $v->order_remark = array_get(self::$oms_status_remark, $v->order_status) ?: '';
+            $v->order_status_code = array_get(self::$oms_status_code_map, $v->order_status) ?: '';
         }
         return $data;
     }
@@ -1185,16 +1221,16 @@ class Order extends Model
      * @param $order_sn
      * @return mixed
      */
-    public static function orderInfoDetail($uid,$order_sn)
+    public static function orderInfoDetail($uid, $order_sn)
     {
         $self = new static();
         if ($order_sn) {
             $self = $self->where('user_id', $uid);
             $data = $self->where('order_sn', $order_sn)
-                ->with(['orderDataItem'=>function($query){
-                    $query->where('if_show',1);
-                },'orderInvoice'])->get()->toArray();
-            if($data){
+                ->with(['orderDataItem' => function ($query) {
+                    $query->where('if_show', 1);
+                }, 'orderInvoice'])->get()->toArray();
+            if ($data) {
                 $status_model = new OmsOrderStatus;
                 list($states_info, $status_info) = $status_model->getStatusMap();
                 foreach ($data as $k => &$v) {
@@ -1204,18 +1240,18 @@ class Order extends Model
                     $group_gifts = [];
                     $total_num = 0;
 
-                    $v['status_name'] = array_get(self::$oms_status_desc_map,$v['order_status'])?:$status_info[$v['order_status']] ;
+                    $v['status_name'] = array_get(self::$oms_status_desc_map, $v['order_status']) ?: $status_info[$v['order_status']];
                     $v['order_remark'] = array_get(self::$oms_status_remark, $v['order_status']) ?: '';
                     $v['order_status_code'] = array_get(self::$oms_status_code_map, $v['order_status']) ?: '';
-                    $v['delivery_mode'] = array_get(self::$delivery_mode_map,$v['delivery_mode'])?:'';
-                    $v['invoiced'] = array_get($v,'order_invoice.invoice_code')?1:0;
-                    if($v['order_status']==1){
-                        $cancel_time = bcadd(strtotime($v['created_at']),config('wms.oms_cancel_time'),0);
-                        $cancel_rest_time = bcsub($cancel_time,time(),0);
-                        $v['cancel_time'] = $cancel_rest_time<0?0:$cancel_rest_time;
+                    $v['delivery_mode'] = array_get(self::$delivery_mode_map, $v['delivery_mode']) ?: '';
+                    $v['invoiced'] = array_get($v, 'order_invoice.invoice_code') ? 1 : 0;
+                    if ($v['order_status'] == 1) {
+                        $cancel_time = bcadd(strtotime($v['created_at']), config('wms.oms_cancel_time'), 0);
+                        $cancel_rest_time = bcsub($cancel_time, time(), 0);
+                        $v['cancel_time'] = $cancel_rest_time < 0 ? 0 : $cancel_rest_time;
                         //查看是否有前端支付成功的标记 如果有标记 订单状态又是未支付 则说明微信支付回调还没有过来
                         $hasPayPendingFlag = \App\Services\Dlc\SalesServices::hasPayPendingFlag($order_sn);
-                        if($hasPayPendingFlag){
+                        if ($hasPayPendingFlag) {
                             $v['wait_pay_notice'] = 1;
                         }
                     }
@@ -1226,11 +1262,11 @@ class Order extends Model
                         $item['product_amount_total'] = (string)floatval($item['product_amount_total']);
                         $item['order_amount_total'] = (string)floatval($item['order_amount_total']);
                         //付邮试用价格设置为0
-                        if($v['order_type']==2){
+                        if ($v['order_type'] == 2) {
                             $item['product_amount_total'] = (string)floatval('0.00');
                         }
                         //赠品小样商品单价设置为0
-                        if($item['is_gift'] != 0 || $item['is_free'] != 0){
+                        if ($item['is_gift'] != 0 || $item['is_free'] != 0) {
                             $item['original_price'] = (string)floatval('0.00');
                         }
                         if ($item['is_gift'] == 0 && $item['is_free'] == 0) {
@@ -1243,10 +1279,10 @@ class Order extends Model
                             $goods_arr[$item['gift_group_id']]['main'][] = $item;
                         } elseif ($item['is_gift'] == 1) {
                             $goods_arr[$item['gift_group_id']]['gift']['name'] = $item['rule_name'];
-                            if(empty($goods_arr[$item['gift_group_id']]['gift']['qty'])){
+                            if (empty($goods_arr[$item['gift_group_id']]['gift']['qty'])) {
                                 $goods_arr[$item['gift_group_id']]['gift']['qty'] = 0;
                             }
-                            $goods_arr[$item['gift_group_id']]['gift']['qty']+=$item['qty'];
+                            $goods_arr[$item['gift_group_id']]['gift']['qty'] += $item['qty'];
                             $goods_arr[$item['gift_group_id']]['gift']['list'][] = $item;
                         } elseif ($item['is_free'] == 1) {
                             $goods_free[] = $item;
@@ -1266,10 +1302,10 @@ class Order extends Model
                                 continue;
                             }
                             $group_gifts[$item['gift_group_id']]['name'] = $item['rule_name'];
-                            if(empty($group_gifts[$item['gift_group_id']]['qty'])){
+                            if (empty($group_gifts[$item['gift_group_id']]['qty'])) {
                                 $group_gifts[$item['gift_group_id']]['qty'] = 0;
                             }
-                            $group_gifts[$item['gift_group_id']]['qty']+=$item['qty'];
+                            $group_gifts[$item['gift_group_id']]['qty'] += $item['qty'];
                             $group_gifts[$item['gift_group_id']]['gifts'][] = $item;
                         }
                         $total_num += $item['qty'];
@@ -1425,7 +1461,7 @@ class Order extends Model
             $items['invoice_url'] = $v['invoice_url'];
             $items['invoice_path'] = $v['invoice_path'];
             $items['invoice_download_url'] = $v['invoice_download_url'];
-            $items['delivery_mode'] = array_get(self::$delivery_mode_map,$v['delivery_mode'])?:'';
+            $items['delivery_mode'] = array_get(self::$delivery_mode_map, $v['delivery_mode']) ?: '';
             $items['express_no'] = $v['express_no'];
             $items['total_amount'] = (string)floatval($v['total_amount']);
             $items['created_at'] = $v['created_at'];
@@ -1585,7 +1621,7 @@ class Order extends Model
 //            $items['invoice_path'] = $v['invoice_path'];
             $items['channel'] = $v['channel'];
 //            $items['invoice_download_url'] = $v['invoice_download_url'];
-            $items['delivery_mode'] = array_get(self::$delivery_mode_map,$v['delivery_mode'])?:'';
+            $items['delivery_mode'] = array_get(self::$delivery_mode_map, $v['delivery_mode']) ?: '';
             $items['express_no'] = $v['express_no'];
             $items['total_amount'] = $v['total_amount'];
 
@@ -1646,7 +1682,7 @@ class Order extends Model
         }
 
 
-        $deal_sku = $sku_model->updateBatchStock(json_encode($stock_sku), $channel, 1,1);
+        $deal_sku = $sku_model->updateBatchStock(json_encode($stock_sku), $channel, 1, 1);
 
         if ($deal_sku['code'] != 1) {
 
@@ -1850,7 +1886,7 @@ class Order extends Model
             $desc = '取消异常订单';
         }
         if (!empty($items)) {
-            $status = $self->whereIn('id', $items)->where($where)->get()->each(function($item)use($update){
+            $status = $self->whereIn('id', $items)->where($where)->get()->each(function ($item) use ($update) {
                 $item->update($update);
             });
         } else {
@@ -1876,13 +1912,13 @@ class Order extends Model
 
     /**
      * 获取业绩订单
-     * @author Steven
      * @param $guide_id
      * @param int $perCount
      * @param array $condition
      * @return array
+     * @author Steven
      */
-    public static function getAchieveList($guide_id,$perCount=10,$condition=[])
+    public static function getAchieveList($guide_id, $perCount = 10, $condition = [])
     {
 
         $status_model = new OmsOrderStatus;
@@ -1890,12 +1926,12 @@ class Order extends Model
         $self = new static();
         /** @var \Illuminate\Database\Eloquent\Builder $model */
         $model = $self->where('guide_id', $guide_id)
-            ->with(['orderDataItem','orderInvoice']);
-        if(!empty($condition['start_date'])){
-            $model->where('created_at','>=',"{$condition['start_date']} 00:00:00");
+            ->with(['orderDataItem', 'orderInvoice']);
+        if (!empty($condition['start_date'])) {
+            $model->where('created_at', '>=', "{$condition['start_date']} 00:00:00");
         }
-        if(!empty($condition['end_date'])){
-            $model->where('created_at','<=',"{$condition['end_date']} 23:59:59");
+        if (!empty($condition['end_date'])) {
+            $model->where('created_at', '<=', "{$condition['end_date']} 23:59:59");
         }
         $total_amount = (string)floatval($model->sum('total_product_price'));
         $list = $model->orderBy('id', 'desc')->paginate($perCount)->toArray();
@@ -1996,7 +2032,7 @@ class Order extends Model
 //            $items['invoice_path'] = $v['invoice_path'];
             $items['channel'] = $v['channel'];
 //            $items['invoice_download_url'] = $v['invoice_download_url'];
-            $items['delivery_mode'] = array_get(self::$delivery_mode_map,$v['delivery_mode'])?:'';
+            $items['delivery_mode'] = array_get(self::$delivery_mode_map, $v['delivery_mode']) ?: '';
             $items['express_no'] = $v['express_no'];
             $items['total_amount'] = (string)floatval($v['total_product_price']);
 
@@ -2008,9 +2044,9 @@ class Order extends Model
         }
         unset($data);
         return [
-            'total_num'=>$list['total'],
-            'total_amount'=>(string)floatval($total_amount),
-            'list'=>$arr,
+            'total_num' => $list['total'],
+            'total_amount' => (string)floatval($total_amount),
+            'list' => $arr,
         ];
     }
 
@@ -2022,34 +2058,34 @@ class Order extends Model
      * @param int $perCount
      * @return array
      */
-    public static function orderListsByStatus($uid,$order_status='',$page=1,$perCount=20)
+    public static function orderListsByStatus($uid, $order_status = '', $page = 1, $perCount = 20)
     {
         $api_status_map = [];
-        foreach(self::$oms_status_code_map as $k=>$v){
+        foreach (self::$oms_status_code_map as $k => $v) {
             $api_status_map[$v][] = $k;
         }
-        $status_id = array_key_exists($order_status,$api_status_map)?$api_status_map[$order_status]:0;
+        $status_id = array_key_exists($order_status, $api_status_map) ? $api_status_map[$order_status] : 0;
         $status_model = new OmsOrderStatus;
         list($states_info, $status_info) = $status_model->getStatusMap();
         $offset = ($page - 1) * $perCount;
         $self = new static();
-        if($status_id){
-            $self = $self->whereIn('order_status',$status_id);
+        if ($status_id) {
+            $self = $self->whereIn('order_status', $status_id);
             $has_status = 1;
         }
         $self = $self->where('user_id', $uid);
-        $model = $self->with(['orderDataItem'=>function($query){
-                $query->where('if_show',1);
-            },'orderInvoice'])
+        $model = $self->with(['orderDataItem' => function ($query) {
+            $query->where('if_show', 1);
+        }, 'orderInvoice'])
             ->skip($offset)
             ->take($perCount)
             ->orderBy('id', 'desc');
-        $size = request()->get('size',10);
+        $size = request()->get('size', 10);
         $data_list = $model->paginate($size)->toArray();
         $data = $data_list['data'];
         $total = $data_list['total'];
         $last_page = $data_list['last_page'];
-        $list = compact('total','last_page');
+        $list = compact('total', 'last_page');
         foreach ($data as $k => &$v) {
             $goods_free = [];
             $goods_arr = [];
@@ -2061,11 +2097,11 @@ class Order extends Model
                 $item['product_amount_total'] = (string)floatval($item['product_amount_total']);
                 $item['order_amount_total'] = (string)floatval($item['order_amount_total']);
                 //付邮试用价格设置为0
-                if($v['order_type']==2){
+                if ($v['order_type'] == 2) {
                     $item['product_amount_total'] = (string)floatval('0.00');
                 }
                 //赠品小样商品单价设置为0
-                if($item['is_gift'] != 0 || $item['is_free'] != 0){
+                if ($item['is_gift'] != 0 || $item['is_free'] != 0) {
                     $item['original_price'] = (string)floatval('0.00');
                 }
                 if ($v['channel'] != 0) {
@@ -2105,10 +2141,10 @@ class Order extends Model
                         continue;
                     }
                     $group_gifts[$item['gift_group_id']]['name'] = $item['rule_name'];
-                    if(empty($group_gifts[$item['gift_group_id']]['qty'])){
+                    if (empty($group_gifts[$item['gift_group_id']]['qty'])) {
                         $group_gifts[$item['gift_group_id']]['qty'] = 0;
                     }
-                    $group_gifts[$item['gift_group_id']]['qty']+=$item['qty'];
+                    $group_gifts[$item['gift_group_id']]['qty'] += $item['qty'];
                     $group_gifts[$item['gift_group_id']]['list'][] = $item;
                 }
                 $total_num += $item['qty'];
@@ -2118,7 +2154,7 @@ class Order extends Model
             $detail['goods_list'] = $goods_arr;
             $detail['goods_free'] = $goods_free;
             $detail['product_coupon_sku'] = $goods_point;
-            $detail['group_gifts'] = $group_gifts?array_values($group_gifts):[];
+            $detail['group_gifts'] = $group_gifts ? array_values($group_gifts) : [];
             $detail['address_info'] = [
                 'mobile' => $v['mobile'],
                 'contact' => $v['contact'],
@@ -2148,15 +2184,16 @@ class Order extends Model
             $items['order_sn'] = $v['order_sn'];
             $items['pay_order_sn'] = $v['pay_order_sn'];
             $items['payment_at'] = $v['payment_at'];
-//            $items['payment'] = $v['payment'];
+            $items['send_at'] = $v['send_at'];
+            $items['is_invoice'] = $v['is_invoice'];
             $trade = self::$trade_type;
             $payment = self::$pay_list;
             $items['payment_type'] = array_search($v['payment_type'], $payment);
             $items['trade_type'] = array_search($v['trade_type'], $trade);
             $items['order_id'] = $v['id'];
 
-            $items['state_status'] = array_get(self::$oms_status_list_map,$v['order_status']);
-            if(empty($items['state_status'])){
+            $items['state_status'] = array_get(self::$oms_status_list_map, $v['order_status']);
+            if (empty($items['state_status'])) {
                 $items['state_status'] = $status_info[$v['order_status']];
             }
             $items['order_status'] = $v['order_status'];
@@ -2167,7 +2204,7 @@ class Order extends Model
             $items['invoice_url'] = $v['invoice_url'];
             $items['invoice_path'] = $v['invoice_path'];
             $items['invoice_download_url'] = $v['invoice_download_url'];
-            $items['delivery_mode'] = array_get(self::$delivery_mode_map,$v['delivery_mode'])?:'';
+            $items['delivery_mode'] = array_get(self::$delivery_mode_map, $v['delivery_mode']) ?: '';
             $items['express_no'] = $v['express_no'];
             $items['total_amount'] = (string)floatval($v['total_amount']);
             $items['created_at'] = $v['created_at'];
@@ -2210,26 +2247,28 @@ class Order extends Model
 
     /**
      * @param $item
-        0 可退款
-        1 不可退款
-        2 退款申请中
-        3 退款被拒绝
-        4 退款已同意
+     * 0 可退款
+     * 1 不可退款
+     * 2 退款申请中
+     * 3 退款被拒绝
+     * 4 退款已同意
      * @return int
      */
-    public static function getReturnStatus($item){
-        $allow_status = [3,4,12];
-        if(in_array($item['order_status'],$allow_status) && empty($item['is_apply_return'])){
+    public static function getReturnStatus($item)
+    {
+        $allow_status = [3, 4, 12];
+        if (in_array($item['order_status'], $allow_status) && empty($item['is_apply_return'])) {
             return 0;
-        }elseif(!empty($item['is_apply_return'])){
-            if(($item['is_apply_return']==1)&&(empty($item['is_allow_return']))){
+        } elseif (!empty($item['is_apply_return'])) {
+            if (($item['is_apply_return'] == 1) && (empty($item['is_allow_return']))) {
                 return 2;
-            }elseif($item['is_allow_return']==1){
+            } elseif ($item['is_allow_return'] == 1) {
                 return 3;
-            }elseif($item['is_allow_return']==2){
+            } elseif ($item['is_allow_return'] == 2) {
                 return 4;
             }
-        }return 1;
+        }
+        return 1;
     }
 
     /**
@@ -2238,22 +2277,23 @@ class Order extends Model
      * @param $delivery_mode
      * @param $express_no
      */
-    public static function statusChangeShip($order_sn,$delivery_mode,$express_no){
-        if(!array_key_exists($delivery_mode,self::$delivery_mode_map)){
-            throw new \Exception('物流公司编号不存在'.$delivery_mode);
+    public static function statusChangeShip($order_sn, $delivery_mode, $express_no)
+    {
+        if (!array_key_exists($delivery_mode, self::$delivery_mode_map)) {
+            throw new \Exception('物流公司编号不存在' . $delivery_mode);
         }
-        $order = self::query()->where('order_sn',$order_sn)->first();
-        if(empty($order)){
+        $order = self::query()->where('order_sn', $order_sn)->first();
+        if (empty($order)) {
             throw new \Exception('订单号不存在');
         }
-        if($order->order_status == 3){
+        if ($order->order_status == 3) {
             $order->update([
-                'order_status'=>4,
-                'order_state'=>8,
-                'delivery_mode'=>$delivery_mode,
-                'express_no'=>$express_no,
+                'order_status' => 4,
+                'order_state' => 8,
+                'delivery_mode' => $delivery_mode,
+                'express_no' => $express_no,
             ]);
-            Order::orderLog($order->id,8,'OMS同步已发货');
+            Order::orderLog($order->id, 8, 'OMS同步已发货');
             //发送订阅消息
             (new \App\Model\SubscribeShipped)->shippedMessage($order->id);
         }

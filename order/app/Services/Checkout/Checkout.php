@@ -117,18 +117,22 @@ class Checkout
         $promotion_suit_obj = new Suit();
         $data_obj = $data_obj->initData();
         $data_obj = $data_obj->setPromotionSuitObj($promotion_suit_obj);
-        $data_obj = $data_obj->setCustomerId($data['customer_id'])->setOpenId($data['openid']);;
+        $data_obj = $data_obj->setCustomerId($data['customer_id'])->setOpenId($data['openid']);
+
         //立即购买的sku
         $sku = array_get($data,'sku')?:'';
         //获取选择下单结算的商品，包括试用装
         $data_obj = $cart_obj->getCheckoutItems($data_obj,$sku);
+
         if(!$data_obj){//购物车空
             return ['error'=>['empty_cart'=>true],'msg'=>'空购物车'];
         }
         //获取用户输入的数据，用户输入数据将会替换购物车过来的数据,coupon_id,code
         $data_obj = $data_obj->mappingInput($data);
+
         $member_obj = new Member();
         $data_obj = $member_obj->getMemberInfo($data_obj);
+
         if(!$data_obj){//没有获取到配送地址，说明被删除了
             return ['error'=>['deleted_shipping_address'=>true],'msg'=>'配送地址有误'];
         }

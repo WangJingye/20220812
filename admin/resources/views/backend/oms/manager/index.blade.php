@@ -176,6 +176,8 @@
                             @if($order['payment_type'] ==4) 花呗支付 @endif
                             @if($order['payment_type'] ==5) 货到付款 @endif
                             @if($order['payment_type'] ==6) 小程序支付 @endif
+                            @if($order['payment_type'] ==10) 购物金支付 @endif
+                            @if($order['payment_type'] ==11) 组合支付 @endif
                         </span>
                         <span class="state_name" style="margin-right:30px;">
                         		订单状态：{{$order['status_name']}}

@@ -41,15 +41,15 @@ caption{
 														 @if($action->getOrderRefundButton($order->id))
 														 <span order_id="{{$order->id}}" class="refund layui-btn layui-btn-normal layui-btn-md" >
 															 退款
-														 </span>	
-														 @endif								
+														 </span>
+														 @endif
 													</td>
 													<td>
 														 @if($action->getDiffRefundButton($order))
 														 <span order_id="{{$order->id}}" class="diffrefund layui-btn layui-btn-normal layui-btn-md" >
 															 差价退款
-														 </span>	
-														 @endif													
+														 </span>
+														 @endif
 													</td>
 												</tr>
 											</tbody>
@@ -77,7 +77,7 @@ caption{
 
 					<div class="order-items-information" style="margin-top:20px;">
 						<div class="layui-row layui-row" >
-						
+
 							<table class="layui-table" lay-skin="line" lay-size="">
 								<caption >商品信息</caption>
 								<colgroup>
@@ -162,7 +162,7 @@ caption{
 									@endforeach
 									</tbody>
 							</table>
-							
+
 							<!-- 赠品 -->
 							<table class="layui-table" lay-skin="line" lay-size="">
 								@foreach($order->gift as $item)
@@ -215,8 +215,8 @@ caption{
 							</div>
 						</div>
 					</div>
-						
-						
+
+
 					<div class="pay-information">
 							<div class="layui-row layui-row layui-col-space20" >
 								<div class="layui-col-md6">
@@ -251,15 +251,15 @@ caption{
 										<colgroup>
 											<col width="100%">
 										</colgroup>
-										<tbody>
-											<tr>
-												<td>抬头：{{$order->invoice_title}}</td>
-											</tr>
-											<tr>
-												<td>纳税人识别号：{{$order->invoice_code}}</td>
-											</tr>
-
-										</tbody>
+                                        <?php $invoice = $order['is_invoice'] == 2 && $order['invoice'] ? json_decode($order['invoice'], true) : []?>
+                                        <tbody>
+                                        <tr>
+                                            <td>抬头：<?= $invoice['title'] ?? ''?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>纳税人识别号：<?= $invoice['code'] ?? ''?></td>
+                                        </tr>
+                                        </tbody>
 									</table>
 								</div>
 							</div>
@@ -332,8 +332,8 @@ caption{
             }
             layer.open({
                 type: 1
-                ,offset: 't' 
-                ,id: 'csslayerDemo' 
+                ,offset: 't'
+                ,id: 'csslayerDemo'
                 ,content: '<div style="padding: 20px;">'+ msg +'</div>'
 //                 ,btn: '关闭全部'
                 ,btnAlign: 'c' //按钮居中
@@ -345,12 +345,12 @@ caption{
             return false;
         }, 'json');
 	});
-	
-	  
+
+
     $('.ruleDetail').on('click', function(){
     	layer.open({
-    	  title:'规则详情', 
-  		  type: 1, 
+    	  title:'规则详情',
+  		  type: 1,
   		  content: '<pre style="padding: 20px;">'+$(this).data('detail')+'</pre>',
     	  area: ['500px', '800px'],
     	  offset: 't',
@@ -364,8 +364,8 @@ caption{
 		var order_id = $(this).attr('order_id');
 		var item_id = $(this).attr('item_id');
 		layer.open({
-	    	  title:'退款', 
-	  		  type: 2, 
+	    	  title:'退款',
+	  		  type: 2,
 	  		  content: "{{ route('backend.sales.order.refund') }}?type=2&order_id="+order_id+"&item_id="+item_id,
 	    	  area: ['600px', '800px'],
 	    	  offset: 't',
@@ -382,8 +382,8 @@ caption{
 			var order_id = $(this).attr('order_id');
 			var item_id = $(this).attr('item_id');
 			layer.open({
-		    	  title:'差价退款', 
-		  		  type: 2, 
+		    	  title:'差价退款',
+		  		  type: 2,
 		  		  content: "{{ route('backend.sales.order.refund') }}?type=1&order_id="+order_id+"&item_id="+item_id,
 		    	  area: ['600px', '800px'],
 		    	  offset: 't',

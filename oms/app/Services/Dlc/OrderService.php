@@ -1,37 +1,36 @@
 <?php namespace App\Services\Dlc;
 
+use App\Model\{OmsOrderStatus, Order};
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redis;
-use App\Model\{Order};
-use Illuminate\Support\Arr;
 
 class OrderService
 {
-    public static function exportWarehouseOrder(){
+    public static function exportWarehouseOrder()
+    {
         $data[] = [
-            'OrderDate','HUSR06','Externorderkey','SKU','Lottable03','OPENQTY','Notes','C_company',
-            'C_Contact1','C_Phone1','C_Address1','Others'
+            'OrderDate', 'HUSR06', 'Externorderkey', 'SKU', 'Lottable03', 'OPENQTY', 'Notes', 'C_company',
+            'C_Contact1', 'C_Phone1', 'C_Address1', 'Others'
         ];
         $orders = Order::with('orderDataItem')
-            ->where('order_status',3)->get();
+            ->where('order_status', 3)->get();
         $virtual_prod_prefix = 'VIRTUAL_';
-        foreach($orders as $order){
-            foreach($order->orderDataItem as $item){
+        foreach ($orders as $order) {
+            foreach ($order->orderDataItem as $item) {
                 //过滤掉虚拟商品
-                if((strpos($item->sku,$virtual_prod_prefix) === 0)){
+                if ((strpos($item->sku, $virtual_prod_prefix) === 0)) {
                     continue;
                 }
                 $data[] = [
                     $order->created_at->format('Y-m-d'),
                     $order->created_at->format('Y-m-d'),
-                    "\t".$order->order_sn,
-                    "\t".$item->sku,
+                    "\t" . $order->order_sn,
+                    "\t" . $item->sku,
                     '良品',
                     $item->qty,
                     '大于15个月',
                     '微商城直营订单',
                     $order->contact,
-                    "\t".$order->mobile,
+                    "\t" . $order->mobile,
                     "{$order->province}{$order->district}{$order->city}{$order->address}",
                     ''
                 ];
@@ -40,5 +39,84 @@ class OrderService
         return $data;
     }
 
+    public static function exportFinanceOrder($params)
+    {
+        $query = DB::table('oms_order_main AS a')
+            ->leftJoin('oms_order_items AS b', 'a.id', '=', 'b.order_main_id');
+        if (isset($params['mobile']) && $params['mobile'] !== '') {
+            $query->where('a.mobile', $params['mobile']);
+        }
+        if (isset($params['order_status']) && $params['order_status'] !== '') {
+            $query->where('a.order_status', $params['order_status']);
+        }
+        if (isset($params['payment_type']) && $params['payment_type'] !== '') {
+            $query->where('a.payment_type', $params['payment_type']);
+        }
+        if (!empty($params['start_time'])) {
+            $query->where('a.created_at', '>=', $params['start_time']);
+        }
+        if (!empty($params['end_time'])) {
+            $query->where('a.created_at', '<=', $params['end_time']);
+        }
+        if (isset($params['pos_id']) && $params['pos_id'] !== '') {
+            $query->where('a.pos_id', $params['pos_id']);
+        }
+        if (isset($params['contact']) && $params['contact'] !== '') {
+            $query = $query->where('a.contact', 'like', "%" . $params['contact'] . '%');
+        }
+        if (!empty($params['order_payment_type'])) {
+            $query = $query->where('payment_type', $params['order_payment_type']);
+        }
+        if (isset($params['order_sn']) && $params['order_sn'] !== '') {
+            $query->where('a.order_sn', $params['order_sn']);
+        }
+        if (isset($params['order_type']) && $params['order_type'] !== '') {
+            $query->where('a.order_type', $params['order_type']);
+        }
+        if (!empty($params['is_exception'])) {
+            $array = array_keys($params['is_exception']);
+            $query = $query->whereIn('is_exception', $array);
+        }
+        if (isset($params['goods_name']) && $params['goods_name'] !== '') {
+            $query = $query->whereRaw('exists(select id from oms_order_items c where c.order_main_id = a.id and c.name like \'%' . $params['goods_name'] . '%\')');
+        }
+        $list = $query->select('a.*', 'b.name as product_name')
+            ->orderBy('a.id', 'desc')
+            ->groupBy(['a.id'])
+            ->get()->toArray();
+        $data[] = [
+            '手机号码', '用户姓名', '订单编号', '产品名称', '下单时间', '支付时间',
+            '退款时间', '订单状态', '订单金额', '支付类型', '微信支付金额'
+        ];
+        $pay_list = [
+            0 => '',
+            1 => '支付宝',
+            2 => '微信',
+            3 => '银联',
+            4 => '花呗',
+            5 => '货到付款',
+            10 => '储值卡',
+            11 => '组合'
+        ];
+        $status_model = new OmsOrderStatus;
+        list($states_info, $status_info) = $status_model->getStatusMap();
+        foreach ($list as $v) {
+            $v = json_decode(json_encode($v), true);
+            $data[] = [
+                "\t" . $v['mobile'],
+                $v['contact'],
+                "\t" . $v['order_sn'],
+                $v['product_name'],
+                $v['created_at'],
+                $v['transaction_time'],
+                $v['return_pay_at'],
+                $status_info[$v['order_status']],
+                "\t" . sprintf("%1\$.2f", $v['total_amount']),
+                $pay_list[$v['payment_type']],
+                "\t" . sprintf("%1\$.2f", $v['pay_amount']),
+            ];
+        }
+        return $data;
+    }
 
 }

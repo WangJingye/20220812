@@ -35,8 +35,7 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('appid', $this->values);
     }
-    
-    
+
     /**
      * 设置微信支付分配的商户号
      * @param string $value
@@ -61,8 +60,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('mch_id', $this->values);
     }
-    
-    
+
+
     /**
      * 设置微信支付分配的终端设备号，与下单一致
      * @param string $value
@@ -87,8 +86,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('device_info', $this->values);
     }
-    
-    
+
+
     /**
      * 设置随机字符串，不长于32位。推荐随机数生成算法
      * @param string $value
@@ -113,7 +112,7 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('nonce_str', $this->values);
     }
-    
+
     /**
      * 设置微信订单号
      * @param string $value
@@ -138,8 +137,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('transaction_id', $this->values);
     }
-    
-    
+
+
     /**
      * 设置商户系统内部的订单号,transaction_id、out_trade_no二选一，如果同时存在优先级：transaction_id> out_trade_no
      * @param string $value
@@ -164,8 +163,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('out_trade_no', $this->values);
     }
-    
-    
+
+
     /**
      * 设置商户系统内部的退款单号，商户系统内部唯一，同一退款单号多次请求只退一笔
      * @param string $value
@@ -190,8 +189,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('out_refund_no', $this->values);
     }
-    
-    
+
+
     /**
      * 设置订单总金额，单位为分，只能为整数，详见支付金额
      * @param string $value
@@ -216,8 +215,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('total_fee', $this->values);
     }
-    
-    
+
+
     /**
      * 设置退款总金额，订单总金额，单位为分，只能为整数，详见支付金额
      * @param string $value
@@ -242,8 +241,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('refund_fee', $this->values);
     }
-    
-    
+
+
     /**
      * 设置货币类型，符合ISO 4217标准的三位字母代码，默认人民币：CNY，其他值列表详见货币类型
      * @param string $value
@@ -268,8 +267,8 @@ class WxPayRefund extends WxPayDataBase
     {
         return array_key_exists('refund_fee_type', $this->values);
     }
-    
-    
+
+
     /**
      * 设置操作员帐号, 默认为商户号
      * @param string $value
@@ -293,6 +292,11 @@ class WxPayRefund extends WxPayDataBase
     public function IsOp_user_idSet()
     {
         return array_key_exists('op_user_id', $this->values);
+    }
+
+    public function setNotify_url($value){
+        $this->values['notify_url'] = $value;
+
     }
 }
 

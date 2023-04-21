@@ -81,28 +81,52 @@ class InputOrderController extends Controller
      */
     public function payUpdateOrder(Order $order, Request $request)
     {
-
-        $v = Validator::make($request->all(), [
+        $data = $request->all();
+        $v = Validator::make($data, [
             "pay_order_sn" => 'required',
             "order_sn" => 'required',
             "type" => 'required',
             "tradeType" => 'required',
             "payment" => 'required',
             "time" => 'required',
+            'pay_amount'=>'required'
         ]);
 
         if ($v->fails()) {
             return $this->error($v->errors()->first());
 
         }
-
-        $data = $request->all();
         $status = $order::payUpdateOrder($data);
         if ($status) {
             return $this->success('success');
         }
 
         return $this->error('失败，请重试');
+    }
+
+    public function payUpdateAndSuccessOrder(Order $order, Request $request){
+        $data = $request->all();
+        $v = Validator::make($data, [
+            "pay_order_sn" => 'required',
+            "order_sn" => 'required',
+            "type" => 'required',
+            "tradeType" => 'required',
+            "payment" => 'required',
+            "pay_amount"=>'required',
+            "time" => 'required',
+            "trade_no" => 'required',
+            "payTime" => 'required'
+        ]);
+        if ($v->fails()) {
+            return $this->error($v->errors()->first());
+        }
+        if (!$order::payUpdateOrder($data)) {
+            return $this->error('失败，请重试');
+        }
+        if (!$order::payOrder($data)) {
+            return $this->error('失败，请重试');
+        }
+        return $this->success('success');
     }
 
     public function addInvoice(Request $request)
@@ -151,7 +175,7 @@ class InputOrderController extends Controller
             }
             $status = OmsInvoice::updateOrCreate(
                 ['order_sn' => $data['order_sn']],
-                ['order_sn' => $data['order_sn'], 'pos_id' => $orderinfo['pos_id'], 'total_free' => $orderinfo['total_amount'], 'title' => $data['title'], 'type' => $data['type'], 'email' => $data['email'], 'number' => $data['number']]
+                ['order_sn' => $data['order_sn'], 'pos_id' => $orderinfo['pos_id'], 'total_free' => $orderinfo['pay_amount'], 'title' => $data['title'], 'type' => $data['type'], 'email' => $data['email'], 'number' => $data['number']]
             );
             Order::where('order_sn', $data['order_sn'])->update(['has_invoice' => 1]);
             if (!$status) {

@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\Controller;
 use App\Jobs\OrderQueued as Queued;
+use App\Model\Order;
+use App\Services\Dlc\SalesServices;
 use Illuminate\Contracts\Bus\Dispatcher;
-use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Services\Dlc\SalesServices;
+use Validator;
 
 class SalesController extends Controller
 {
@@ -26,12 +27,14 @@ class SalesController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function getStatusCount(Request $request){
+    public function getStatusCount(Request $request)
+    {
         $uid = $request->get('uid');
-        if($uid){
+        if ($uid) {
             $result = SalesServices::getOrderStatusCount($uid);
-            return $this->success('OK',$result);
-        }return $this->error();
+            return $this->success('OK', $result);
+        }
+        return $this->error();
     }
 
     /**
@@ -39,22 +42,24 @@ class SalesController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function getLogistics(Request $request){
+    public function getLogistics(Request $request)
+    {
         $v = Validator::make($request->all(), [
             "order_sn" => 'required',
         ]);
         if ($v->fails()) {
             return $this->error($v->errors()->first());
         }
-        try{
+        try {
             $uid = $this->getUid();
-            if(!$uid)return $this->expire();
+            if (!$uid) return $this->expire();
             $order_sn = $request->get('order_sn');
-            $result = SalesServices::getLogistics($order_sn,$uid);
-            if(is_array($result)){
-                return $this->success('OK',$result);
-            }throw new \Exception($result);
-        }catch (\Exception $e){
+            $result = SalesServices::getLogistics($order_sn, $uid);
+            if (is_array($result)) {
+                return $this->success('OK', $result);
+            }
+            throw new \Exception($result);
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
@@ -64,7 +69,8 @@ class SalesController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function orderMerge(Request $request){
+    public function orderMerge(Request $request)
+    {
         $v = Validator::make($request->all(), [
             "OldMemberCode" => 'required',
             "NewMemberCode" => 'required',
@@ -72,24 +78,26 @@ class SalesController extends Controller
         if ($v->fails()) {
             return $this->error($v->errors()->first());
         }
-        try{
+        try {
             $old_member_code = $request->get('OldMemberCode');
             $new_member_code = $request->get('NewMemberCode');
-            $result = SalesServices::omsOrderMerge($old_member_code,$new_member_code);
-            if($result===true){
+            $result = SalesServices::omsOrderMerge($old_member_code, $new_member_code);
+            if ($result === true) {
                 //调用oms接口合并成功,批量更新会员ID
-                SalesServices::messUpdateOrderPosId($old_member_code,$new_member_code);
+                SalesServices::messUpdateOrderPosId($old_member_code, $new_member_code);
                 return $this->success('合并成功');
-            }elseif($result===false){
+            } elseif ($result === false) {
                 return $this->success('旧会员ID没有订单,无需处理');
-            }throw new \Exception($result);
-        }catch (\Exception $e){
+            }
+            throw new \Exception($result);
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
 
     }
 
-    public function orderPosIdUpdate(Request $request){
+    public function orderPosIdUpdate(Request $request)
+    {
         $v = Validator::make($request->all(), [
             "Uid" => 'required',
             "MemberCode" => 'required',
@@ -97,26 +105,27 @@ class SalesController extends Controller
         if ($v->fails()) {
             return $this->error($v->errors()->first());
         }
-        try{
+        try {
             $uid = $request->get('Uid');
             $member_code = $request->get('MemberCode');
-            Log::info(__FUNCTION__,[
-                'uid'=>$uid,
-                'member_code'=>$member_code,
+            Log::info(__FUNCTION__, [
+                'uid' => $uid,
+                'member_code' => $member_code,
             ]);
-            SalesServices::updateOrderPosIdByUid($uid,$member_code);
+            SalesServices::updateOrderPosIdByUid($uid, $member_code);
             return $this->success('更新成功');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
 
     }
 
-    public function getAllProvince(Request $request){
-        try{
+    public function getAllProvince(Request $request)
+    {
+        try {
             $data = SalesServices::getAllProvince();
-            return $this->success('OK',$data);
-        }catch (\Exception $e){
+            return $this->success('OK', $data);
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
 
@@ -127,8 +136,9 @@ class SalesController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function payPendingFlag(Request $request){
-        try{
+    public function payPendingFlag(Request $request)
+    {
+        try {
             $v = Validator::make($request->all(), [
                 "order_sn" => 'required',
             ]);
@@ -138,13 +148,14 @@ class SalesController extends Controller
             $order_sn = $request->get('order_sn');
             SalesServices::addPayPendingFlag($order_sn);
             return $this->success('OK');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function goodsArrivalReminder(Request $request){
-        try{
+    public function goodsArrivalReminder(Request $request)
+    {
+        try {
             $v = Validator::make($request->all(), [
                 'sku' => 'required',
                 'open_id' => 'required',
@@ -156,17 +167,18 @@ class SalesController extends Controller
             $sku = $request->get('sku');
             $open_id = $request->get('open_id');
             $template_id = $request->get('template_id');
-            $state = $request->header('wxVersion')?:'';
-            $data = json_encode(compact('template_id','state'));
-            SalesServices::setArrivalReminder($sku,$open_id,$data);
+            $state = $request->header('wxVersion') ?: '';
+            $data = json_encode(compact('template_id', 'state'));
+            SalesServices::setArrivalReminder($sku, $open_id, $data);
             return $this->success('OK');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function omsSync(Request $request){
-        try{
+    public function omsSync(Request $request)
+    {
+        try {
             $v = Validator::make($request->all(), [
                 'orderId' => 'required',
             ]);
@@ -176,7 +188,7 @@ class SalesController extends Controller
             $orderId = $request->get('orderId');
             \App\Services\Dlc\OmsSync::run($orderId);
             return $this->success('OK');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
@@ -186,16 +198,17 @@ class SalesController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function omsCommentUpdate(Request $request){
-        try{
+    public function omsCommentUpdate(Request $request)
+    {
+        try {
             $params = $request->all();
             $validator = Validator::make($params, [
-                'order_sn' => ['required','max:50'],
-                'score_p' => ['required','numeric'],
-                'score_cs' => ['required','numeric'],
-                'score_l' => ['required','numeric'],
-                'content' => ['nullable','max:500'],
-            ],[
+                'order_sn' => ['required', 'max:50'],
+                'score_p' => ['required', 'numeric'],
+                'score_cs' => ['required', 'numeric'],
+                'score_l' => ['required', 'numeric'],
+                'content' => ['nullable', 'max:500'],
+            ], [
                 'required' => ':attribute是必填项',
                 'max' => ':attribute不能超过:max个字符',
                 'regex' => ':attribute格式不正确',
@@ -207,17 +220,18 @@ class SalesController extends Controller
             }
             SalesServices::omsCommentUpdate($params);
             return $this->success('OK');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function omsCommentGet(Request $request){
-        try{
+    public function omsCommentGet(Request $request)
+    {
+        try {
             $params = $request->all();
             $validator = Validator::make($params, [
-                'order_sn' => ['required','max:50'],
-            ],[
+                'order_sn' => ['required', 'max:50'],
+            ], [
                 'required' => ':attribute是必填项',
                 'max' => ':attribute不能超过:max个字符',
                 'regex' => ':attribute格式不正确',
@@ -229,8 +243,8 @@ class SalesController extends Controller
             }
             $order_sn = $params['order_sn'];
             $data = SalesServices::omsCommentGet($order_sn);
-            return $this->success('OK',$data);
-        }catch (\Exception $e){
+            return $this->success('OK', $data);
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
@@ -240,13 +254,14 @@ class SalesController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function omsReturnApplyRequest(Request $request){
-        try{
+    public function omsReturnApplyRequest(Request $request)
+    {
+        try {
             $params = $request->all();
             $validator = Validator::make($params, [
-                'order_sn' => ['required','max:50'],
-                'content' => ['nullable','max:500'],
-            ],[
+                'order_sn' => ['required', 'max:50'],
+                'content' => ['nullable', 'max:500'],
+            ], [
                 'required' => ':attribute是必填项',
                 'max' => ':attribute不能超过:max个字符',
                 'regex' => ':attribute格式不正确',
@@ -258,16 +273,17 @@ class SalesController extends Controller
             }
             SalesServices::omsReturnApplyRequest($params);
             return $this->success('OK');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
-    public function arrivalReminder(Request $request){
+    public function arrivalReminder(Request $request)
+    {
         $params = $request->all();
         $validator = Validator::make($params, [
             'skus_str' => ['required'],
-        ],[
+        ], [
             'required' => ':attribute是必填项',
             'max' => ':attribute不能超过:max个字符',
             'regex' => ':attribute格式不正确',
@@ -279,16 +295,17 @@ class SalesController extends Controller
         }
 
         $skus_str = $request->get('skus_str');
-        $skus = explode(',',$skus_str);
+        $skus = explode(',', $skus_str);
         app(Dispatcher::class)->dispatch(new Queued(
-            'arrivalReminder',
-            ['skus'=>$skus])
+                'arrivalReminder',
+                ['skus' => $skus])
         );
         return $this->success();
     }
 
-    public function returnApplyStatusChange(Request $request){
-        try{
+    public function returnApplyStatusChange(Request $request)
+    {
+        try {
             $v = Validator::make($request->all(), [
                 'orderId' => 'required',
                 'type' => 'required',
@@ -298,13 +315,69 @@ class SalesController extends Controller
             }
             $orderId = $request->get('orderId');
             $type = $request->get('type');
-            \App\Services\Dlc\SalesServices::omsReturnAllow($orderId,$type);
+            \App\Services\Dlc\SalesServices::omsReturnAllow($orderId, $type);
             return $this->success('OK');
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
 
+    public function applyInvoice(Request $request)
+    {
+        try {
+            $params = $request->all();
+            $order = Order::query()->where('id', $params['id'])->first();
+            if ($order['is_invoice'] != 0) {
+                throw new \Exception('开票申请中，请勿重新提交');
+            }
+            $invoice = [
+                'type' => $params['type'],
+                'title' => $params['invoiceName'] ?? '',
+                'code' => $params['code'] ?? '',
+                'email' => $params['email'] ?? '',
+            ];
+            Order::query()->where('id', $params['id'])->update([
+                'is_invoice' => 1,
+                'invoice' => json_encode($invoice)
+            ]);
+            return $this->success([], '发票申请已提交，请联系客服开票吧');
+        } catch (\Exception $e) {
+            return $this->error($e->getMessage());
+        }
+    }
 
+    public function cancelInvoice(Request $request)
+    {
+        try {
+            $params = $request->all();
+            $order = Order::query()->where('id', $params['id'])->first();
+            if ($order['is_invoice'] != 1) {
+                throw new \Exception('开票申请已处理，请刷新界面确认');
+            }
+            Order::query()->where('id', $params['id'])->update([
+                'is_invoice' => 0,
+                'invoice' => ''
+            ]);
+            return $this->success([], '发票申请已取消');
+        } catch (\Exception $e) {
+            return $this->error([], $e->getMessage());
+        }
+    }
 
+    public function invoice(Request $request)
+    {
+        try {
+            $params = $request->all();
+            $order = Order::query()->where('id', $params['id'])->first();
+            if ($order['is_invoice'] != 1) {
+                throw new \Exception('开票申请已处理，请刷新界面确认');
+            }
+            Order::query()->where('id', $params['id'])->update([
+                'is_invoice' => 2
+            ]);
+            return $this->success('开票完成');
+        } catch (\Exception $e) {
+            return $this->error([], $e->getMessage());
+        }
+    }
 }

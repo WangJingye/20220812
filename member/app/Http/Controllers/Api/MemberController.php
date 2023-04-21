@@ -476,9 +476,20 @@ class MemberController extends Controller
     {
         $crmService = new CrmUsersService();
         $crm_user_info = $crmService->userInfo(['pos_id' => $request->pos_id]);
-        if($crm_user_info){
-            return $this->success('success',$crm_user_info);
+        if ($crm_user_info) {
+            return $this->success('success', $crm_user_info);
         }
         return $this->error('fail');
+    }
+
+    public function getUserInfoByOpenid(Request $request)
+    {
+        $userInfo = Users::query()->where('open_id', $request->get('openid'))->first();
+        return $this->success('success', $userInfo);
+    }
+    public function getUserInfoByUserId(Request $request)
+    {
+        $userInfo = Users::query()->where('id', $request->get('id'))->first();
+        return $this->success('success', $userInfo);
     }
 }

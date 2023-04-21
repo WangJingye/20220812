@@ -99,6 +99,13 @@ $router->post('trial/add','TrialController@add');
 $router->post('trial/dataList','TrialController@dataList');
 $router->post('trial/detail','TrialController@detail');
 $router->post('trial/active','TrialController@active');
+#储值卡
+$router->post('goldOrder/pay','GoldOrderController@pay');
+$router->post('goldOrder/refund','GoldOrderController@refund');
+$router->post('goldOrder/applyRefund','GoldOrderController@applyRefund');
+$router->post('goldOrder/notify','GoldOrderController@notify');
+$router->post('goldOrder/list','GoldOrderController@list');
+
 
 
 

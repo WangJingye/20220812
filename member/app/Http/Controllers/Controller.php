@@ -37,8 +37,8 @@ class Controller extends BaseController
      * @param array $data
      * @return mixed
      */
-    public function error($msg = '失败', $data=[]){
-        return Response::json(['code'=>0,'message'=>$msg,'data'=>$data]);
+    public function error($msg = '失败', $data=[],$code=0){
+        return Response::json(['code'=>$code,'message'=>$msg,'data'=>$data]);
     }
 
     public function __construct(){

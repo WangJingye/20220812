@@ -152,7 +152,6 @@
                 this.$set(this.currentElement.action,'route',{});
             }
 
-
         },
         mounted: function () {
             this.cms=this.$root.$data.ajax.cms;
