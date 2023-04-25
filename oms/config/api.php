@@ -37,6 +37,7 @@ return [
         'couponUse'=> MEMBER.'coupon/inner/couponUse',
         'useBalance' => MEMBER . 'user/useBalance',
         'refundBalance' => MEMBER . 'user/refundBalance',
+        'exportBalanceLog' => MEMBER . 'balance/exportBalanceLog',
     ]
 ];
 

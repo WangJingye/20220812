@@ -305,7 +305,8 @@ class GoldOrderService
         $this->sendRequest('refundBalanceCard', 'member', [
             'id' => $balanceInfo['id'],
             'order_sn' => $order['order_sn'],
-            'order_title' => $order['order_title']
+            'order_title' => $order['order_title'],
+            'recharge_amount'=>$refundAmount,
         ]);
     }
 

@@ -464,4 +464,13 @@ class BalanceController extends ApiController
             throw new Exception($info['message'] ?? '');
         }
     }
+
+    public function exportBalanceLog(Request $request)
+    {
+        try{
+            return $this->success('success', $this->balanceService->exportBalanceLog($request->all()));
+        }catch (\Exception $e){
+            return $this->error($e->getMessage());
+        }
+    }
 }

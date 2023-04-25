@@ -41,22 +41,21 @@ class OrderService
 
     public static function exportFinanceOrder($params)
     {
-        $query = DB::table('oms_order_main AS a')
+        $query = DB::table('oms_order_logistics_info as c')
+            ->leftJoin('oms_order_main AS a', 'a.id', '=', 'c.order_id')
             ->leftJoin('oms_order_items AS b', 'a.id', '=', 'b.order_main_id');
         if (isset($params['mobile']) && $params['mobile'] !== '') {
             $query->where('a.mobile', $params['mobile']);
         }
-        if (isset($params['order_status']) && $params['order_status'] !== '') {
-            $query->where('a.order_status', $params['order_status']);
-        }
+        $query->whereRaw('(c.status = 5 or c.status = 8)');
         if (isset($params['payment_type']) && $params['payment_type'] !== '') {
             $query->where('a.payment_type', $params['payment_type']);
         }
         if (!empty($params['start_time'])) {
-            $query->where('a.created_at', '>=', $params['start_time']);
+            $query->where('c.created_at', '>=', $params['start_time']);
         }
         if (!empty($params['end_time'])) {
-            $query->where('a.created_at', '<=', $params['end_time']);
+            $query->where('c.created_at', '<=', $params['end_time']);
         }
         if (isset($params['pos_id']) && $params['pos_id'] !== '') {
             $query->where('a.pos_id', $params['pos_id']);
@@ -80,9 +79,9 @@ class OrderService
         if (isset($params['goods_name']) && $params['goods_name'] !== '') {
             $query = $query->whereRaw('exists(select id from oms_order_items c where c.order_main_id = a.id and c.name like \'%' . $params['goods_name'] . '%\')');
         }
-        $list = $query->select('a.*', 'b.name as product_name')
-            ->orderBy('a.id', 'desc')
-            ->groupBy(['a.id'])
+        $list = $query->select(['a.*', 'b.name as product_name', 'c.status as log_status', 'c.created_at as log_created'])
+            ->orderBy('c.id', 'asc')
+            ->groupBy(['c.id'])
             ->get()->toArray();
         $data[] = [
             '手机号码', '用户姓名', '订单编号', '产品名称', '下单时间', '支付时间',
@@ -100,6 +99,7 @@ class OrderService
         ];
         $status_model = new OmsOrderStatus;
         list($states_info, $status_info) = $status_model->getStatusMap();
+        //订单数据
         foreach ($list as $v) {
             $v = json_decode(json_encode($v), true);
             $data[] = [
@@ -109,12 +109,19 @@ class OrderService
                 $v['product_name'],
                 $v['created_at'],
                 $v['transaction_time'],
-                $v['return_pay_at'],
-                $status_info[$v['order_status']],
+                $v['log_status'] == 8 ? $v['log_created'] : '',
+                $v['log_status'] == 8 ? '退款' : '支付',
                 "\t" . sprintf("%1\$.2f", $v['total_amount']),
-                $pay_list[$v['payment_type']],
-                "\t" . sprintf("%1\$.2f", $v['pay_amount']),
+                $pay_list[$v['payment_type'] ?? ''] ?? '',
+                $v['log_status'] == 8 ? "\t" . sprintf("%1\$.2f", -$v['pay_amount']) : "\t" . sprintf("%1\$.2f", $v['pay_amount']),
             ];
+        }
+        //购物金充值退款记录
+        $api = app('ApiRequestInner', ['module' => 'member']);
+        $res = $api->request('exportBalanceLog', 'POST', $params);
+        if ($res['code'] == 1 && count($res['data'])) {
+            unset($res['data'][0]);
+            $data = array_merge($data, $res['data']);
         }
         return $data;
     }
