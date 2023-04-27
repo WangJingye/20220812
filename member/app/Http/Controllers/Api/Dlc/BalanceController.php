@@ -369,8 +369,10 @@ class BalanceController extends ApiController
         $list = $this->getBalanceLogs($request);
         $typeList = [1 => '充值', 2 => '消费', 3 => '订单退款', 4 => '充值退款'];
         $data[] = [
-            '手机号码', '用户姓名', '用户昵称', '订单编号', '产品名称', '下单时间', '支付时间', '退款时间', '订单状态',
-            '订单类型', '储值卡充值金额', '翻倍系数', '翻倍后储值卡金额', '储值卡消耗金额', '变动时间', '储值账户余额',
+            '手机号码', '用户姓名', '用户昵称', '订单编号', '产品名称',
+            '下单时间', '支付时间', '退款时间', '订单状态', '订单类型',
+            '储值类型', '储值卡充值金额', '翻倍系数', '翻倍后储值卡金额', '储值卡消耗金额',
+            '变动时间', '储值账户余额',
         ];
         foreach ($list as $v) {
             $v = json_decode(json_encode($v), true);
@@ -391,6 +393,7 @@ class BalanceController extends ApiController
                 $item[] = '';
                 $item[] = '';
                 $item[] = '';
+                $item[] = '';
                 $item[] = $v['balance'];
             } else {
                 $item[] = $v['created_at'];
@@ -399,11 +402,13 @@ class BalanceController extends ApiController
                 $item[] = '';
                 $item[] = $typeList[$v['type']];
                 if ($v['type'] == 1) {
+                    $item[] = $v['order_type'] == 2 ? '手动充值' : '自动充值';
                     $item[] = $v['recharge_amount'];
-                    $item[] = round($v['balance'] / $v['recharge_amount'], 2);
+                    $item[] = $v['recharge_amount'] > 0 ? round($v['balance'] / $v['recharge_amount'], 2) : 1;
                     $item[] = $v['balance'];
                     $item[] = '';
                 } else {
+                    $item[] = '';
                     $item[] = '';
                     $item[] = '';
                     $item[] = '';

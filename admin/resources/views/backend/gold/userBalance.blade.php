@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">支付金额</label>
+                    <label class="layui-form-label">实付金额</label>
                     <div class="layui-input-block">
                         <input class="layui-input title" placeholder="例如：1000" name="price" type="number">
                     </div>
@@ -229,7 +229,12 @@
                     return d.first_name + d.last_name;
                 }
             },
-            {field: 'gold_name', title: '储值卡'},
+            {
+                field: 'gold_name', title: '储值卡', align: "center",
+                templet: function (d) {
+                    return d.gold_name + (d.order_type==2?'[<span style="color: red">手动充值</span>]':'');
+                },
+            },
             {
                 field: 'amount',
                 title: '已使用<hr style="margin: 0;padding: 0">面值',
@@ -376,10 +381,6 @@
         }
         if (form.find('input[name=face_value]').val() <= 0) {
             layer.msg('充值金额必须大于0');
-            return false;
-        }
-        if (form.find('input[name=price]').val() <= 0) {
-            layer.msg('实付金额必须大于0');
             return false;
         }
         let args = form.serialize();

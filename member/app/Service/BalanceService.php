@@ -101,7 +101,7 @@ class BalanceService
         $gold = [
             'gold_name' => $params['gold_name'],
             'price' => $params['price'],
-            'rate' => $params['face_value'] / $params['price'],
+            'rate' => $params['price'] > 0 ? $params['face_value'] / $params['price'] : 1,
             'face_value' => $params['face_value'],
             'valid_time' => $params['valid_time'],
             'gold_type' => 2
@@ -145,6 +145,7 @@ class BalanceService
             'type' => 1,
             'order_sn' => $params['order_sn'],
             'order_title' => $params['order_title'],
+            'order_type' => $data['order_type'],
             'remain_balance' => $userInfo['balance'],
             'created_at' => date('Y-m-d H:i:s', $time),
             'recharge_amount' => $params['pay_amount']

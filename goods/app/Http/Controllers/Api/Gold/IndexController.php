@@ -18,7 +18,7 @@ class IndexController extends Controller
         $limit = request('limit', 10);
         $list = (new Gold())
             ->where('status', '!=', '0')
-            ->where('gold_type',1)
+            ->where('gold_type', 1)
             ->orderBy('id', 'desc')->paginate($limit)->toArray();
         $return = [];
         $return['pageData'] = $list['data'];
@@ -64,8 +64,11 @@ class IndexController extends Controller
             }
         }
         $gold = new Gold($data);
-        $gold['rate'] = round($gold['rate'], 2);
         $gold['face_value'] = round($gold['price'] * $gold['rate'], 2);
+        if (!empty($data['gold_type']) && $data['gold_type'] == 2) {
+            $gold['face_value'] = $data['face_value'];
+        }
+        $gold['rate'] = round($gold['rate'], 2);
         $gold->save();
         return $this->success($gold);
     }
