@@ -16,7 +16,10 @@ class IndexController extends Controller
     public function list(Request $request)
     {
         $limit = request('limit', 10);
-        $list = (new Gold())->where('status', '!=', '0')->orderBy('id', 'desc')->paginate($limit)->toArray();
+        $list = (new Gold())
+            ->where('status', '!=', '0')
+            ->where('gold_type',1)
+            ->orderBy('id', 'desc')->paginate($limit)->toArray();
         $return = [];
         $return['pageData'] = $list['data'];
         $return['count'] = $list['total'];
@@ -51,18 +54,20 @@ class IndexController extends Controller
     public function add(Request $request)
     {
         $data = $request->all();
-        $gold = Gold::query()
-            ->where('gold_name', $data['gold_name'])
-            ->where('status', '!=', '0')
-            ->first();
-        if (!empty($gold)) {
-            return $this->error(0, '储值卡名称重复，不能添加');
+        if (empty($data['gold_type']) || $data['gold_type'] != 2) {
+            $gold = Gold::query()
+                ->where('gold_name', $data['gold_name'])
+                ->where('status', '!=', '0')
+                ->first();
+            if (!empty($gold)) {
+                return $this->error(0, '储值卡名称重复，不能添加');
+            }
         }
         $gold = new Gold($data);
         $gold['rate'] = round($gold['rate'], 2);
         $gold['face_value'] = round($gold['price'] * $gold['rate'], 2);
         $gold->save();
-        return $this->success([]);
+        return $this->success($gold);
     }
 
     public function detail(Request $request)

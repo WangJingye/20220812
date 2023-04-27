@@ -62,6 +62,7 @@ Route::group(['namespace' => 'Api'], function () {
     Route::any('balance/cancelInvoice', 'Dlc\BalanceController@cancelInvoice');
     Route::any('balance/applyInvoice', 'Dlc\BalanceController@applyInvoice');
     Route::any('balance/exportBalanceLog', 'Dlc\BalanceController@exportBalanceLog');
+    Route::any('balance/recharge', 'Dlc\BalanceController@recharge');
 });
 
 Route::group([

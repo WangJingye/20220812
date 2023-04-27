@@ -608,6 +608,7 @@ Route::group([
     Route::any('gold/index/delete', 'Gold\IndexController@delete')->name('backend.gold.delete');
     Route::any('gold/index/add', 'Gold\IndexController@add')->name('backend.gold.add');
     Route::any('gold/index/insert', 'Gold\IndexController@insert')->name('backend.gold.insert');
+    Route::any('gold/index/recharge', 'Gold\IndexController@recharge')->name('backend.gold.recharge');
     Route::any('gold/order/list', 'Gold\IndexController@order')->name('backend.gold.order');
     Route::any('gold/order/getOrderList', 'Gold\IndexController@getOrderList')->name('backend.gold.getOrderList');
     Route::any('gold/index/userBalanceLog', 'Gold\IndexController@userBalanceLog')->name('backend.gold.userBalanceLog');

@@ -89,5 +89,9 @@ class IndexController extends Controller
     {
         return $this->curl('member/user/invoice', $request->all());
     }
+    public function recharge(Request $request)
+    {
+        return $this->curl('member/balance/recharge', $request->all());
+    }
 
 }

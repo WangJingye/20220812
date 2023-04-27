@@ -280,6 +280,7 @@ return [
         'member/user/getUserBalanceList' => MEMBER . 'user/getUserBalanceList',
         'order/goldOrder/refund' => ORDER . 'api/goldOrder/refund',
         'member/user/invoice' => MEMBER . 'user/invoice',
+        'member/balance/recharge' => MEMBER . 'balance/recharge',
         'oms/order/invoice' => OMS . 'order/invoice',
     ],
 

@@ -22,5 +22,6 @@ return [
 
         'getGoldInfo' => GOODS . 'gold/detail',
         'getOrderInfo' => OMS . 'orders/getOrderInfo',
+        'addGold' => GOODS . 'gold/add',
     ],
 ];

@@ -57,6 +57,7 @@
             <div class="layui-form-item">
                 <div class="layui-inline">
                     <button class="layui-btn layui-btn-normal" id="search">搜索</button>
+                    <button class="layui-btn" id="recharge">手动充值</button>
                 </div>
             </div>
         </form>
@@ -133,6 +134,51 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label"></label>
                     <button class="layui-btn layui-btn-normal confirm-invoice">确定</button>
+                </div>
+            </form>
+        </div>
+        <div class="recharge-info-hidden">
+            <form onsubmit="return false;" style="margin-top: 20px">
+                <input name="id" type="hidden">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">手机号</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input type" placeholder="用户手机号" name="mobile" value="">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">储值卡名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input type" placeholder="储值卡显示名称" name="gold_name" value="">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">充值金额</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input title" placeholder="例如:2000" name="face_value" type="number">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">支付金额</label>
+                    <div class="layui-input-block">
+                        <input class="layui-input title" placeholder="例如：1000" name="price" type="number">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">有效期</label>
+                    <div class="layui-input-block">
+                        <select name="valid_time" class="layui-select" style="width: 100%">
+                            <option value="">请选择</option>
+                            <?php for($i = 1;$i <= 1;$i++):?>
+                            <option value="<?=$i?>"><?= $i?>年</option>
+                            <?php endfor;?>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"></label>
+                    <button class="layui-btn layui-btn-normal confirm-recharge">确定</button>
                 </div>
             </form>
         </div>
@@ -282,7 +328,7 @@
                     table.reload('table_list')
                 }
             });
-            let payMethods = {2: '微信支付', 10: '储值余额支付', 11: '组合支付'};
+            let payMethods = {2: '微信支付', 10: '储值余额支付', 11: '组合支付', 12: '人工充值'};
             let form = $('.refund-info-form');
             form.find('.payment_type').val(payMethods[data.pay_method]);
             let refundAmount = data.pay_amount - data.used_amount;
@@ -303,8 +349,36 @@
         $.post("{{ route('backend.gold.invoice') }}", args, function (res) {
             layer.msg(res.msg);
             if (res.code == 1) {
-
                 $('.invoice-info-form').parents('.layui-layer-page').find('.layui-layer-close').click()
+            }
+        });
+    }).on('click', '.confirm-recharge', function () {
+        let form = $('.recharge-info-form');
+        if (form.find('input[name=gold_name]').val() == '') {
+            layer.msg('请输入储值卡名称');
+            return false;
+        }
+        if (form.find('input[name=face_value]').val() == '') {
+            layer.msg('请输入充值金额');
+            return false;
+        }
+        if (form.find('input[name=price]').val() == '') {
+            layer.msg('请输入实付金额');
+            return false;
+        }
+        if (form.find('input[name=valid_time]').val() == '') {
+            layer.msg('请输入有效期');
+            return false;
+        }
+        if (form.find('input[name=mobile]').val() == '') {
+            layer.msg('请输入手机号');
+            return false;
+        }
+        let args = form.serialize();
+        $.post("{{ route('backend.gold.recharge') }}", args, function (res) {
+            layer.msg(res.msg);
+            if (res.code == 1) {
+                $('.recharge-info-form').parents('.layui-layer-page').find('.layui-layer-close').click()
             }
         });
     });
@@ -317,6 +391,21 @@
         //将排好序的Data重载表格
         table.reload('table_list', {
             where: args
+        });
+    });
+    $('#recharge').click(function () {
+        let dom = $('.recharge-info-hidden').clone();
+        dom.find('form').addClass('recharge-info-form');
+        layer.open({
+            type: 1,
+            content: dom.html(),
+            title: '手动充值',
+            area: ['80%', '100%'],
+            offset: 't',
+            fixed: true,
+            end: function () {
+                table.reload('table_list')
+            }
         });
     });
     $(document).keyup(function (event) {

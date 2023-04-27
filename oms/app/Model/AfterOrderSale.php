@@ -288,7 +288,7 @@ class AfterOrderSale extends Model
                 if ($order['payment_type'] == 3) {
                     Order::orderLog($order->id, 5, "银联退款提交成功，等待退款回调");
                 } else {
-                    Order::orderLog($order->id, 8, "退款完成");
+                    Order::orderLog($order->id, 7, "退款完成");
                 }
                 return true;
             }
@@ -335,7 +335,7 @@ class AfterOrderSale extends Model
 //                        DB::rollBack();
 //                        return false;
 //                    }
-                    Order::orderLog($order->id, 8, "退款完成");
+                    Order::orderLog($order->id, 7, "退款完成");
 //                    $sms = new Sms();
 //                    $sub = new SubscribeShipped;
 //                    $sms->send($order['mobile'], 11, $order['contact'], $order['order_sn']);
@@ -388,7 +388,7 @@ class AfterOrderSale extends Model
 //                    $sub = new SubscribeShipped;
 //                    $sms->send($order['mobile'], 11, $order['contact'], $order['order_sn']);
 //                    $sub->refundMessage($order->id);
-                    Order::orderLog($order->id, 8, "退款完成");
+                    Order::orderLog($order->id, 7, "退款完成");
                 }
 
                 return true;
@@ -446,7 +446,7 @@ class AfterOrderSale extends Model
             if ($order->save()) {
                 $sms = new Sms();
                 $sms->send($order['mobile'], 11, $order['contact'], $order['order_sn']);
-                Order::orderLog($order->id, 8, "银联退款完成");
+                Order::orderLog($order->id, 7, "银联退款完成");
                 DB::commit();
                 return true;
             }

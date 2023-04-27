@@ -1,13 +1,11 @@
 <?php namespace App\Http\Controllers\Api\Dlc;
 
-use App\Model\GoldOrder;
 use App\Model\UserBalance;
 use App\Model\UserBalanceLog;
 use App\Service\BalanceService;
 use App\Service\Dlc\UsersService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Swoole\Exception;
 use Validator;
 
 class BalanceController extends ApiController
@@ -43,7 +41,7 @@ class BalanceController extends ApiController
     {
         $params = $request->all();
         if (!isset($params['id'])) {
-            throw new Exception('参数有误');
+            throw new \Exception('参数有误');
         }
         $userBalance = UserBalance::query()->where('id', $params['id'])->first();
         return $this->success('success', $userBalance);
@@ -56,10 +54,11 @@ class BalanceController extends ApiController
             $limit = $params['limit'] ?? 5;
             $lastId = $params['lastId'] ?? 0;
             if (!isset($params['status'])) {
-                throw new Exception('参数有误');
+                throw new \Exception('参数有误');
             }
             $query = UserBalance::query()
-                ->where('user_id', $this->getUid());
+                ->where('user_id', $this->getUid())
+                ->where('order_type', 1);
 
             if ($params['status'] == 0) {
                 $query = $query->where(function ($q1) {
@@ -82,7 +81,7 @@ class BalanceController extends ApiController
                 ->limit($limit)
                 ->get()->toArray();
             return $this->success('success', $list);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }
@@ -135,7 +134,7 @@ class BalanceController extends ApiController
         try {
             $params = $request->all();
             if (!isset($params['id'])) {
-                throw new Exception('参数有误');
+                throw new \Exception('参数有误');
             }
             $this->balanceService->refundBalanceCard($params);
             return $this->success();
@@ -184,7 +183,7 @@ class BalanceController extends ApiController
             ];
             UserBalanceLog::insert($data);
             DB::commit();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             DB::rollBack();
             return $this->error($e->getMessage());
         }
@@ -234,7 +233,7 @@ class BalanceController extends ApiController
             ];
             UserBalanceLog::insert($data);
             DB::commit();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             DB::rollBack();
             return $this->error($e->getMessage());
         }
@@ -245,41 +244,14 @@ class BalanceController extends ApiController
     {
         try {
             $params = $request->all();
-            $userInfo = UsersService::getUserInfo($params['user_id']);
-            $goldInfo = $this->sendRequest('getGoldInfo', ['id' => $params['gold_id']]);
             DB::beginTransaction();
-            $time = time();
-            $data = [
-                'user_id' => $params['user_id'],
-                'gold_id' => $params['gold_id'],
-                'order_sn' => $params['order_sn'],
-                'gold_name' => $goldInfo['gold_name'],
-                'pay_amount' => $params['pay_amount'],
-                'amount' => $goldInfo['face_value'],
-                'start_time' => date('Y-m-d 00:00:00', $time),
-                'end_time' => date('Y-m-d 23:59:59', strtotime('+' . $goldInfo['valid_time'] . ' year', $time - 23 * 3600)),
-                'created_at' => date('Y-m-d H:i:s', $time),
-                'updated_at' => date('Y-m-d H:i:s', $time),
-                'pay_method' => $params['pay_method'],
-            ];
-
-            UserBalance::insert($data);
-            $userInfo['balance'] += $goldInfo['face_value'];
-            $userInfo->save();
-            $data = [
-                'user_id' => $params['user_id'],
-                'balance' => $goldInfo['face_value'],
-                'type' => 1,
-                'order_sn' => $params['order_sn'],
-                'order_title' => $params['order_title'],
-                'remain_balance' => $userInfo['balance'],
-                'created_at' => date('Y-m-d H:i:s', $time),
-                'recharge_amount' => $params['pay_amount']
-            ];
-            UserBalanceLog::insert($data);
+            $userInfo = UsersService::getUserInfo($params['user_id']);
+            $goldInfo = $this->balanceService->sendRequest('getGoldInfo', ['id' => $params['gold_id']]);
+            $this->balanceService->addBalance($params, $goldInfo, $userInfo);
             DB::commit();
             return $this->success();
         } catch (\Exception $e) {
+            DB::rollBack();
             return $this->error($e->getMessage());
         }
     }
@@ -409,7 +381,7 @@ class BalanceController extends ApiController
                 $v['order_title'],
             ];
             if ($v['type'] == 2 || $v['type'] == 3) {
-                $orderInfo = $this->sendRequest('getOrderInfo', ['order_sn' => $v['order_sn']]);
+                $orderInfo = $this->balanceService->sendRequest('getOrderInfo', ['order_sn' => $v['order_sn']]);
                 $item[] = $orderInfo['created_at'];
                 $item[] = $orderInfo['payment_at'];
                 $item[] = $orderInfo['return_pay_at'];
@@ -418,7 +390,7 @@ class BalanceController extends ApiController
                 $item[] = '';
                 $item[] = '';
                 $item[] = '';
-                $item[] = "\t" . $v['balance'];
+                $item[] = $v['balance'];
             } else {
                 $item[] = $v['created_at'];
                 $item[] = $v['created_at'];
@@ -426,19 +398,19 @@ class BalanceController extends ApiController
                 $item[] = '';
                 $item[] = $typeList[$v['type']];
                 if ($v['type'] == 1) {
-                    $item[] = "\t" . $v['recharge_amount'];
-                    $item[] = "\t" . round($v['balance'] / $v['recharge_amount'], 2);
-                    $item[] = "\t" . $v['balance'];
+                    $item[] = $v['recharge_amount'];
+                    $item[] = round($v['balance'] / $v['recharge_amount'], 2);
+                    $item[] = $v['balance'];
                     $item[] = '';
                 } else {
                     $item[] = '';
                     $item[] = '';
                     $item[] = '';
-                    $item[] = "\t" . $v['balance'];
+                    $item[] = $v['balance'];
                 }
             }
             $item[] = $v['created_at'];
-            $item[] = "\t" . $v['remain_balance'];
+            $item[] = $v['remain_balance'];
             $data[] = $item;
         }
         return json_encode(['data' => $data]);
@@ -454,22 +426,20 @@ class BalanceController extends ApiController
         return $result['data'];
     }
 
-    private function sendRequest($method, $data)
+    public function exportBalanceLog(Request $request)
     {
-        $api = app('ApiRequestInner');
-        $info = $api->request($method, 'POST', $data);
-        if (isset($info['code']) && $info['code'] == 1) {
-            return $info['data'];
-        } else {
-            throw new Exception($info['message'] ?? '');
+        try {
+            return $this->success('success', $this->balanceService->exportBalanceLog($request->all()));
+        } catch (\Exception $e) {
+            return $this->error($e->getMessage());
         }
     }
 
-    public function exportBalanceLog(Request $request)
+    public function recharge(Request $request)
     {
-        try{
-            return $this->success('success', $this->balanceService->exportBalanceLog($request->all()));
-        }catch (\Exception $e){
+        try {
+            return $this->success('success', $this->balanceService->recharge($request->all()));
+        } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
     }

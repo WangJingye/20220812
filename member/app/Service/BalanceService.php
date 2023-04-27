@@ -5,6 +5,7 @@ namespace App\Service;
 
 use App\Model\UserBalance;
 use App\Model\UserBalanceLog;
+use App\Model\Users;
 use App\Service\Dlc\UsersService;
 use Illuminate\Support\Facades\DB;
 
@@ -93,4 +94,77 @@ class BalanceService
         }
         return $data;
     }
+
+    public function recharge($params)
+    {
+        $userInfo = Users::query()->where('phone', $params['mobile'])->first();
+        $gold = [
+            'gold_name' => $params['gold_name'],
+            'price' => $params['price'],
+            'rate' => $params['face_value'] / $params['price'],
+            'face_value' => $params['face_value'],
+            'valid_time' => $params['valid_time'],
+            'gold_type' => 2
+        ];
+        $goldInfo = $this->sendRequest('addGold', $gold);
+        $data = [
+            'user_id' => $userInfo['id'],
+            'gold_id' => $goldInfo['id'],
+            'order_sn' => $this->createOrderNo(),
+            'pay_amount' => $goldInfo['price'],
+            'pay_method' => 12,
+            'order_title' => $params['gold_name'],
+        ];
+        $this->addBalance($data, $goldInfo, $userInfo);
+    }
+
+    public function addBalance($params, $goldInfo, $userInfo)
+    {
+        $time = time();
+        $data = [
+            'user_id' => $userInfo['id'],
+            'gold_id' => $params['gold_id'],
+            'order_sn' => $params['order_sn'],
+            'order_type' => $params['order_type'] ?? 1,
+            'gold_name' => $goldInfo['gold_name'],
+            'pay_amount' => $params['pay_amount'],
+            'amount' => $goldInfo['face_value'],
+            'start_time' => date('Y-m-d 00:00:00', $time),
+            'end_time' => date('Y-m-d 23:59:59', strtotime('+' . $goldInfo['valid_time'] . ' year', $time - 23 * 3600)),
+            'created_at' => date('Y-m-d H:i:s', $time),
+            'updated_at' => date('Y-m-d H:i:s', $time),
+            'pay_method' => $params['pay_method'],
+        ];
+        UserBalance::insert($data);
+        $userInfo['balance'] += $goldInfo['face_value'];
+        $userInfo->save();
+        $data = [
+            'user_id' => $params['user_id'],
+            'balance' => $goldInfo['face_value'],
+            'type' => 1,
+            'order_sn' => $params['order_sn'],
+            'order_title' => $params['order_title'],
+            'remain_balance' => $userInfo['balance'],
+            'created_at' => date('Y-m-d H:i:s', $time),
+            'recharge_amount' => $params['pay_amount']
+        ];
+        UserBalanceLog::insert($data);
+    }
+
+    public function sendRequest($method, $data)
+    {
+        $api = app('ApiRequestInner');
+        $info = $api->request($method, 'POST', $data);
+        if (isset($info['code']) && $info['code'] == 1) {
+            return $info['data'];
+        } else {
+            throw new \Exception($info['message'] ?? '');
+        }
+    }
+
+    public function createOrderNo($channel_id = 1, $is_test = 2)
+    {
+        return date('ymdHis') . $is_test . $channel_id . str_pad(rand(0, 999999), 6, STR_PAD_LEFT);
+    }
+
 }
