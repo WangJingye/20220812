@@ -47,7 +47,7 @@ class OrderService
         if (isset($params['mobile']) && $params['mobile'] !== '') {
             $query->where('a.mobile', $params['mobile']);
         }
-        $query->whereRaw('(c.status = 5 or c.status = 8)');
+        $query->whereRaw('(c.status = 5 or c.status = 7)');
         if (isset($params['payment_type']) && $params['payment_type'] !== '') {
             $query->where('a.payment_type', $params['payment_type']);
         }

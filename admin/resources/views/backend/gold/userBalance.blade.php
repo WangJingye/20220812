@@ -374,6 +374,14 @@
             layer.msg('请输入手机号');
             return false;
         }
+        if (form.find('input[name=face_value]').val() <= 0) {
+            layer.msg('充值金额必须大于0');
+            return false;
+        }
+        if (form.find('input[name=price]').val() <= 0) {
+            layer.msg('实付金额必须大于0');
+            return false;
+        }
         let args = form.serialize();
         $.post("{{ route('backend.gold.recharge') }}", args, function (res) {
             layer.msg(res.msg);

@@ -114,6 +114,7 @@ class BalanceService
             'pay_amount' => $goldInfo['price'],
             'pay_method' => 12,
             'order_title' => $params['gold_name'],
+            'order_type' => 2
         ];
         $this->addBalance($data, $goldInfo, $userInfo);
     }

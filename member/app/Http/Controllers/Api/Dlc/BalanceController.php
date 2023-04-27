@@ -56,8 +56,9 @@ class BalanceController extends ApiController
             if (!isset($params['status'])) {
                 throw new \Exception('参数有误');
             }
+            $userId = $this->getUid();
             $query = UserBalance::query()
-                ->where('user_id', $this->getUid())
+                ->where('user_id', $userId)
                 ->where('order_type', 1);
 
             if ($params['status'] == 0) {
@@ -438,7 +439,8 @@ class BalanceController extends ApiController
     public function recharge(Request $request)
     {
         try {
-            return $this->success('success', $this->balanceService->recharge($request->all()));
+            $this->balanceService->recharge($request->all());
+            return $this->success('充值成功');
         } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }
