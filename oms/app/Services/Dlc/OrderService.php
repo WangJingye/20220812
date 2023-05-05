@@ -103,9 +103,9 @@ class OrderService
         foreach ($list as $v) {
             $v = json_decode(json_encode($v), true);
             $data[] = [
-                $v['mobile'],
+                "\t" . $v['mobile'],
                 $v['contact'],
-                $v['order_sn'],
+                "\t" . $v['order_sn'],
                 $v['product_name'],
                 $v['created_at'],
                 $v['transaction_time'],
