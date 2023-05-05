@@ -377,7 +377,7 @@ class BalanceController extends ApiController
         foreach ($list as $v) {
             $v = json_decode(json_encode($v), true);
             $item = [
-                "\t" . $v['phone'],
+                $v['phone'],
                 $v['first_name'] . $v['last_name'],
                 $v['nickname'],
                 "\t" . $v['order_sn'],
