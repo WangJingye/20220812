@@ -79,9 +79,9 @@ class BalanceService
         foreach ($list as $v) {
             $v = json_decode(json_encode($v), true);
             $data[] = [
-                $v['phone'],
+                "\t" . $v['phone'],
                 $v['first_name'] . $v['last_name'],
-                $v['order_sn'],
+                "\t" . $v['order_sn'],
                 $v['order_title'],
                 $v['created_at'],
                 $v['created_at'],
