@@ -109,11 +109,11 @@ class OrderService
                 $v['product_name'],
                 $v['created_at'],
                 $v['transaction_time'],
-                $v['log_status'] == 8 ? $v['log_created'] : '',
-                $v['log_status'] == 8 ? '退款' : '支付',
+                $v['log_status'] == 7 ? $v['log_created'] : '',
+                $v['log_status'] == 7 ? '退款' : '支付',
                 sprintf("%1\$.2f", $v['total_amount']),
                 $pay_list[$v['payment_type'] ?? ''] ?? '',
-                $v['log_status'] == 8 ? sprintf("%1\$.2f", -$v['pay_amount']) : sprintf("%1\$.2f", $v['pay_amount']),
+                $v['log_status'] == 7 ? sprintf("%1\$.2f", -$v['pay_amount']) : sprintf("%1\$.2f", $v['pay_amount']),
             ];
         }
         //购物金充值退款记录
