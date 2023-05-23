@@ -1054,6 +1054,7 @@ class Order extends Model
                 if (isset($info['code']) && $info['code'] == 0) {
                     return false;
                 }
+                $order_info->update(['gold_info' => json_encode($info['data'])]);
             }
             DB::commit();
             Log::info('pay_success_order' . $order_info['coupon_id'] . $order_info['order_sn'], []);

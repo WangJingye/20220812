@@ -391,6 +391,14 @@
             }
         });
     });
+    laydate.render({
+        elem: '#end_time'  // 输出框id
+        , type: 'datetime'
+    });
+    laydate.render({
+        elem: '#start_time'  // 输出框id
+        , type: 'datetime'
+    });
     $('#search').click(function () {
         let list = $('#search-form').serializeArray();
         let args = {};

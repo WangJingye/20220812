@@ -718,13 +718,16 @@ class OrdersController extends ApiController
     public function export(Request $request)
     {
         $type = $request->get('action');
-        $params=$request->all();
-        $data=[];
+        $params = $request->all();
+        $data = [];
         if ($type == 'warehouse') {
             $data = \App\Services\Dlc\OrderService::exportWarehouseOrder();
         }
         if ($type == 'finance') {
             $data = \App\Services\Dlc\OrderService::exportFinanceOrder($params);
+        }
+        if ($type == 'financeAll') {
+            $data = \App\Services\Dlc\OrderService::exportFinanceOrderAll($params);
         }
 
         return $this->success('success', $data ?? []);

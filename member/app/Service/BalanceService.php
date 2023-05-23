@@ -95,6 +95,55 @@ class BalanceService
         return $data;
     }
 
+    public function getBalanceLogAll($params)
+    {
+        $data = [];
+        $query = DB::table('tb_user_balance_log as a')
+            ->leftJoin('tb_users AS b', 'b.id', '=', 'a.user_id')
+            ->whereRaw('(a.type = 1 or a.type = 4)');
+        if (!empty($params['mobile'])) {
+            $query->where('b.phone', '=', $params['mobile']);
+        }
+        if (!empty($params['start_time'])) {
+            $query->where('a.created_at', '>=', $params['start_time']);
+        }
+        if (!empty($params['order_payment_type'])) {
+            if ($params['order_payment_type'] != 2) {
+                return $data;
+            }
+        }
+        if (!empty($params['end_time'])) {
+            $query->where('a.created_at', '<=', $params['end_time']);
+        }
+        if (isset($params['order_sn']) && $params['order_sn'] !== '') {
+            $query->where('a.order_sn', $params['order_sn']);
+        }
+        if (isset($params['goods_name']) && $params['goods_name'] !== '') {
+            $query = $query->whereRaw('a.order_title like \'%' . $params['goods_name'] . '%\'');
+        }
+        $list = $query->select(['a.*', 'b.phone', 'b.open_id'])
+            ->orderBy('a.id', 'desc')
+            ->groupBy(['a.id'])
+            ->get()->toArray();
+        $api = app('ApiRequestInner');
+        $res = [];
+        foreach ($list as $v) {
+            $v = json_decode(json_encode($v), true);
+            $response = $api->request('getGoldOrderInfo', 'POST', ['order_sn' => $v['order_sn']]);
+            if ($response['code'] != 1) {
+                throw new \Exception('储值卡订单信息获取有误' . $v['order_sn']);
+            }
+            $goldOrder = $response['data'];
+            $v['transaction_id'] = $goldOrder['transaction_id'] ?? '';
+            $v['order_amount'] = $goldOrder['amount'] ?? '';
+            $v['pay_time'] = $goldOrder['pay_time'] ?? '';
+            $v['refund_time'] = $goldOrder['refund_time'] ?? '';
+            $v['refund_amount'] = $goldOrder['refund_amount'] ?? '';
+            $res[] = $v;
+        }
+        return $res;
+    }
+
     public function recharge($params)
     {
         $userInfo = Users::query()->where('phone', $params['mobile'])->first();

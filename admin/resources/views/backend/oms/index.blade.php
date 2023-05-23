@@ -152,6 +152,7 @@
                 <button id="formSubmit" class="layui-btn" lay-submit lay-filter="formSubmit">导出订单</button>
                 <button class="layui-btn" id="export_warehouse_order">导出仓库发货单</button>
                 <button class="layui-btn" id="export_finance_order">导出财务报表</button>
+                <button class="layui-btn" id="export_finance_all_order">导出财务报表All</button>
             </div>
         </div>
         <div class="layui-form-item">
@@ -684,6 +685,17 @@
                     var value = res.data.value;
                     var columns = res.data.columns;
                     table.exportFile(columns, value, '财务报表.xls'); //默认导出 csv，也可以为：xls
+                }, 'json');
+                return false;
+            });
+            $("#export_finance_all_order").on('click', function () {
+                $.post("{{ route('backend.oms.order.export',['type'=>'financeAll']) }}", $('#search-form').serialize(), function (res) {
+                    if (res.code != 1) {
+                        return false;
+                    }
+                    var value = res.data.value;
+                    var columns = res.data.columns;
+                    table.exportFile(columns, value, '财务报表All.xls'); //默认导出 csv，也可以为：xls
                 }, 'json');
                 return false;
             });

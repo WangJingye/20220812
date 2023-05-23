@@ -203,6 +203,8 @@ class BalanceController extends ApiController
                 return $this->error('储值余额不足', ['balance' => $userInfo['balance']]);
             }
             $userInfo->save();
+            $info = [];
+            $actBalance = 0;
             $list = UserBalance::query()
                 ->whereRaw('(status = 1 or status = 2)')
                 ->whereRaw('amount != used_amount')
@@ -211,9 +213,13 @@ class BalanceController extends ApiController
             foreach ($list as $item) {
                 $need = $item['amount'] - $item['used_amount'];
                 if ($balance < $need) {
+                    $info[$item['id']] = $balance;
+                    $actBalance += $balance / $item['amount'] * $item['pay_amount'];
                     $item['used_amount'] += $balance;
                     $balance = 0;
                 } else {
+                    $info[$item['id']] = $need;
+                    $actBalance += $need / $item['amount'] * $item['pay_amount'];
                     $item['used_amount'] += $need;
                     $balance = $balance - $need;
                 }
@@ -234,11 +240,16 @@ class BalanceController extends ApiController
             ];
             UserBalanceLog::insert($data);
             DB::commit();
+            $res = [
+                'use_info' => $info,
+                'remain_balance' => $userInfo['balance'],
+                'act_balance' => $actBalance
+            ];
+            return $this->success('success', $res);
         } catch (\Exception $e) {
             DB::rollBack();
             return $this->error($e->getMessage());
         }
-        return $this->success();
     }
 
     public function addBalance(Request $request)
@@ -436,6 +447,15 @@ class BalanceController extends ApiController
     {
         try {
             return $this->success('success', $this->balanceService->exportBalanceLog($request->all()));
+        } catch (\Exception $e) {
+            return $this->error($e->getMessage());
+        }
+    }
+
+    public function getBalanceLogAll(Request $request)
+    {
+        try {
+            return $this->success('success', $this->balanceService->getBalanceLogAll($request->all()));
         } catch (\Exception $e) {
             return $this->error($e->getMessage());
         }

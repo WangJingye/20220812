@@ -70,4 +70,15 @@ class GoldOrderController extends ApiController
         }
     }
 
+    public function getGoldOrderInfo(Request $request)
+    {
+        try {
+            $params = $request->all();
+            $order = GoldOrder::query()->where('order_sn', $params['order_sn'])->first();
+            return $this->success($order, 'success');
+        } catch (\Exception $e) {
+            return $this->error([], $e->getMessage());
+        }
+    }
+
 }

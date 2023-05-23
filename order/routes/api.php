@@ -105,6 +105,7 @@ $router->post('goldOrder/refund','GoldOrderController@refund');
 $router->post('goldOrder/applyRefund','GoldOrderController@applyRefund');
 $router->post('goldOrder/notify','GoldOrderController@notify');
 $router->post('goldOrder/list','GoldOrderController@list');
+$router->post('goldOrder/getGoldOrderInfo','GoldOrderController@getGoldOrderInfo');
 
 
 
