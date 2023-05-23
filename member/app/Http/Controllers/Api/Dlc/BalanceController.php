@@ -153,26 +153,38 @@ class BalanceController extends ApiController
         try {
             $userInfo['balance'] += $balance;
             $userInfo->save();
-            $list = UserBalance::query()
-                ->whereRaw('status = 2')
-                ->whereRaw('used_amount != 0')
-                ->where('user_id', $params['user_id'])
-                ->orderBy('id', 'desc')
-                ->get();
-            foreach ($list as $item) {
-                if ($balance < $item['used_amount']) {
-                    $item['used_amount'] -= $balance;
-                    $balance = 0;
-                } else {
-                    $balance = $balance - $item['used_amount'];
-                    $item['used_amount'] = 0;
-                    $item['status'] = 1;
+            $refundGoldInfos = $params['gold_info']['use_info'] ?? [];
+            if (empty($refundGoldInfos)) {
+                $list = UserBalance::query()
+                    ->whereRaw('status = 2')
+                    ->whereRaw('used_amount != 0')
+                    ->where('user_id', $params['user_id'])
+                    ->orderBy('id', 'desc')
+                    ->get();
+                foreach ($list as $item) {
+                    if ($balance < $item['used_amount']) {
+                        $item['used_amount'] -= $balance;
+                        $balance = 0;
+                    } else {
+                        $balance = $balance - $item['used_amount'];
+                        $item['used_amount'] = 0;
+                        $item['status'] = 1;
+                    }
+                    $item->save();
+                    if ($balance == 0) {
+                        break;
+                    }
                 }
-                $item->save();
-                if ($balance == 0) {
-                    break;
+            } else {
+                $list = UserBalance::query()
+                    ->whereRaw('id in (' . implode(',', array_keys($refundGoldInfos)) . ')')
+                    ->get();
+                foreach ($list as $item) {
+                    $item['used_amount'] -= $refundGoldInfos[$item['id']];
+                    $item->save();
                 }
             }
+
             $data = [
                 'user_id' => $params['user_id'],
                 'balance' => $params['balance'],

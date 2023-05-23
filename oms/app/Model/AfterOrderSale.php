@@ -261,6 +261,7 @@ class AfterOrderSale extends Model
                         'order_title' => $item['name'],
                         'balance' => $order['gold_amount'],
                         'user_id' => $order['user_id'],
+                        'gold_info' => $order['gold_info']
                     ];
                     $info = $api->request('refundBalance', 'POST', $params);
                     if (isset($info['code']) && $info['code'] == 0) {
