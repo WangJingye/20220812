@@ -16,6 +16,7 @@ class IndexController extends Controller
     {
         $list = Gold::query()
             ->where('status', '1')
+            ->where('gold_type','1')
             ->whereRaw('(link_start_time is null or link_start_time <= "'.date('Y-m-d H:i:s').'")')
             ->whereRaw('(link_end_time is null or link_end_time >= "'.date('Y-m-d H:i:s').'")')
             ->orderBy('price')
