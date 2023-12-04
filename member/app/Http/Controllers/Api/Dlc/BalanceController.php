@@ -114,7 +114,7 @@ class BalanceController extends ApiController
             $query = $query->where('a.created_at', '>=', $params['start_time']);
         }
         if (!empty($params['end_time'])) {
-            $query = $query->where('a.created_at', '>=', $params['end_time']);
+            $query = $query->where('a.created_at', '<=', $params['end_time']);
         }
         if (isset($params['phone']) && $params['phone'] !== '') {
             $query = $query->where('b.phone', $params['phone']);
